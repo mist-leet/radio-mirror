@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  icecast2:
+    image: pltnk/icecast2
+    container_name: icecast2
+    restart: always
+    ports:
+      - 8000:8000
+    volumes:
+      - ./icecast.xml:/etc/icecast2/icecast.xml
+  radio-console:
+    build:
+      context: ./radio-console
+    env_file: radio-console.env
+    depends_on:
+      - icecast2
