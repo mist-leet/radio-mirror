@@ -1,0 +1,15 @@
+###
+
+GET http://{{host}}:{{port}}/health_check
+
+###
+
+GET http://{{host}}:{{port}}/update_db
+
+
+###
+
+GET http://{{host}}:{{port}}/{{mount}}/track
+###
+
+GET http://{{host}}:{{port}}/{{mount}}/next

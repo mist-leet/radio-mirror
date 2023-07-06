@@ -1,17 +1,43 @@
 version: "3"
 
 services:
-  icecast2:
-    image: pltnk/icecast2
-    container_name: icecast2
-    restart: always
+  postgres:
+    image: postgres
+    container_name: postgres
+    build: './postgres'
     ports:
-      - 8000:8000
-    volumes:
-      - ./icecast.xml:/etc/icecast2/icecast.xml
-  radio-console:
+      - "1337:5432"
+    env_file: .env
+  api:
     build:
       context: ./radio-console
-    env_file: radio-console.env
+    env_file: .env
+    container_name: api
+    ports:
+      - "8080:8080"
     depends_on:
-      - icecast2
+      - postgres
+    volumes:
+      - ./source:/source
+  ezstream:
+    build:
+      context: ./ezstream
+    container_name: ezstream
+    env_file:
+      - .env
+    volumes:
+       - ./source:/source
+    depends_on:
+      - icecast
+      - api
+  icecast:
+    build:
+      context: ./icecast
+    container_name: icecast
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./icecast/icecast.xml:/etc/icecast2/icecast.xml
+      - ./icecast/logs:/var/log/icecast2
+    depends_on:
+      - api

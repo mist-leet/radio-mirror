@@ -1,17 +1,10 @@
-from sqlalchemy.orm import Session
+from database.connection import DatabaseEngine, engine
+assert engine is not None
 
-# from server.server import RadioConsoleApi
+from database.models import Base
+DatabaseEngine.create_tables_if_need(engine, Base)
 
-# if __name__ == '__main__':
-#     RadioConsoleApi.start()
-from sqlalchemy import select
-from database.connection import engine
-from database.models import *
+from server.server import RadioConsoleApi
 
-session = Session(engine)
 
-select_query = select(Artist)
-
-artist: Artist = list(session.scalars(select_query))[0]
-print(artist.name)
-print(artist.tracks)
+RadioConsoleApi.start()

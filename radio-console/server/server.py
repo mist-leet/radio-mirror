@@ -1,47 +1,48 @@
 from aiohttp import web
+from engine.console import ConsoleEngine
+from engine.player import Mount
 
 
 class RadioConsoleApi:
 
     class Handlers:
 
-        # GET
-
         @classmethod
         async def health_check(cls, request: web.Request) -> web.Response:
             return web.json_response({'is_alive': True})
 
         @classmethod
-        async def get_current_track(cls, request: web.Request) -> web.Response:
-            return web.json_response({})
+        async def track(cls, request: web.Request) -> web.Response:
+            str_mount = request.match_info.get('mount', Mount.main.value)
+            track = Mount(str_mount).get().current()
+            return web.Response(body=track.full_path)
 
         @classmethod
         async def get_current_track_meta(cls, request: web.Request) -> web.Response:
             return web.json_response({})
 
         @classmethod
-        async def next_track(cls, request: web.Request) -> web.Response:
-            return web.json_response({})
+        async def next(cls, request: web.Request) -> web.Response:
+            str_mount = request.match_info.get('mount', Mount.main.value)
+            mount = Mount(str_mount).get()
+            mount.next()
+            track = mount.current()
+            response = track.as_dict()
+            response['path'] = track.full_path
+            return web.json_response(response)
 
         @classmethod
-        async def get_playlist(cls, request: web.Request) -> web.Response:
-            return web.json_response({})
-
-        # POST
-
-        @classmethod
-        async def set_next_tracks(cls, request: web.Request) -> web.Response:
-            return web.json_response({})
+        async def update_db(cls, request: web.Request) -> web.Response:
+            result = ConsoleEngine.update_db()
+            return web.json_response(result)
 
     @classmethod
     def start(cls):
         app = web.Application()
         app.add_routes([
             web.get('/health_check', cls.Handlers.health_check),
-            web.get('/get_current_track', cls.Handlers.get_current_track),
-            web.get('/get_current_track_meta', cls.Handlers.get_current_track),
-            web.get('/next_track', cls.Handlers.next_track),
-            web.get('/get_playlist', cls.Handlers.get_playlist),
-            web.post('/set_next_tracks', cls.Handlers.set_next_tracks),
+            web.get('/{mount}/track', cls.Handlers.track),
+            web.get('/{mount}/next', cls.Handlers.next),
+            web.get('/update_db', cls.Handlers.update_db),
         ])
-        web.run_app(app)
+        web.run_app(app, host='0.0.0.0', port=8080)
