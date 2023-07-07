@@ -23,6 +23,8 @@ services:
     build:
       context: ./ezstream
     container_name: ezstream
+    ports:
+      - "8888:8888"
     env_file:
       - .env
     volumes:
