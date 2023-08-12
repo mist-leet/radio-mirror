@@ -1,6 +1,6 @@
 from enum import Enum
 import requests
-from engine.player import Mount
+from console.player import Mount
 
 
 class InternalHttpClient:

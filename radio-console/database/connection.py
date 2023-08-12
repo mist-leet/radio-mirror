@@ -2,16 +2,19 @@ import time
 from typing import Optional, Type
 
 from sqlalchemy import create_engine, Engine, text
-from sqlalchemy.orm import Session, DeclarativeBase
+from sqlalchemy.orm import Session, DeclarativeBase, sessionmaker, scoped_session
 from sqlalchemy_utils import database_exists, create_database
 
+from utils.base import classproperty
+from contextlib import contextmanager
 
 class DatabaseEngine:
 
     __config = {
         'user': 'postgres',
         'password': 'postgres',
-        'host': 'postgres',
+        # 'host': 'postgres',
+        'host': 'localhost',
         'port': '5432',
         'db': 'radio_console',
     }
@@ -53,4 +56,13 @@ class DatabaseEngine:
 
 
 engine = DatabaseEngine.create()
-session = Session(engine, expire_on_commit=False)
+__Session = sessionmaker(autoflush=True, bind=engine, expire_on_commit=True)
+@contextmanager
+def Session():
+    """ Creates a context with an open SQLAlchemy session.
+    """
+    session = __Session(expire_on_commit=False)
+    yield session
+    session.close()
+# Session = sessionmaker()
+# Session.configure(bind=engine)

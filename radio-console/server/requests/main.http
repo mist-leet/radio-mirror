@@ -17,3 +17,20 @@ GET http://{{host}}:{{port}}/internal/{{mount}}/next
 ###
 
 GET http://{{host}}:{{port_internal}}/check
+
+
+
+###
+
+GET http://{{host}}:{{port_internal}}/internal/create_and_run
+
+###
+
+POST http://{{host}}:{{port_internal}}/internal/main/update
+Content-Type: application/json
+
+[
+  "/source/2006 - Сквозное (EP)/01. Хочешь.mp3",
+  "/source/2006 - Сквозное (EP)/02. Приоритеты.mp3",
+  "/source/2006 - Сквозное (EP)/03. Простые слова.mp3"
+]
