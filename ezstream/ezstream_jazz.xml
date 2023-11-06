@@ -1,0 +1,31 @@
+<ezstream>
+    <servers>
+        <server>
+            <name>main</name>
+            <protocol>HTTP</protocol>
+            <hostname>icecast</hostname>
+            <port>8002</port>
+            <user>source</user>
+            <password>admin</password>
+            <tls>May</tls>
+            <tls_cipher_suite>HIGH:!RSA:!SHA:!DH:!aNULL:!eNULL:!TLSv1</tls_cipher_suite>
+        </server>
+    </servers>
+    <streams>
+        <stream>
+            <stream_name>main</stream_name>
+            <mountpoint>/stream_Mount.jazz</mountpoint>
+            <intake>mount</intake>
+            <server>main</server>
+            <format>MP3</format>
+            <stream_url>http://icecast:8002/stream_jazz</stream_url>
+        </stream>
+    </streams>
+    <intakes>
+        <intake>
+            <name>mount</name>
+            <type>playlist</type>
+            <filename>/ezstream/playlist_jazz.txt</filename>
+        </intake>
+    </intakes>
+</ezstream>

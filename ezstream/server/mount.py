@@ -35,3 +35,6 @@ class Mount(Enum):
     @property
     def playlist_name(self):
         return f'playlist_{self.value}.txt'
+
+    def __str__(self):
+        return (f'Mount [{self.int}] - {self.name}. file: ezstream_{self.name}.xml')

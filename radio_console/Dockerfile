@@ -15,7 +15,7 @@ FROM python:3.8
 COPY --from=builder /venv /venv
 ENV PATH=/venv/bin:$PATH
 
-WORKDIR /radio-console
+WORKDIR /radio_console
 COPY . .
 
 EXPOSE 8080

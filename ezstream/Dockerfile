@@ -24,7 +24,7 @@ RUN pip3 install -r requirements.txt --break-system-packages
 
 EXPOSE 8888
 
-ENTRYPOINT ["/usr/bin/python3", "server/server.py"]
+CMD ["/usr/bin/python3", "-u", "server/server.py"]
 #CMD ["curl", "-X", "GET", "--location", "http://0.0.0.0:8080/internal/create_and_run"]
 
 #ENTRYPOINT ["/usr/bin/ezstream", "-v", "-c", "/ezstream/ezstream.xml"]

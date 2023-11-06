@@ -4,19 +4,16 @@ from unittest import TestCase
 
 from sqlalchemy import text
 
-from database.connection import DatabaseEngine, engine
+from radio_console.database.connection import DatabaseEngine, engine
 
 assert engine is not None
 
-from database.models import Base
+from radio_console.database.models import Base
 
 DatabaseEngine.create_tables_if_need(engine, Base)
 
-from console.metadata import MetaParser
-
-# MetaParser.run()
-from database.models import *
-from database.connection import Session
+from radio_console.database.models import *
+from radio_console.database.connection import Session
 
 
 class TestAlchemy(TestCase):
@@ -44,7 +41,6 @@ class TestAlchemy(TestCase):
             Track.get_or_create([artist, album], {'name': f'test_{i}', 'track_number': i, 'filename': f'test_{i}'})
             for i in range(5)
         ]
-
 
     def test_add_another_one(self):
         with Session() as session:

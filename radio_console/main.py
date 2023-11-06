@@ -1,5 +1,5 @@
-from database.connection import DatabaseEngine, engine
-from metadata import MetaParser
+from radio_console.database.connection import DatabaseEngine, engine
+from radio_console.console.metadata import MetaParser
 
 assert engine is not None
 

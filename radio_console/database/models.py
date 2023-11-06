@@ -1,7 +1,7 @@
 from __future__ import annotations
 from enum import Enum as PythonEnum
 from typing import List, Dict, Any, Type
-from sqlalchemy import ForeignKey, select, and_
+from sqlalchemy import ForeignKey, select, and_, func
 from sqlalchemy import Text, Integer
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
@@ -10,7 +10,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.sql.base import ReadOnlyColumnCollection
 from sqlalchemy.sql.elements import KeyedColumnElement
 from connection import Session
-from utils.base import classproperty
+from radio_console.utils.base import classproperty
 
 
 class Base(DeclarativeBase):
@@ -52,11 +52,9 @@ class Base(DeclarativeBase):
     @classmethod
     def __create(cls, data: dict) -> Base:
         with Session() as session:
-            print(f'=' * 50)
             obj = cls(**data)
             session.add(obj)
             session.commit()
-            print(f'=' * 50)
             return cls.get(obj.id)
 
     @classproperty
@@ -78,6 +76,12 @@ class Base(DeclarativeBase):
     @classproperty
     def table_name(cls) -> List[str]:
         return cls.__tablename__
+
+    @classmethod
+    def random(cls, amount: int) -> List[Base]:
+        with Session() as session:
+            query = select(cls).order_by(func.random()).limit(amount)
+            return session.scalars(query).all()
 
     def __str__(self) -> str:
         return str(self.as_dict())

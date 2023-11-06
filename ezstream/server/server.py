@@ -1,4 +1,6 @@
 from __future__ import annotations
+
+import logging
 import os
 import subprocess
 from enum import Enum
@@ -29,6 +31,7 @@ PIDMap = _PIDMap()
 
 class Utils:
     base_path = r'/'
+    subprocesses = []
 
     class Singal(Enum):
         NEXT = 'USR1'
@@ -36,23 +39,27 @@ class Utils:
 
     @classmethod
     def craete_and_run(cls):
-        for i in (1,):
+        for i in (1, 2):
             XMLCreator.create(i)
             ezstream_pid = cls.run_ezstream(i)
             PIDMap.add(i, ezstream_pid)
 
-
     @classmethod
     def run_ezstream(cls, config_number: int) -> PID:
         mount = Mount.from_int(config_number)
-        command = f'/usr/bin/ezstream -v -c /ezstream/ezstream_{mount.value}.xml && echo $1'
-        result = subprocess.run(command, capture_output=True, shell=True)
-        pid = result.stdout.decode()
-        print(f'*-' * 50)
-        print(f'Run EZSTREAM instance #{config_number}. pid={pid}')
-        return pid
-
-    # /usr/bin/ezstream -v -c /ezstream/ezstream_main.xml && echo $1
+        logging.info(f'Run EZSTREAM ({mount}) instance #{config_number}.')
+        command = f'/usr/bin/ezstream -v -c /ezstream/ezstream_{mount.value}.xml'
+        # result = subprocess.call(command, capture_output=True, shell=True)
+        process = subprocess.Popen(command, shell=True)
+        # process.wait()
+        logging.info(f'End.')
+        return 0
+        # errors = result.stderr.decode()
+        # if errors:
+        #     raise Exception(f'Fail to start ezstream:\n{mount}\n{errors}')
+        # pid = result.stdout.decode()
+        # logging.info(f'*-' * 50)
+        # return pid
 
     @classmethod
     def send_signal(cls, mount: Mount, signal: Singal):
@@ -68,7 +75,7 @@ class Utils:
 
 
 class Server:
-    class Handlers:
+    class __Handlers:
 
         @classmethod
         async def health_check(cls, request: web.Request) -> web.Response:
@@ -94,15 +101,20 @@ class Server:
             return web.Response()
 
     @classmethod
+    def test(cls):
+        Utils.craete_and_run()
+
+    @classmethod
     def start(cls):
         app = web.Application()
         app.add_routes([
-            web.get('/health_check', cls.Handlers.health_check),
-            web.get('/internal/create_and_run', cls.Handlers.create_and_run),
-            web.get('/internal/{mount}/next', cls.Handlers.next),
-            web.post('/internal/{mount}/update', cls.Handlers.update),
+            web.get('/health_check', cls.__Handlers.health_check),
+            web.get('/internal/create_and_run', cls.__Handlers.create_and_run),
+            web.get('/internal/{mount}/next', cls.__Handlers.next),
+            web.post('/internal/{mount}/update', cls.__Handlers.update),
         ])
         web.run_app(app, host='0.0.0.0', port=8888)
 
-
+logging.basicConfig(level=logging.DEBUG)
 Server.start()
+# Server.test()

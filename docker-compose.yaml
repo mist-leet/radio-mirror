@@ -1,24 +1,24 @@
 version: "3"
 
 services:
-  postgres:
-    image: postgres
-    container_name: postgres
-    build: './postgres'
-    ports:
-      - "1337:5432"
-    env_file: .env
-  api:
-    build:
-      context: ./radio-console
-    env_file: .env
-    container_name: api
-    ports:
-      - "8080:8080"
-    depends_on:
-      - postgres
-    volumes:
-      - ./source:/source
+#  postgres:
+#    image: postgres
+#    container_name: postgres
+#    build: './postgres'
+#    ports:
+#      - "1337:5432"
+#    env_file: .env
+#  api:
+#    build:
+#      context: ./radio_console
+#    env_file: .env
+#    container_name: api
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - postgres
+#    volumes:
+#      - ./source:/source
   ezstream:
     build:
       context: ./ezstream
@@ -31,15 +31,17 @@ services:
        - ./source:/source
     depends_on:
       - icecast
-      - api
+#      - api
   icecast:
     build:
       context: ./icecast
     container_name: icecast
     ports:
       - "8000:8000"
+      - "8001:8001"
+      - "8002:8002"
     volumes:
       - ./icecast/icecast.xml:/etc/icecast2/icecast.xml
-      - ./icecast/logs:/var/log/icecast2
-    depends_on:
-      - api
+#      - ./icecast/logs:/var/log/icecast2 WTF?
+#    depends_on:
+#      - api

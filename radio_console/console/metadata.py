@@ -6,14 +6,13 @@ from dataclasses import dataclass
 from typing import Iterator, Union, Optional
 from typing import List
 from connection import Session
-from database.models import Artist, Album, Track, Base
-from utils.log import Logger
+from radio_console.database.models import Artist, Album, Track, Base
+from radio_console.utils.log import Logger
 
 
 class MetaParser:
     # Путь до библиотеки с музыкой
-    # source_path: str = r'/source'
-    source_path: str = r'D:\prg_project\py\radio-tools\source'
+    source_path: str = r'/source'
     meta_file_name = 'meta.json'
 
     @classmethod

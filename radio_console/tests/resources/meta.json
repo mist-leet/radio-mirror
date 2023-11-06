@@ -1,0 +1,110 @@
+{
+  "artist": {
+    "name": "Ab ovo",
+    "description": "Из народа",
+    "tags": [
+      "1"
+    ]
+  },
+  "album": {
+    "name": "Panorama 94-96",
+    "description": "Небольшой сборник песен выпущенный перед полноценным альбомом",
+    "year": "1996",
+    "path": "/source/1996 - Panorama 94-96",
+    "tags": [
+      "1"
+    ]
+  },
+  "track_list": [
+    {
+      "filename": "01 Mnemosyne.mp3",
+      "name": "Mnemosyne",
+      "duration": "3:15",
+      "tags": [
+        "1"
+      ],
+      "track_number": 1
+    },
+    {
+      "filename": "02 The Sky Horses.mp3",
+      "name": "The Sky Horses",
+      "duration": "3:15",
+      "tags": [
+        "1"
+      ],
+      "track_number": 1
+    },
+    {
+      "filename": "03 Spuma.mp3",
+      "name": "Spuma",
+      "duration": "3:15",
+      "tags": [
+        "1"
+      ],
+      "track_number": 1
+    },
+    {
+      "filename": "04 Eldolon.mp3",
+      "name": "Eldolon",
+      "duration": "3:15",
+      "tags": [
+        "1"
+      ],
+      "track_number": 1
+    },
+    {
+      "filename": "05 Aither.mp3",
+      "name": "Aither",
+      "duration": "3:15",
+      "tags": [
+        "1"
+      ],
+      "track_number": 1
+    },
+    {
+      "filename": "06 L'Architecture Secrete.mp3",
+      "name": "L'Architecture Secrete",
+      "duration": "3:15",
+      "tags": [
+        "1"
+      ],
+      "track_number": 1
+    },
+    {
+      "filename": "07 Panorama.mp3",
+      "name": "Panorama",
+      "duration": "3:15",
+      "tags": [
+        "1"
+      ],
+      "track_number": 1
+    },
+    {
+      "filename": "08 L'Appel Du Froid.mp3",
+      "name": "L'Appel Du Froid",
+      "duration": "3:15",
+      "tags": [
+        "1"
+      ],
+      "track_number": 1
+    },
+    {
+      "filename": "09 Carmina.mp3",
+      "name": "Carmina",
+      "duration": "3:15",
+      "tags": [
+        "1"
+      ],
+      "track_number": 1
+    },
+    {
+      "filename": "10 Arimathie's Rain.mp3",
+      "name": "Arimathie's Rain",
+      "duration": "3:15",
+      "tags": [
+        "1"
+      ],
+      "track_number": 1
+    }
+  ]
+}

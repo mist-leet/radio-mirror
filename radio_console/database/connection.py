@@ -1,18 +1,17 @@
 import time
 from typing import Optional, Type
 
-from sqlalchemy import create_engine, Engine, text
-from sqlalchemy.orm import Session, DeclarativeBase, sessionmaker, scoped_session
+from sqlalchemy import create_engine, Engine
+from sqlalchemy.orm import DeclarativeBase, sessionmaker
 from sqlalchemy_utils import database_exists, create_database
 
-from utils.base import classproperty
 from contextlib import contextmanager
 
 class DatabaseEngine:
 
     __config = {
-        'user': 'postgres',
-        'password': 'postgres',
+        'user': 'admin',
+        'password': 'admin',
         # 'host': 'postgres',
         'host': 'localhost',
         'port': '5432',
@@ -42,7 +41,7 @@ class DatabaseEngine:
 
     @classmethod
     def __build_url(cls, db_name: Optional[str] = None) -> str:
-        # postgresql+psycopg2://postgres:postgres@postgres:5432/radio_console
+        """postgresql+psycopg2://postgres:postgres@postgres:5432/radio_console"""
         user = cls.__config['user']
         password = cls.__config['password']
         host = cls.__config['host']
@@ -64,5 +63,3 @@ def Session():
     session = __Session(expire_on_commit=False)
     yield session
     session.close()
-# Session = sessionmaker()
-# Session.configure(bind=engine)
