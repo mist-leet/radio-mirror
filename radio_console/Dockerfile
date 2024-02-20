@@ -1,4 +1,4 @@
-FROM python:3.8 AS builder
+FROM python:3.11 AS builder
 
 
 RUN python3 -m venv /venv
@@ -10,7 +10,7 @@ RUN pip3 install -r requirements.txt
 
 
 # Final stage:
-FROM python:3.8
+FROM python:3.11
 
 COPY --from=builder /venv /venv
 ENV PATH=/venv/bin:$PATH

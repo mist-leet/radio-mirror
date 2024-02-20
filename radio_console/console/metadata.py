@@ -1,41 +1,60 @@
 from __future__ import annotations
 import json
 import os
-from dataclasses import asdict
-from dataclasses import dataclass
-from typing import Iterator, Union, Optional
-from typing import List
-from connection import Session
-from radio_console.database.models import Artist, Album, Track, Base
+from dataclasses import asdict, dataclass
+from typing import Iterator
+
+from radio_console.database.crud import CRUD
+from radio_console.database.models import Artist, Album, Track
+
 from radio_console.utils.log import Logger
 
 
 class MetaParser:
     # Путь до библиотеки с музыкой
-    source_path: str = r'/source'
+    # source_path: str = r'/source'
+    source_path: str = r'//home/ilya/git/radio/source'
     meta_file_name = 'meta.json'
 
     @classmethod
     def parse_meta(cls, meta: MetaData):
-        artist = Artist.get_or_create([], asdict(meta.artist))
-        album = Album.get_or_create([artist], asdict(meta.album))
+        artist = CRUD.find(Artist(name=meta.artist.name))
+        if not artist:
+            artist = CRUD.create(Artist(name=meta.artist.name))
+        album = CRUD.find(Album(
+            name=meta.album.name,
+            year=meta.album.year,
+            artist_id=artist.id
+        ))
+        if not album:
+            album = CRUD.create(Album(
+                name=meta.album.name,
+                year=meta.album.year,
+                artist_id=artist.id,
+                path=meta.album.path
+            ))
         tracks = []
         for row in meta.track_list:
-            tracks.append(Track.get_or_create([artist, album], asdict(row)))
-        new_objects = cls.filter_new([artist, album, *tracks])
-        if not new_objects:
-            return
-        with Session() as session:
-            session.add_all(new_objects)
-            session.commit()
-        return [str(obj) for obj in new_objects]
+            track = CRUD.find(Track(
+                name=row.name,
+                track_number=row.track_number,
+                artist_id=artist.id,
+                album_id=album.id,
+                filename=row.filename
+            ))
+            if not track:
+                track = CRUD.create(Track(
+                    name=row.name,
+                    track_number=row.track_number,
+                    artist_id=artist.id,
+                    album_id=album.id,
+                    filename=row.filename,
+                ))
+                tracks.append(track)
+        return [str(obj) for obj in tracks]
 
     @classmethod
-    def filter_new(cls, objects: List[Base]) -> List[Base]:
-        return list(filter(lambda x: x.id is None, objects))
-
-    @classmethod
-    def run(cls) -> List[str]:
+    def run(cls) -> list[str]:
         Logger.info(f'Start parsing meta info')
         result = []
         for meta in cls.__meta_iter():
@@ -55,7 +74,7 @@ class MetaParser:
             yield MetaData.from_dict(meta_data)
 
     @classmethod
-    def __extract_meta(cls, path: str) -> Optional[dict]:
+    def __extract_meta(cls, path: str) -> dict | None:
         try:
             with open(path, 'r', encoding='utf-8') as f:
                 return json.load(f)
@@ -69,26 +88,12 @@ class MetaParser:
             yield from map(lambda dir_name: os.path.join(root, dir_name), dirs)
 
 
-@dataclass
-class MetaData:
-    artist: ArtistData
-    album: AlbumData
-    track_list: List[TrackData]
-
-    @classmethod
-    def from_dict(cls, data: dict) -> MetaData:
-        return cls(
-            artist=ArtistData(**data.get('artist', {})),
-            album=AlbumData(**data.get('album', {})),
-            track_list=[TrackData(**row) for row in data.get('track_list', [])],
-        )
-
 
 @dataclass
 class ArtistData:
     name: str
     description: str
-    tags: List[str]
+    tags: list[str]
 
 
 @dataclass
@@ -96,7 +101,7 @@ class AlbumData:
     name: str
     description: str
     year: int
-    tags: List[str]
+    tags: list[str]
     path: str
 
 
@@ -105,5 +110,19 @@ class TrackData:
     filename: str
     name: str
     duration: str
-    tags: List[str]
+    tags: list[str]
     track_number: int
+
+@dataclass
+class MetaData:
+    artist: ArtistData
+    album: AlbumData
+    track_list: list[TrackData]
+
+    @classmethod
+    def from_dict(cls, data: dict) -> MetaData:
+        return cls(
+            artist=ArtistData(**data.get('artist', {})),
+            album=AlbumData(**data.get('album', {})),
+            track_list=[TrackData(**row) for row in data.get('track_list', [])],
+        )

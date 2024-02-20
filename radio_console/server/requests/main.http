@@ -1,8 +1,8 @@
-###
+### Health Check
 
 GET http://{{host}}:{{port}}/health_check
 
-###
+### Update database from meta.json
 
 GET http://{{host}}:{{port}}/internal/update_db
 

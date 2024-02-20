@@ -18,8 +18,9 @@ class RadioConsoleApi:
         async def update(cls, request: web.Request) -> web.Response:
             mount = Mount(request.match_info.get('mount', Mount.main.value))
             player = PlayerMount.get(mount)
-            player.update()
-            InternalHttpClient.API.update(mount, player.all_text())
+            player.update_queue()
+            playlist_data = player.get_playlist()
+            InternalHttpClient.API.update(mount, playlist_data)
 
         @classmethod
         async def update_db(cls, request: web.Request) -> web.Response:
@@ -29,25 +30,20 @@ class RadioConsoleApi:
         @classmethod
         async def next(cls, request: web.Request) -> web.Response:
             mount = Mount(request.match_info.get('mount', Mount.main.value))
+            player = PlayerMount.get(mount)
+            player.next()
             InternalHttpClient.API.next(mount)
             return web.json_response()
 
     @classmethod
     def start(cls):
-        """
-
-        TODO:
-            - /history
-            - /update
-        """
         app = web.Application()
         app.add_routes([
             web.get('/health_check', cls.External.health_check),
             # web.get('/{mount}/update', cls.External.update),
-
+            # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
             web.get('/internal/update_db', cls.Internal.update_db),
             web.get('/internal/{mount}/update', cls.Internal.update),
             web.get('/internal/{mount}/next', cls.Internal.next),
-            web.get('/internal/{mount}/update', cls.Internal.next),
         ])
         web.run_app(app, host='0.0.0.0', port=8080)

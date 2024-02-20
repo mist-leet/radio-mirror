@@ -1,52 +1,39 @@
-import string
-import random
+import os
 from unittest import TestCase
 
-from sqlalchemy import text
+from crud import CRUD
+from models import *
+from radio_console.database.connection import DatabaseEngine
 
-from radio_console.database.connection import DatabaseEngine, engine
 
-assert engine is not None
+class TestDataBaseEngine(DatabaseEngine):
+    _init_path = os.path.join(os.path.dirname(__file__), '../database/sql/init.sql')
 
-from radio_console.database.models import Base
 
-DatabaseEngine.create_tables_if_need(engine, Base)
-
-from radio_console.database.models import *
-from radio_console.database.connection import Session
+cursor = TestDataBaseEngine.create()
+TestDataBaseEngine.after_create(cursor)
 
 
 class TestAlchemy(TestCase):
 
     def __clear_all(self):
-        with Session() as session:
-            session.execute(text("""
-                delete from track CASCADE;
-                delete from album CASCADE;
-                delete from artist CASCADE;
-            """))
-            session.commit()
-
-    @classmethod
-    def gen_str(cls, length: int = 4) -> str:
-        return random.sample(string.ascii_lowercase, length)
+        cursor.execute("""
+            delete from track CASCADE;
+            delete from album CASCADE;
+            delete from artist CASCADE;
+        """)
 
     def setUp(self) -> None:
-        self.__clear_all()
-
-    def test_add_tags(self):
-        artist = Artist.get_or_create([], {'name': 'test_artist_2'})
-        album = Album.get_or_create([artist], {'name': 'test_album_2', 'year': 2020, 'path': '/test/'})
-        tracks = [
-            Track.get_or_create([artist, album], {'name': f'test_{i}', 'track_number': i, 'filename': f'test_{i}'})
-            for i in range(5)
-        ]
+        TestDataBaseEngine._init_database(cursor)
 
     def test_add_another_one(self):
-        with Session() as session:
-            artist = Artist.get_or_create([], {'name': 'test_artist'})
-            album = Album.get_or_create([artist], {'name': 'test_album', 'year': 2020, 'path': '/test/'})
-            track = Track.get_or_create([artist, album], {'name': 'test', 'track_number': 1, 'filename': 'test'})
-            track = Track.get_or_create([artist, album], {'name': 'test_2', 'track_number': 1, 'filename': 'test'})
-            session.add_all([track])
-            session.commit()
+        artist = CRUD.create(Artist(name='test_artist'))
+        album = CRUD.create(Album(name='test_album', year=2020, path='/test/', artist_id=artist.id))
+        tracks = [
+            CRUD.create(Track(name='test', track_number=1, filename='test', artist_id=artist.id, album_id=album.id)),
+            CRUD.create(Track(name='test2', track_number=1, filename='test', artist_id=artist.id, album_id=album.id))
+        ]
+        assert artist.to_dict() == CRUD.read(Artist(id=artist.id)).to_dict()
+        assert album.to_dict() == CRUD.read(Album(id=album.id)).to_dict()
+        assert tracks[0].to_dict() == CRUD.read(Track(id=tracks[0].id)).to_dict()
+        assert tracks[1].to_dict() == CRUD.read(Track(id=tracks[1].id)).to_dict()

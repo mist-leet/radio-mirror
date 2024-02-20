@@ -1,46 +1,49 @@
 import time
-from typing import Optional, Type
-
-from sqlalchemy import create_engine, Engine
-from sqlalchemy.orm import DeclarativeBase, sessionmaker
-from sqlalchemy_utils import database_exists, create_database
-
-from contextlib import contextmanager
+import os
+import psycopg2
+from radio_console.utils.base import classproperty
+from radio_console.utils.log import Logger
 
 class DatabaseEngine:
-
+    # TODO: move to .env
     __config = {
         'user': 'admin',
         'password': 'admin',
         # 'host': 'postgres',
         'host': 'localhost',
         'port': '5432',
-        'db': 'radio_console',
+        'database': 'radio_console',
     }
+    _init_path = os.path.join(os.path.dirname(__file__), 'sql/test.sql')
     __sleep_step = 2.
 
     @classmethod
-    def create(cls) -> Engine:
-        engine = cls.__create(cls.__config['db'])
-        if not database_exists(engine.url):
-            create_database(engine.url)
-        return engine
+    def create(cls):
+        sleep_counter = 0
+        try:
+            return cls.__create()
+        except Exception as exc:
+            if sleep_counter > 10:
+                raise exc
+            time.sleep(cls.__sleep_step)
+            Logger.error(exc)
+            Logger.error(f'Wait for db')
+            sleep_counter += 1
 
     @classmethod
-    def __create(cls, db_name: str) -> Engine:
-        total_sleep = 0
-        url = cls.__build_url(db_name)
-        while True:
-            try:
-                return create_engine(url, echo=True)
-            except Exception as exc:
-                time.sleep(cls.__sleep_step)
-                total_sleep += cls.__sleep_step
-                if total_sleep > 20.:
-                    raise exc
+    def after_create(cls, cursor):
+        if not cls.__check_tables(cursor):
+            cls._init_database(cursor)
 
     @classmethod
-    def __build_url(cls, db_name: Optional[str] = None) -> str:
+    def __create(cls):
+        conn = psycopg2.connect(**cls.__config)
+        conn.autocommit = True
+        cursor = conn.cursor()
+        return cursor
+
+    @classmethod
+    def __build_url(cls, db_name: str | None = None) -> str:
         """postgresql+psycopg2://postgres:postgres@postgres:5432/radio_console"""
         user = cls.__config['user']
         password = cls.__config['password']
@@ -50,16 +53,29 @@ class DatabaseEngine:
         return f'postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}'
 
     @classmethod
-    def create_tables_if_need(cls, engine: Engine, base: Type[DeclarativeBase]):
-        base.metadata.create_all(engine)
+    def _init_database(cls, cursor):
+        cursor.execute(cls._init_database_template)
+
+    @classmethod
+    def __check_tables(cls, cursor) -> bool:
+        base_template = 'SELECT 1 FROM "TABLE";'
+        for table in cls._table_list:
+            template = base_template.replace('TABLE', table)
+            try:
+                cursor.execute(template)
+            except Exception as exc:
+                return False
+        return True
+
+    @classproperty
+    def _table_list(self) -> list[str]:
+        return ['artist', 'album', 'genre', 'vibe', 'track', 'track_vibe']
+
+    @classproperty
+    def _init_database_template(self) -> str:
+        with open(self._init_path, 'r', encoding='utf-8') as f:
+            return f.read()
 
 
-engine = DatabaseEngine.create()
-__Session = sessionmaker(autoflush=True, bind=engine, expire_on_commit=True)
-@contextmanager
-def Session():
-    """ Creates a context with an open SQLAlchemy session.
-    """
-    session = __Session(expire_on_commit=False)
-    yield session
-    session.close()
+cursor = DatabaseEngine.create()
+DatabaseEngine.after_create(cursor)

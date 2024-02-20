@@ -10,6 +10,7 @@ create table if not exists album
 (
     id        serial primary key,
     name      text,
+    year      int,
     path      text,
     artist_id int references artist (id)
 
