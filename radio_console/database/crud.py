@@ -1,8 +1,6 @@
 from typing import Any
-from psycopg2.extensions import quote_ident
-
-from radio_console.database.connection import cursor
-from radio_console.database.models import TModel
+from database.connection import cursor
+from database.models import TModel
 
 
 class CRUD:

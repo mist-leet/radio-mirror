@@ -4,16 +4,15 @@ import os
 from dataclasses import asdict, dataclass
 from typing import Iterator
 
-from radio_console.database.crud import CRUD
-from radio_console.database.models import Artist, Album, Track
-
-from radio_console.utils.log import Logger
+from database.crud import CRUD
+from database.models import Artist, Album, Track
+from utils.env import env_config
+from utils.log import Logger
 
 
 class MetaParser:
     # Путь до библиотеки с музыкой
-    # source_path: str = r'/source'
-    source_path: str = r'//home/ilya/git/radio/source'
+    source_path: str = env_config.get('SOURCE_PATH')
     meta_file_name = 'meta.json'
 
     @classmethod
@@ -51,13 +50,14 @@ class MetaParser:
                     filename=row.filename,
                 ))
                 tracks.append(track)
-        return [str(obj) for obj in tracks]
+        return [str(obj.filename) for obj in tracks]
 
     @classmethod
     def run(cls) -> list[str]:
         Logger.info(f'Start parsing meta info')
         result = []
         for meta in cls.__meta_iter():
+            Logger.info(f'Parsing: {meta.album.path}')
             inserted = cls.parse_meta(meta)
             Logger.info(f'Inseted: {inserted}')
         return result

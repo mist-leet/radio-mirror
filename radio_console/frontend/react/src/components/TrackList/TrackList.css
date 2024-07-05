@@ -1,0 +1,7 @@
+.track-list-container {
+    flex: 2 1 auto;
+    max-width: 500px;
+    background: pink;
+    margin: 5px;
+    padding: 5px;
+}

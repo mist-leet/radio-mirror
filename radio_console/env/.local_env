@@ -1,0 +1,6 @@
+POSTGRES_DB=radio_console
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+SOURCE_PATH=/home/ilya/git/radio/source

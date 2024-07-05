@@ -29,8 +29,8 @@ services:
     volumes:
        - ./source:/source
     depends_on:
-      - icecast
       - api
+      - icecast
   icecast:
     build:
       context: ./icecast
@@ -41,6 +41,6 @@ services:
       - "8002:8002"
     volumes:
       - ./icecast/icecast.xml:/etc/icecast2/icecast.xml
-#      - ./icecast/logs:/var/log/icecast2 WTF?
+      - ./icecast/logs:/var/log/icecast2 WTF?
     depends_on:
       - api

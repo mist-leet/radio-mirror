@@ -1,6 +1,5 @@
 from __future__ import annotations
 from enum import Enum
-from typing import List, Dict
 
 
 class Mount(Enum):
@@ -9,7 +8,7 @@ class Mount(Enum):
     ambient = 'ambient'
 
     @classmethod
-    def __int_map(cls) -> Dict[Mount, int]:
+    def __int_map(cls) -> dict[Mount, int]:
         return {
             cls.main: 1,
             cls.jazz: 2,
@@ -17,7 +16,7 @@ class Mount(Enum):
         }
 
     @classmethod
-    def __int_rev_map(cls) -> Dict[int, Mount]:
+    def __int_rev_map(cls) -> dict[int, Mount]:
         return {
             1: cls.main,
             2: cls.jazz,
@@ -37,4 +36,4 @@ class Mount(Enum):
         return f'playlist_{self.value}.txt'
 
     def __str__(self):
-        return (f'Mount [{self.int}] - {self.name}. file: ezstream_{self.name}.xml')
+        return f'Mount [{self.int}] - {self.name}. file: ezstream_{self.name}.xml'

@@ -18,5 +18,7 @@ ENV PATH=/venv/bin:$PATH
 WORKDIR /radio_console
 COPY . .
 
+ENV PYTHONUNBUFFERED=1
+
 EXPOSE 8080
-CMD ["python3", "main.py"]
+CMD ["python3", "-u", "main.py"]

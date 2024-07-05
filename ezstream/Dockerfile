@@ -4,11 +4,9 @@ ARG USER_UID=1000
 ARG USER_GID=1000
 
 COPY ezstream.xml /ezstream/ezstream.xml
-COPY play.sh /
+COPY playlist_main.txt /ezstream/playlist_main.txt
 COPY server /server
 COPY requirements.txt /
-COPY mount1.txt /
-COPY mount2.txt /
 
 RUN apt -y update
 RUN apt install -y ezstream=1.0.2-2
@@ -23,8 +21,4 @@ RUN apt install -y python3-pip
 RUN pip3 install -r requirements.txt --break-system-packages
 
 EXPOSE 8888
-
 CMD ["/usr/bin/python3", "-u", "server/server.py"]
-#CMD ["curl", "-X", "GET", "--location", "http://0.0.0.0:8080/internal/create_and_run"]
-
-#ENTRYPOINT ["/usr/bin/ezstream", "-v", "-c", "/ezstream/ezstream.xml"]

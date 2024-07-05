@@ -32,12 +32,14 @@
         <mount-name>/stream_main</mount-name>
         <username>source</username>
         <password>admin</password>
+        <charset>UTF-8</charset>
     </mount>
 
     <mount>
         <mount-name>/stream_jazz</mount-name>
         <username>source</username>
         <password>admin</password>
+        <charset>UTF-8</charset>
     </mount>
     <http-headers>
         <header name="Access-Control-Allow-Origin" value="*"/>

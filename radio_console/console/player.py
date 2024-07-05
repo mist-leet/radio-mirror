@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from radio_console.database.models import Track
-from radio_console.database.functions import playlist_paths
-from radio_console.console.console import ConsoleEngine
-from radio_console.console.config import Mount, Mode, Config
+from database.models import Track
+from database.functions import playlist_paths, build_track_info
+from console.console_engine import ConsoleEngine
+from console.config import Mount, Mode, Config
+from utils.functions import find_cover, to_base64
+from utils.log import Logger
 
 _mounts: dict[Mount, PlayerMount] = {}
 
@@ -45,7 +47,23 @@ class PlayerMount:
         self.__queue = tracks
 
     def get_playlist(self) -> list[str]:
-        return playlist_paths(self.__queue)
+        playlist = playlist_paths(self.__queue)
+        return playlist
+
+    def track_info(self, track_name: str) -> dict:
+        track: Track = next(filter(lambda track: track.name in track_name, self.__queue), None)
+        if not track:
+            Logger.error(f'No track with name: {track_name}')
+            Logger.error(f'queue:')
+            for i, track in enumerate(self.__queue):
+                Logger.error(f'[{i}] {track.name}')
+            raise KeyError(f'No track with name: {track_name} in queue {self.mount}')
+        track_dict = build_track_info(track.id)
+        path = track_dict.pop('album_path')
+        covers = find_cover(path)
+        if covers:
+            track_dict['cover'] = to_base64(covers[0])
+        return track_dict
 
 
 PlayerMount.register(Mount.main, Config(Mode.default))

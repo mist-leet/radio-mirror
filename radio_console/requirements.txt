@@ -4,3 +4,4 @@ python-dotenv==1.0.0
 SQLAlchemy==2.0.16
 SQLAlchemy-Utils==0.41.1
 requests==2.28.2
+aiohttp_cors==0.7.0

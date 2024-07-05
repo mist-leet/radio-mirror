@@ -8,7 +8,6 @@ class XMLCreator:
 
     mount: Mount
     __base_path: str = r'/ezstream'
-    # __base_path: str = r'/home/ilya/git/radio_tools/ezstream'
 
     @classmethod
     def create(cls, mount: int):

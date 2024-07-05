@@ -1,20 +1,20 @@
 import time
 import os
 import psycopg2
-from radio_console.utils.base import classproperty
-from radio_console.utils.log import Logger
+from utils.base import classproperty
+from utils.log import Logger
+from utils.env import env_config
+
 
 class DatabaseEngine:
-    # TODO: move to .env
     __config = {
-        'user': 'admin',
-        'password': 'admin',
-        # 'host': 'postgres',
-        'host': 'localhost',
-        'port': '5432',
-        'database': 'radio_console',
+        'database': env_config.get('POSTGRES_DB'),
+        'user': env_config.get('POSTGRES_USER'),
+        'password': env_config.get('POSTGRES_PASSWORD'),
+        'host': env_config.get('POSTGRES_HOST'),
+        'port': env_config.get('POSTGRES_PORT'),
     }
-    _init_path = os.path.join(os.path.dirname(__file__), 'sql/test.sql')
+    _init_path = os.path.join(os.path.dirname(__file__), 'sql/init.sql')
     __sleep_step = 2.
 
     @classmethod
@@ -37,6 +37,7 @@ class DatabaseEngine:
 
     @classmethod
     def __create(cls):
+        Logger.info(f'Connect database: {cls.__config}')
         conn = psycopg2.connect(**cls.__config)
         conn.autocommit = True
         cursor = conn.cursor()

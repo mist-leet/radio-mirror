@@ -1,6 +1,6 @@
-from crud import CRUD
-from models import Track
-from radio_console.console.config import Mode, Config
+from database.crud import CRUD
+from database.models import Track
+from console.config import Mode, Config
 
 
 class BaseConfigExecutor:

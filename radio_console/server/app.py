@@ -1,7 +1,8 @@
 from aiohttp import web
-from radio_console.console.console import ConsoleEngine
-from radio_console.console.player import Mount, PlayerMount
-from radio_console.server.internal_client import InternalHttpClient
+import aiohttp_cors
+from console.console_engine import ConsoleEngine
+from console.player import Mount, PlayerMount
+from server.internal_client import InternalHttpClient
 
 
 class RadioConsoleApi:
@@ -35,6 +36,13 @@ class RadioConsoleApi:
             InternalHttpClient.API.next(mount)
             return web.json_response()
 
+        @classmethod
+        async def track(cls, request: web.Request) -> web.Response:
+            mount = Mount(request.match_info.get('mount', Mount.main.value))
+            player = PlayerMount.get(mount)
+            track_name = InternalHttpClient.Icecast.track(mount)
+            return web.json_response(player.track_info(track_name))
+
     @classmethod
     def start(cls):
         app = web.Application()
@@ -45,5 +53,17 @@ class RadioConsoleApi:
             web.get('/internal/update_db', cls.Internal.update_db),
             web.get('/internal/{mount}/update', cls.Internal.update),
             web.get('/internal/{mount}/next', cls.Internal.next),
+            web.get('/internal/{mount}/track', cls.Internal.track),
         ])
+        cors = aiohttp_cors.setup(app, defaults={
+            "*": aiohttp_cors.ResourceOptions(
+                allow_credentials=True,
+                expose_headers="*",
+                allow_headers="*"
+            )
+        })
+
+        for route in list(app.router.routes()):
+            cors.add(route)
+
         web.run_app(app, host='0.0.0.0', port=8080)

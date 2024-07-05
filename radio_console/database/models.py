@@ -1,6 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, fields as dataclass_fields, asdict, field
-from base import classproperty
+from utils.base import classproperty
 
 
 @dataclass(frozen=True)

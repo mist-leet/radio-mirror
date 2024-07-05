@@ -1,0 +1,7 @@
+.app-container {
+  background: gray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}

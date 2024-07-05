@@ -1,6 +1,6 @@
-from radio_console.console.config import Config, Mode
-from radio_console.console.metadata import MetaParser
-from radio_console.database.config_executor import ConfigExecutor
+from console.config import Config, Mode
+from console.metadata import MetaParser
+from database.config_executor import ConfigExecutor
 
 
 class ConsoleEngine:

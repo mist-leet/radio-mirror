@@ -3,9 +3,9 @@ from unittest import TestCase
 from sqlalchemy import text
 
 from player import Mount, PlayerMount, Config, Mode
-from radio_console.database.connection import Session
-from radio_console.tests import init_db
-from radio_console.database.models import Artist, Album, Track
+from database.connection import Session
+from tests import init_db
+from database.models import Artist, Album, Track
 init_db()
 
 class TestMounts(TestCase):

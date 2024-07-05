@@ -1,19 +1,19 @@
 from __future__ import annotations
 
+import json
 import logging
 import os
 import subprocess
 from enum import Enum
-from typing import List, Dict
+from signal import SIGUSR1, SIGHUP
 
 from aiohttp import web
-
 from xml_creator import XMLCreator
 from mount import Mount
 
-class _PIDMap:
 
-    __map: Dict[int, PID] = None
+class _PIDMap:
+    __map: dict[int, PID] = None
 
     def __init__(self):
         self.__map = {}
@@ -25,7 +25,7 @@ class _PIDMap:
         return self.__map.get(mount)
 
 
-PID = int
+PID = int | subprocess.Popen
 PIDMap = _PIDMap()
 
 
@@ -34,15 +34,26 @@ class Utils:
     subprocesses = []
 
     class Singal(Enum):
-        NEXT = 'USR1'
-        UPDATE = 'USR1'
+        NEXT = 'SIGUSR1'
+        UPDATE = 'SIGHUP'
+
+        @property
+        def int(self) -> int:
+            if self == self.NEXT:
+                return SIGUSR1
+            if self == self.UPDATE:
+                return SIGHUP
+            raise ValueError
 
     @classmethod
     def craete_and_run(cls):
-        for i in (1, 2):
-            XMLCreator.create(i)
-            ezstream_pid = cls.run_ezstream(i)
-            PIDMap.add(i, ezstream_pid)
+        mounts = (
+            Mount.main,
+        )
+        for mount in mounts:
+            XMLCreator.create(mount.int)
+            ezstream_pid = cls.run_ezstream(mount.int)
+            PIDMap.add(mount.int, ezstream_pid)
 
     @classmethod
     def run_ezstream(cls, config_number: int) -> PID:
@@ -53,21 +64,29 @@ class Utils:
         process = subprocess.Popen(command, shell=True)
         # process.wait()
         logging.info(f'End.')
-        return 0
-        # errors = result.stderr.decode()
-        # if errors:
-        #     raise Exception(f'Fail to start ezstream:\n{mount}\n{errors}')
-        # pid = result.stdout.decode()
-        # logging.info(f'*-' * 50)
-        # return pid
+        return process
 
     @classmethod
     def send_signal(cls, mount: Mount, signal: Singal):
-        pid = PIDMap.get(mount.int)
-        subprocess.run(f"pkill -{signal.value} {pid}", shell=True, check=True)
+        ezstream_pids = cls.__get_pids(mount)
+        for pid in ezstream_pids:
+            logging.info(f'Sending signal {signal} to {pid} / {ezstream_pids}')
+            try:
+                # os.kill(pid, signal.int)
+                subprocess.run(f'kill -s {signal.value.replace("SIG", "")} {pid}', shell=True)
+            except Exception as exc:
+                logging.error(f'Error during sending signal {exc}')
 
     @classmethod
-    def write_playlist(cls, mount: Mount, data: List[str]):
+    def __get_pids(cls, mount: Mount):
+        process_name = f'ezstream_{mount.value}'
+        cmd = "ps aux | grep {}".format(process_name)
+        output = subprocess.check_output(cmd, shell=True).decode()
+        pid_list = [int(line.split()[1]) for line in output.splitlines() if process_name in line]
+        return pid_list
+
+    @classmethod
+    def write_playlist(cls, mount: Mount, data: list[str]):
         path = os.path.join(cls.base_path, 'ezstream', mount.playlist_name)
         with open(path, 'w', encoding='utf-8') as f:
             for line in data:
@@ -95,13 +114,20 @@ class Server:
         @classmethod
         async def update(cls, request: web.Request) -> web.Response:
             mount = Mount(request.match_info.get('mount', Mount.main.value))
-            body: List[str] = await request.json()
+            body: str = await request.text()
+            body: list[str] = json.loads(body.encode('utf-8'))
+            if not body:
+                return web.Response(status=200, text='No data')
+            if not isinstance(body, list) or not isinstance(body[0], str):
+                return web.Response(status=400, text=f'Invalid data, type={type(body)}, type[0]={type(body[0])}')
+            logging.info(f'Got {len(body)} tracks for update: {body[0][:30]}...')
             Utils.write_playlist(mount, body)
             Utils.send_signal(mount, Utils.Singal.UPDATE)
+            Utils.send_signal(mount, Utils.Singal.NEXT)
             return web.Response()
 
     @classmethod
-    def test(cls):
+    def create(cls):
         Utils.craete_and_run()
 
     @classmethod
@@ -109,12 +135,13 @@ class Server:
         app = web.Application()
         app.add_routes([
             web.get('/health_check', cls.__Handlers.health_check),
-            web.get('/internal/create_and_run', cls.__Handlers.create_and_run),
-            web.get('/internal/{mount}/next', cls.__Handlers.next),
-            web.post('/internal/{mount}/update', cls.__Handlers.update),
+            web.get('/create_and_run', cls.__Handlers.create_and_run),
+            web.get('/{mount}/next', cls.__Handlers.next),
+            web.post('/{mount}/update', cls.__Handlers.update),
         ])
         web.run_app(app, host='0.0.0.0', port=8888)
 
+
 logging.basicConfig(level=logging.DEBUG)
+Server.create()
 Server.start()
-# Server.test()

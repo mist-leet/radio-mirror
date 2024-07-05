@@ -3,7 +3,7 @@ from unittest import TestCase
 
 from crud import CRUD
 from models import *
-from radio_console.database.connection import DatabaseEngine
+from database.connection import DatabaseEngine
 
 
 class TestDataBaseEngine(DatabaseEngine):
