@@ -7,7 +7,9 @@ links:
 
 local urls:
  - http://localhost:8001/admin/
+ - http://localhost:8001/stream_main
+
+
  - http://localhost:8002/admin/
- - 
- - http://localhost:8002/admin/
+
 

@@ -1,35 +1,31 @@
 import os.path
-from dataclasses import dataclass
 from mount import Mount
 
 
-@dataclass(frozen=True)
 class XMLCreator:
 
     mount: Mount
-    __base_path: str = r'/ezstream'
+    __base_path = r'/ezstream'
 
     @classmethod
-    def create(cls, mount: int):
-        return cls(Mount.from_int(mount)).__create()
+    def create(cls, mount: Mount):
+        with open(cls.__filepath(mount), 'w', encoding='utf-8') as file:
+            file.write(cls.__content(mount))
 
-    @property
-    def __filepath(self):
-        return os.path.join(self.__base_path, f'ezstream_{self.mount.value}.xml')
+    @classmethod
+    def __filepath(cls, mount: Mount):
+        return os.path.join(cls.__base_path, f'ezstream_{mount.value}.xml')
 
-    def __create(self):
-        with open(self.__filepath, 'w', encoding='utf-8') as file:
-            file.write(self.__content)
-
-    @property
-    def __content(self):
-        return f"""<ezstream>
+    @staticmethod
+    def __content(mount: Mount):
+        return f"""
+<ezstream>
     <servers>
         <server>
             <name>main</name>
             <protocol>HTTP</protocol>
             <hostname>icecast</hostname>
-            <port>800{self.mount.int}</port>
+            <port>800{mount.int}</port>
             <user>source</user>
             <password>admin</password>
             <tls>May</tls>
@@ -39,18 +35,18 @@ class XMLCreator:
     <streams>
         <stream>
             <stream_name>main</stream_name>
-            <mountpoint>/stream_{self.mount.value}</mountpoint>
+            <mountpoint>/stream_{mount.value}</mountpoint>
             <intake>mount</intake>
             <server>main</server>
             <format>MP3</format>
-            <stream_url>http://icecast:800{self.mount.int}/stream_{self.mount.value}</stream_url>
+            <stream_url>http://icecast:800{mount.int}/stream_{mount.value}</stream_url>
         </stream>
     </streams>
     <intakes>
         <intake>
             <name>mount</name>
             <type>playlist</type>
-            <filename>/ezstream/playlist_{self.mount.value}.txt</filename>
+            <filename>/ezstream/playlist_{mount.value}.txt</filename>
         </intake>
     </intakes>
 </ezstream>"""

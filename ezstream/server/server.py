@@ -12,23 +12,6 @@ from xml_creator import XMLCreator
 from mount import Mount
 
 
-class _PIDMap:
-    __map: dict[int, PID] = None
-
-    def __init__(self):
-        self.__map = {}
-
-    def add(self, mount: int, pid: PID):
-        self.__map[mount] = pid
-
-    def get(self, mount: int) -> PID:
-        return self.__map.get(mount)
-
-
-PID = int | subprocess.Popen
-PIDMap = _PIDMap()
-
-
 class Utils:
     base_path = r'/'
     subprocesses = []
@@ -46,23 +29,11 @@ class Utils:
             raise ValueError
 
     @classmethod
-    def craete_and_run(cls):
-        mounts = (
-            Mount.main,
-        )
-        for mount in mounts:
-            XMLCreator.create(mount.int)
-            ezstream_pid = cls.run_ezstream(mount.int)
-            PIDMap.add(mount.int, ezstream_pid)
-
-    @classmethod
-    def run_ezstream(cls, config_number: int) -> PID:
-        mount = Mount.from_int(config_number)
-        logging.info(f'Run EZSTREAM ({mount}) instance #{config_number}.')
+    def run_ezstream(cls, mount: Mount):
+        logging.info(f'Run EZSTREAM ({mount})')
+        XMLCreator.create(mount)
         command = f'/usr/bin/ezstream -v -c /ezstream/ezstream_{mount.value}.xml'
-        # result = subprocess.call(command, capture_output=True, shell=True)
         process = subprocess.Popen(command, shell=True)
-        # process.wait()
         logging.info(f'End.')
         return process
 
@@ -72,17 +43,20 @@ class Utils:
         for pid in ezstream_pids:
             logging.info(f'Sending signal {signal} to {pid} / {ezstream_pids}')
             try:
-                # os.kill(pid, signal.int)
                 subprocess.run(f'kill -s {signal.value.replace("SIG", "")} {pid}', shell=True)
             except Exception as exc:
                 logging.error(f'Error during sending signal {exc}')
 
     @classmethod
-    def __get_pids(cls, mount: Mount):
+    def __get_pids(cls, mount: Mount) -> list[int]:
         process_name = f'ezstream_{mount.value}'
         cmd = "ps aux | grep {}".format(process_name)
         output = subprocess.check_output(cmd, shell=True).decode()
-        pid_list = [int(line.split()[1]) for line in output.splitlines() if process_name in line]
+        pid_list = [
+            int(line.split()[1])
+            for line in output.splitlines()
+            if process_name in line
+        ]
         return pid_list
 
     @classmethod
@@ -99,11 +73,6 @@ class Server:
         @classmethod
         async def health_check(cls, request: web.Request) -> web.Response:
             return web.json_response({'is_alive': True})
-
-        @classmethod
-        async def create_and_run(cls, request: web.Request) -> web.Response:
-            Utils.craete_and_run()
-            return web.Response()
 
         @classmethod
         async def next(cls, request: web.Request) -> web.Response:
@@ -126,22 +95,23 @@ class Server:
             Utils.send_signal(mount, Utils.Singal.NEXT)
             return web.Response()
 
-    @classmethod
-    def create(cls):
-        Utils.craete_and_run()
+        @classmethod
+        async def create(cls, request: web.Request) -> web.Response:
+            mount = Mount(request.match_info.get('mount', Mount.main.value))
+            Utils.run_ezstream(mount)
+            return web.Response()
 
     @classmethod
     def start(cls):
         app = web.Application()
         app.add_routes([
             web.get('/health_check', cls.__Handlers.health_check),
-            web.get('/create_and_run', cls.__Handlers.create_and_run),
             web.get('/{mount}/next', cls.__Handlers.next),
             web.post('/{mount}/update', cls.__Handlers.update),
+            web.post('/{mount}/create', cls.__Handlers.create),
         ])
         web.run_app(app, host='0.0.0.0', port=8888)
 
 
 logging.basicConfig(level=logging.DEBUG)
-Server.create()
 Server.start()
