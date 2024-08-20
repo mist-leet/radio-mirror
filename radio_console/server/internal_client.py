@@ -4,7 +4,7 @@ from typing import List
 
 import requests
 from utils.log import Logger
-from console.player import Mount
+from console_old.player import Mount
 
 
 class InternalHttpClient:
@@ -22,7 +22,6 @@ class InternalHttpClient:
             if not match:
                 raise ValueError(f'Can\'t find TITLE in vclt: {response.text}')
             return match.group(1)
-
 
         @classmethod
         def build_url(cls, mount: Mount) -> str:

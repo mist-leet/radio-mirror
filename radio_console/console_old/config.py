@@ -45,13 +45,3 @@ class Mount(Enum):
     def __str__(self):
         return (f'Mount [{self.int}] - {self.name}. file: ezstream_{self.name}.xml')
 
-
-class Mode(Enum):
-    default = 'default'
-    album = 'album'
-
-
-@dataclass(frozen=True)
-class Config:
-    mode: Mode = field(default=Mode.default)
-

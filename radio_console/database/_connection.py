@@ -1,9 +1,9 @@
 import time
 import os
 import psycopg2
-from utils.base import classproperty
-from utils.log import Logger
-from utils.env import env_config
+from radio_console.utils import classproperty
+from radio_console.utils import Logger
+from radio_console.utils import env_config
 
 
 class DatabaseEngine:

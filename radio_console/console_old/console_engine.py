@@ -1,5 +1,5 @@
-from console.config import Config, Mode
-from console.metadata import MetaParser
+from console_old.config import Config, Mode
+from console_old.metadata import MetaParser
 from database.config_executor import ConfigExecutor
 
 

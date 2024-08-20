@@ -1,6 +1,6 @@
 from typing import Any
-from database.connection import cursor
-from database.models import TModel
+from ._connection import cursor
+from ._models import TModel
 
 
 class CRUD:
@@ -60,6 +60,14 @@ class CRUD:
             template_limit = f'\nLIMIT {amount}'
             return template_start + template_where + template_limit
 
+        @classmethod
+        def delete_template(cls, table: str, data: dict[str, Any]) -> str:
+            template_start = f'DELETE FROM "{table}"'
+            template_where = 'WHERE ' + ' AND '.join([
+                f'"{field_name}" = {value}' for field_name, value in data.items()
+            ])
+            return template_start + template_where
+
     @classmethod
     def find(cls, object: TModel) -> TModel | None:
         template = cls._Utils.find_template(object.table, object.to_dict(filter_none=True))
@@ -83,6 +91,14 @@ class CRUD:
         col_names = [desc[0] for desc in cursor.description]
         result = dict(zip(col_names, row))
         return object.from_dict(result)
+
+    @classmethod
+    def delete(cls, object: TModel) -> None:
+        if object.id is None:
+            raise ValueError(f'No "id" field found in {object}')
+        template = cls._Utils.delete_template(object.table, {'id': object.id})
+        cursor.execute(template)
+        return None
 
     @classmethod
     def create(cls, object: TModel) -> TModel:

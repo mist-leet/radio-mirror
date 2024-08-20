@@ -1,7 +1,7 @@
 from aiohttp import web
 import aiohttp_cors
-from console.console_engine import ConsoleEngine
-from console.player import Mount, PlayerMount
+from console_old.console_engine import ConsoleEngine
+from console_old.player import Mount, PlayerMount
 from server.internal_client import InternalHttpClient
 
 

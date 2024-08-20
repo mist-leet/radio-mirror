@@ -3,8 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from database.models import Track
 from database.functions import playlist_paths, build_track_info
-from console.console_engine import ConsoleEngine
-from console.config import Mount, Mode, Config
+from console_old.console_engine import ConsoleEngine
+from console_old.config import Mount, Mode, Config
 from utils.functions import find_cover, to_base64
 from utils.log import Logger
 
