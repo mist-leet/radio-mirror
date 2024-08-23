@@ -1,54 +1,63 @@
-drop table if exists artist cascade;
-create table if not exists artist
+DROP TABLE IF EXISTS artist CASCADE;
+CREATE TABLE IF NOT EXISTS artist
 (
-    id   serial primary key,
-    name text unique
+    id   SERIAL PRIMARY KEY,
+    name TEXT UNIQUE
 );
 
-drop table if exists album cascade;
-create table if not exists album
+DROP TABLE IF EXISTS album CASCADE;
+CREATE TABLE IF NOT EXISTS album
 (
-    id        serial primary key,
-    name      text,
-    year      int,
-    path      text,
-    artist_id int references artist (id)
+    id        SERIAL PRIMARY KEY,
+    name      TEXT,
+    year      INT,
+    path      TEXT,
+    artist_id INT REFERENCES artist (id)
 
 );
 
-drop table if exists genre cascade;
-create table if not exists genre
+DROP TABLE IF EXISTS genre CASCADE;
+CREATE TABLE IF NOT EXISTS genre
 (
-    id   serial primary key,
-    name text
+    id   SERIAL PRIMARY KEY,
+    name TEXT
 );
 
-drop table if exists vibe cascade;
-create table if not exists vibe
+DROP TABLE IF EXISTS vibe CASCADE;
+CREATE TABLE IF NOT EXISTS vibe
 (
-    id   serial primary key,
-    name text
+    id   SERIAL PRIMARY KEY,
+    name TEXT
 );
 
-drop table if exists track cascade;
-create table if not exists track
+DROP TABLE IF EXISTS track CASCADE;
+CREATE TABLE IF NOT EXISTS track
 (
-    id           serial primary key,
-    name         text,
-    track_number smallint,
-    artist_id    int references artist (id),
-    album_id     int references album (id),
-    genre_id     int references genre (id),
-    year         int,
-    comment      text,
-    rating       smallint,
-    filename     text
+    id           SERIAL PRIMARY KEY,
+    name         TEXT,
+    track_number SMALLINT,
+    artist_id    INT REFERENCES artist (id),
+    album_id     INT REFERENCES album (id),
+    duration     TEXT,
+    year         INT,
+    comment      TEXT,
+    rating       SMALLINT,
+    filename     TEXT
 );
 
-drop table if exists track_vibe cascade;
-create table if not exists track_vibe
+DROP TABLE IF EXISTS track_vibe CASCADE;
+CREATE TABLE IF NOT EXISTS track_vibe
 (
-    id       serial primary key,
-    track_id int references track (id),
-    vibe_id  int references vibe (id)
+    id       SERIAL PRIMARY KEY,
+    track_id INT REFERENCES track (id),
+    vibe_id  INT REFERENCES vibe (id)
 )
+
+INSERT INTO vibe (name)
+
+VALUES ('tech'),
+       ('ambient'),
+       ('sex'),
+       ('rus'),
+       ('back')
+;

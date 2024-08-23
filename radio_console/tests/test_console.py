@@ -67,7 +67,7 @@ def init_test_data():
                 year=2077,
                 comment='',
                 rating=1,
-                filename=f'{i}.mp3',
+                filename=f'track_{album.name}_{i}',
             ))
             test_data['tracks'].append(track)
             CRUD.create(TrackVibe(
@@ -90,6 +90,7 @@ class TestConsole(unittest.TestCase):
         for mount in (Mount.tech, Mount.ambient):
             config = Config(QueueMode.random, mount, queue_amount=1_000)
             queue = Console.get_queue(config)
+            print(queue)
 
 
 

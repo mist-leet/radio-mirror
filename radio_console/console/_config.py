@@ -15,3 +15,6 @@ class Config:
     queue_mode: QueueMode
     mount: Mount
     queue_amount: int = field(default=100)
+
+    def __repr__(self):
+        return f'{self.mount.name} - {self.queue_mode.name=} - {self.queue_amount}'

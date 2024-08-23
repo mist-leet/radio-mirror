@@ -110,6 +110,10 @@ class CRUD:
         return object.from_dict(result)
 
     @classmethod
+    def get_or_create(cls, object: TModel) -> TModel:
+        return cls.find(object) or cls.create(object)
+
+    @classmethod
     def list(cls, object: TModel, amount: int = 100) -> list[TModel]:
         template = cls._Utils.list_template(object.table, object.to_dict(filter_none=True), amount)
         cursor.execute(template)

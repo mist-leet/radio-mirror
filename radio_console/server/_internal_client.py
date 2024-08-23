@@ -1,13 +1,10 @@
 import re
 from enum import Enum
-from typing import List
-
 import requests
-from utils.log import Logger
-from console_old.player import Mount
+from radio_console.utils import Logger, Mount
 
 
-class InternalHttpClient:
+class InternalClient:
 
     class Icecast:
 
@@ -30,7 +27,7 @@ class InternalHttpClient:
                 mount=f'stream_{mount.value}'
             )
 
-    class API:
+    class EZStream:
 
         class Action(Enum):
             next = 'next'

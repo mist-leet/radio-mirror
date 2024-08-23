@@ -58,12 +58,6 @@ class Album(BaseModel):
 
 
 @dataclass(frozen=True)
-class Genre(BaseModel):
-    id: int | None = field(default=None)
-    name: str | None = field(default=None)
-
-
-@dataclass(frozen=True)
 class Vibe(BaseModel):
     id: int | None = field(default=None)
     name: str | None = field(default=None)
@@ -76,11 +70,11 @@ class Track(BaseModel):
     track_number: int | None = field(default=None)
     artist_id: int | None = field(default=None)
     album_id: int | None = field(default=None)
-    genre_id: int | None = field(default=None)
     year: int | None = field(default=None)
     comment: str | None = field(default=None)
     rating: int | None = field(default=None)
     filename: str | None = field(default=None)
+    duration: str | None = field(default=None)
 
 
 @dataclass(frozen=True)
@@ -90,4 +84,4 @@ class TrackVibe(BaseModel):
     vibe_id: int | None = field(default=None)
 
 
-TModel = Artist | Album | Genre | Vibe | Track | TrackVibe
+TModel = Artist | Album | Vibe | Track | TrackVibe
