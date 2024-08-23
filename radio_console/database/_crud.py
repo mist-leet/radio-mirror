@@ -4,7 +4,6 @@ from ._models import TModel
 
 
 class CRUD:
-
     class _Utils:
 
         @staticmethod

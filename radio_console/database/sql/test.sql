@@ -1,8 +1,10 @@
 INSERT INTO artist (name)
-VALUES ('Test Artist') returning id;
+VALUES ('Test Artist')
+RETURNING id;
 
 INSERT INTO album (name, path, artist_id)
-VALUES ('Test', '/www/qwe', 1) returning id;
+VALUES ('Test', '/www/qwe', 1)
+RETURNING id;
 
 INSERT INTO track (track_number, artist_id, album_id, genre_id, year, comment, rating, filename, name)
 VALUES (1, 1, 1, NULL, 2022, NULL, NULL, '1.mp3', '1'),

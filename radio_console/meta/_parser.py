@@ -7,10 +7,10 @@ from typing import Iterator
 from radio_console.utils import env_config
 from radio_console.database import CRUD, Artist, Album, Track, TrackVibe, Vibe
 
-__all__ = ('MetadataParser', )
+__all__ = ('MetadataParser',)
+
 
 class MetadataParser:
-
     source_path: str = env_config.get('SOURCE_PATH')
     meta_file_name = 'meta.json'
 
@@ -90,9 +90,9 @@ class SongDataProcessor:
     def _process_track_list(self):
         for row in self.track_list_info:
             if CRUD.find(Track(
-                artist_id=self.artist.id,
-                album_id=self.album.id,
-                name=row['name']
+                    artist_id=self.artist.id,
+                    album_id=self.album.id,
+                    name=row['name']
             )):
                 continue
             track = CRUD.create(Track(
@@ -108,4 +108,3 @@ class SongDataProcessor:
                 vibe_id=self.vibe.id,
             ))
             self.__log['track'] = self.__log.get('track', 0) + 1
-

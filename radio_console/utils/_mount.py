@@ -4,7 +4,6 @@ from enum import Enum
 
 
 class Mount(Enum):
-
     tech = 'tech'
     ambient = 'ambient'
     sex = 'sex'

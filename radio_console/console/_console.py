@@ -8,7 +8,6 @@ from ._config import Config, QueueMode
 
 @dataclass(frozen=True)
 class Console:
-
     config: Config
 
     @classmethod

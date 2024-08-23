@@ -17,7 +17,7 @@ TestDataBaseEngine.after_create(cursor)
 
 def init_test_data():
     test_data = {}
-    for model in (TrackVibe, Track,  Album, Artist, Vibe):
+    for model in (TrackVibe, Track, Album, Artist, Vibe):
         for row in CRUD.list(model(), 1_000):
             CRUD.delete(row)
     vibe_1 = CRUD.create(Vibe(name=Mount.tech.name))
@@ -80,7 +80,6 @@ def init_test_data():
 
 
 class TestConsole(unittest.TestCase):
-
     __test_data = {}
 
     def setUp(self):
@@ -91,7 +90,3 @@ class TestConsole(unittest.TestCase):
             config = Config(QueueMode.random, mount, queue_amount=1_000)
             queue = Console.get_queue(config)
             print(queue)
-
-
-
-
