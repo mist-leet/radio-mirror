@@ -3,7 +3,6 @@ from enum import Enum
 import requests
 from radio_console.utils import Logger, Mount
 
-
 class InternalClient:
 
     class Icecast:

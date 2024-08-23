@@ -1,5 +1,5 @@
-from utils.env import redefine_env
+from radio_console.utils import redefine_env
 # redefine_env('.local_env')
 redefine_env('.env')
-from server.app import RadioConsoleApi
+from radio_console.server import RadioConsoleApi
 RadioConsoleApi.start()

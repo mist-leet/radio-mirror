@@ -20,12 +20,15 @@ class MetadataParser:
         for meta_path in cls.__meta_files():
             with open(meta_path, 'r', encoding='utf-8') as file:
                 meta_data = json.load(file)
-                parsed = SongDataProcessor(
+                processor = SongDataProcessor(
                     vibe_info=meta_data['vibe'],
                     artist_info=meta_data['artist'],
                     album_info=meta_data['album'],
                     track_list_info=meta_data['track_list'],
-                ).run()
+                )
+                processor.run()
+                result_log[meta_path] = processor.log
+        return result_log
 
     @classmethod
     def __meta_files(cls) -> Iterator[str]:
@@ -53,16 +56,22 @@ class SongDataProcessor:
         if not self.vibe:
             raise KeyError(f'{self.vibe_info=} not found')
 
-    def run(self) -> SongDataProcessor:
+    @property
+    def log(self) -> dict:
+        return self.__log
+
+    def run(self):
         self._process_artist()
         self._process_album()
         self._process_track_list()
-        return self
 
     def _process_artist(self):
-        self.artist = CRUD.get_or_create(Artist(
+        self.artist = CRUD.find(Artist(
             name=self.artist_info['name']
         ))
+        if not self.artist:
+            self.__log['artist'] = 1
+            self.artist = CRUD.create(Artist(name=self.artist_info['name']))
 
     def _process_album(self):
         self.album = CRUD.find(Album(
@@ -70,6 +79,7 @@ class SongDataProcessor:
             artist_id=self.artist.id
         ))
         if not self.album:
+            self.__log['album'] = 1
             self.album = CRUD.create(Album(
                 name=self.album_info['name'],
                 year=self.album_info['year'],
@@ -97,4 +107,5 @@ class SongDataProcessor:
                 track_id=track.id,
                 vibe_id=self.vibe.id,
             ))
+            self.__log['track'] = self.__log.get('track', 0) + 1
 
