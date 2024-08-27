@@ -6,16 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
     <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Courier Prime' rel='stylesheet'>
     <!--    <link rel="icon" href="./favicon.ico" type="image/x-icon">-->
 </head>
 
 <body>
 
-<div><button id="play-button">Start</button></div>
-<div><button id="next-button">Next</button></div>
-<video controls="" autoplay="" name="media"><source src="http://0.0.0.0:8001/stream_tech" type="audio/mpeg"></video>
+<video controls name="media" id="audio">
+    <source src="http://0.0.0.0:8001/stream_tech" type="audio/mpeg">
+</video>
 
 <div class="main">
+
+    <div class="menu">
+        <div class="menu-row"><a href="/">tech </a></div>
+        <div class="menu-row"><a href="/">passion </a></div>
+        <div class="menu-row"><a href="/">sound scape </a></div>
+        <div class="menu-row"><a href="/">neoclassical </a></div>
+        <div class="menu-row"><a href="/">russian core </a></div>
+    </div>
+
+    <div class="menu-control">
+        <div class="menu-row" id="play-pause"><a>play</a></div>
+        <div class="menu-row" id="next-button"><a>next</a></div>
+    </div>
+
     <div class="cover-block">
         <img class="cover" src="img.png">
     </div>

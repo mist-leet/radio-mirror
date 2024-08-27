@@ -43,7 +43,8 @@ def get_music_info(folder_path):
 
 
 # path = r'/home/ilya/git/radio/source/1996 - Panorama 94-96'
-path = r'/home/ilya/git/radio/source/2006 - Сквозное (EP)'
+# path = r'/home/ilya/git/radio/source/2006 - Сквозное (EP)'
+path = r'/home/ilya/git/radio/source/Command D - Esc'
 meta = get_music_info(path)
 with open("meta.json", "w", encoding="utf-8") as file:
     json.dump(meta, file, indent=4, ensure_ascii=False)

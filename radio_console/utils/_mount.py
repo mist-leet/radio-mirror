@@ -20,6 +20,14 @@ class Mount(Enum):
             self.back: 5,
         }
 
+    @classmethod
+    def safe_init(cls, value: str | int | None) -> Mount | None:
+        if value is None:
+            return None
+        if isinstance(value, int):
+            return Mount.from_int(value)
+        return cls(value)
+
     @property
     def __int_rev_map(self) -> dict[int, Mount]:
         return {

@@ -1,10 +1,21 @@
-* {
+body {
     /*border: 0.01px solid black;*/
     /*background-color: pink;*/
+    background: #0A0A0A;
+}
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
+
+#audio {
+    display: none;
 }
 
 .is-active {
-    background: pink;
+    color: #9A9A9A;
+    border: 1px solid #9A9A9A;
 }
 
 .main {
@@ -12,10 +23,29 @@
     justify-content: flex-end;
 }
 
+.menu {
+    padding-right: 350px;
+}
+
+.menu-control {
+    padding-right: 150px;
+}
+
+.menu-row {
+    margin-top: 15px;
+    font-family: 'Courier Prime';
+    font-size: 22px;
+    text-decoration: underline;
+    color: white;
+}
+
 .cover {
 }
 
 .playlist-block {
+    font-family: 'Courier Prime';
+    font-size: 14px;
+    color: #3D3D3D;
 }
 
 .cover-block {
@@ -44,18 +74,21 @@
 
 /* track row */
 
-.track-row {
+.track-row{
     display: flex;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid #3D3D3D;
+}
+
+.track-row:not(:first-child) {
+    padding-top: 15px;
 }
 
 .track-info {
     display: flex;
     padding: 1px;
     width: 500px;
-      justify-content: space-between;
-
+    justify-content: space-between;
 }
 
 .artist-info-block, .track-info-block, .additional-info {

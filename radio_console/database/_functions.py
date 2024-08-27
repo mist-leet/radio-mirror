@@ -78,3 +78,7 @@ def playlist_paths(tracks: list[Track]) -> list[str]:
         col_names = [desc[0] for desc in cursor.description]
         result.append(dict(zip(col_names, row)))
     return [row['path'] for row in result]
+
+
+def cover_path(track: Track) -> str:
+    ...

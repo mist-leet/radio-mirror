@@ -1,15 +1,15 @@
 import os
 import base64
+from typing import Iterator
 
 
-def find_cover(path: str) -> list[str]:
+def find_cover(path: str) -> Iterator[str]:
     image_extensions = ('.png', '.jpg', '.jpeg')
-    image_files = []
     for root, dirs, files in os.walk(path):
         for file in files:
-            if file.lower().endswith(image_extensions):
-                image_files.append(os.path.join(root, file))
-    return image_files
+            if not file.lower().endswith(image_extensions):
+                continue
+            yield os.path.join(root, file)
 
 
 def to_base64(path: str) -> str:

@@ -1,6 +1,8 @@
 import time
 from dataclasses import dataclass, field
 from datetime import timedelta
+
+from database import Track
 from utils import Mount, Logger
 from console import Config, Console, QueueMode, Scheduler, Queue
 from ._internal_client import InternalClient
@@ -38,6 +40,7 @@ def update_one(config: Config):
 @dataclass
 class QueueState:
     _configuration: dict[Mount, Queue] = field(default_factory=dict, init=False)
+    _track_buffer: dict[Mount, Track] = field(default_factory=dict, init=False)
 
     def update(self, mount: Mount, queue: Queue):
         self._configuration[mount] = queue
@@ -59,7 +62,18 @@ class QueueState:
         track = next(filter(lambda track: track.filename == track_file_name, queue.tracks), None)
         if track is None:
             raise KeyError(f'Не найден {track_file_name=} в очереди {mount}, {queue=}')
+        self._update_current_track(mount, track)
         return Console.track_data(track)
+
+    def cover_path(self, mount: Mount) -> str:
+        return Console.cover(self.current_track(mount))
+
+    def _update_current_track(self, mount: Mount, track: Track):
+        self._track_buffer[mount] = track
+
+    def current_track(self, mount: Mount) -> Track:
+        return self._track_buffer[mount]
+
 
 
 queue_state = QueueState()
