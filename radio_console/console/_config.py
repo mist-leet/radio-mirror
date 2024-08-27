@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from enum import StrEnum
 
-from radio_console.utils import Mount
+from utils import Mount
 
 
 class QueueMode(StrEnum):

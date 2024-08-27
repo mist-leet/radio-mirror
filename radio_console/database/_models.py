@@ -1,6 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, fields as dataclass_fields, asdict, field
-from radio_console.utils import classproperty
+from utils import classproperty
 
 
 @dataclass(frozen=True)
@@ -70,9 +70,6 @@ class Track(BaseModel):
     track_number: int | None = field(default=None)
     artist_id: int | None = field(default=None)
     album_id: int | None = field(default=None)
-    year: int | None = field(default=None)
-    comment: str | None = field(default=None)
-    rating: int | None = field(default=None)
     filename: str | None = field(default=None)
     duration: str | None = field(default=None)
 

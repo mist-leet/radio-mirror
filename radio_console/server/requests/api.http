@@ -1,0 +1,18 @@
+GET http://{{api_host}}:{{api_port}}/update
+
+####
+
+GET http://{{api_host}}:{{api_port}}/start
+
+
+###
+
+GET http://{{api_host}}:{{api_port}}/{{mount_tech}}/queue
+###
+
+GET http://{{api_host}}:{{api_port}}/{{mount_tech}}/track
+
+###
+
+GET http://{{api_host}}:{{api_port}}/{{mount_tech}}/track
+

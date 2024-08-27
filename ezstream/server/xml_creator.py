@@ -49,4 +49,8 @@ class XMLCreator:
             <filename>/ezstream/playlist_{mount.value}.txt</filename>
         </intake>
     </intakes>
-</ezstream>"""
+    <metadata>
+        <format_str>@T@</format_str>
+    </metadata>
+</ezstream>
+"""

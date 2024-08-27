@@ -1,9 +1,9 @@
 import time
 import os
 import psycopg2
-from radio_console.utils import classproperty
-from radio_console.utils import Logger
-from radio_console.utils import env_config
+from utils import classproperty
+from utils import Logger
+from utils import env_config
 
 
 class DatabaseEngine:
@@ -70,7 +70,7 @@ class DatabaseEngine:
 
     @classproperty
     def _table_list(self) -> list[str]:
-        return ['artist', 'album', 'genre', 'vibe', 'track', 'track_vibe']
+        return ['artist', 'album', 'vibe', 'track', 'track_vibe']
 
     @classproperty
     def _init_database_template(self) -> str:

@@ -1,7 +1,7 @@
 import re
 from enum import Enum
 import requests
-from radio_console.utils import Logger, Mount
+from utils import Logger, Mount
 
 
 class InternalClient:
@@ -14,7 +14,8 @@ class InternalClient:
             url = cls.build_url(mount)
             Logger.info(f'[GET] {url=}')
             response = requests.get(url)
-            match = re.search(r'TITLE=(.+)', response.text)
+            Logger.info(f'got vclt: {response.text=}')
+            match = re.search(r'source\/.+\/(.+\.mp3)', response.text)
             if not match:
                 raise ValueError(f'Can\'t find TITLE in vclt: {response.text}')
             return match.group(1)
@@ -31,6 +32,7 @@ class InternalClient:
         class Action(Enum):
             next = 'next'
             update = 'update'
+            create = 'create'
 
         url = 'http://ezstream:8888'
 
@@ -39,6 +41,17 @@ class InternalClient:
             url = cls.build_url(mount, cls.Action.next)
             Logger.info(f'[GET] {url=}')
             requests.get(url)
+            return True
+
+        @classmethod
+        def create(cls, mount: Mount) -> bool:
+            url = cls.build_url(mount, cls.Action.create)
+            Logger.info(f'[GET] {url=}')
+            response = requests.get(url)
+            try:
+                Logger.info(f'Response: {response.json()}')
+            except Exception:
+                Logger.info(response.text)
             return True
 
         @classmethod

@@ -1,0 +1,3 @@
+###
+
+GET http://{{icecast_host}}:{{tech_port}}/{{stream_tech}}.vclt

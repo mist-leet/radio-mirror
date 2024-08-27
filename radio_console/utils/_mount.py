@@ -12,10 +12,12 @@ class Mount(Enum):
 
     @property
     def __int_map(self) -> dict[Mount, int]:
-        cls = type(self)
         return {
-            cls(key): value
-            for value, key in enumerate(cls.__members__)
+            self.tech: 1,
+            self.ambient: 2,
+            self.sex: 3,
+            self.rus: 4,
+            self.back: 5,
         }
 
     @property

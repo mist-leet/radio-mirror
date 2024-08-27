@@ -16,12 +16,6 @@ CREATE TABLE IF NOT EXISTS album
 
 );
 
-DROP TABLE IF EXISTS genre CASCADE;
-CREATE TABLE IF NOT EXISTS genre
-(
-    id   SERIAL PRIMARY KEY,
-    name TEXT
-);
 
 DROP TABLE IF EXISTS vibe CASCADE;
 CREATE TABLE IF NOT EXISTS vibe
@@ -39,9 +33,6 @@ CREATE TABLE IF NOT EXISTS track
     artist_id    INT REFERENCES artist (id),
     album_id     INT REFERENCES album (id),
     duration     TEXT,
-    year         INT,
-    comment      TEXT,
-    rating       SMALLINT,
     filename     TEXT
 );
 
@@ -51,7 +42,7 @@ CREATE TABLE IF NOT EXISTS track_vibe
     id       SERIAL PRIMARY KEY,
     track_id INT REFERENCES track (id),
     vibe_id  INT REFERENCES vibe (id)
-)
+);
 
 INSERT INTO vibe (name)
 

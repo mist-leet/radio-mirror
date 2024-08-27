@@ -1,8 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass
+from functools import lru_cache
 
-from radio_console.database import Track
-from radio_console.database import get_queue_random, playlist_paths
+from database import Track, CRUD, build_track_info
+from database import get_queue_random, playlist_paths
 from ._config import Config, QueueMode
 
 
@@ -13,6 +14,27 @@ class Console:
     @classmethod
     def get_queue(cls, config: Config) -> Queue:
         return cls(config=config).__process_queue()
+
+    @classmethod
+    @lru_cache(maxsize=10)
+    def track_data(cls, track: Track) -> dict:
+        result = build_track_info(track.id, track.album_id)
+        return {
+            'album': {
+                'name': result[0]['album_name'],
+                'year': result[0]['album_year'],
+            },
+            'artist': {
+                'name': result[0]['artist_name'],
+            },
+            'track_list': [{
+                'id': track['id'],
+                'name': track['name'],
+                'track_number': track['track_number'],
+                'duration': track['duration'],
+                'is_active': track['is_active'],
+            } for track in result]
+        }
 
     def __process_queue(self) -> Queue:
         if self.config.queue_mode == QueueMode.random:

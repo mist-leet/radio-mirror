@@ -21,22 +21,22 @@
 
     <listen-socket>
         <port>8001</port>
-        <shoutcast-mount>/stream_main</shoutcast-mount>
+        <shoutcast-mount>/stream_tech</shoutcast-mount>
     </listen-socket>
     <listen-socket>
         <port>8002</port>
-        <shoutcast-mount>/stream_jazz</shoutcast-mount>
+        <shoutcast-mount>/stream_ambient</shoutcast-mount>
     </listen-socket>
 
     <mount>
-        <mount-name>/stream_main</mount-name>
+        <mount-name>/stream_tech</mount-name>
         <username>source</username>
         <password>admin</password>
         <charset>UTF-8</charset>
     </mount>
 
     <mount>
-        <mount-name>/stream_jazz</mount-name>
+        <mount-name>/stream_ambient</mount-name>
         <username>source</username>
         <password>admin</password>
         <charset>UTF-8</charset>

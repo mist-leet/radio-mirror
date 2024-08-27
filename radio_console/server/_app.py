@@ -1,9 +1,10 @@
 from aiohttp import web
 import aiohttp_cors
 
+from utils import Logger, Mount
 from ._entrypoint import queue_state, EntryPoint
 from ._internal_client import InternalClient
-from radio_console.meta import MetadataParser
+from meta import MetadataParser
 
 
 class RadioConsoleApi:
@@ -19,8 +20,13 @@ class RadioConsoleApi:
             return web.json_response(log)
 
         @classmethod
-        async def queue_info(cls, request: web.Request) -> web.Response:
+        async def queue(cls, request: web.Request) -> web.Response:
             return web.json_response(queue_state.build_queue_info())
+
+        @classmethod
+        async def track(cls, request: web.Request) -> web.Response:
+            mount = Mount(request.match_info.get('mount'))
+            return web.json_response(queue_state.build_track_info(mount))
 
         @classmethod
         async def start(cls, request: web.Request) -> web.Response:
@@ -48,6 +54,9 @@ class RadioConsoleApi:
             web.get('/health_check', cls.External.health_check),
             web.get('/update', cls.External.update),
             web.get('/start', cls.External.start),
+
+            web.get('/{mount}/queue', cls.External.queue),
+            web.get('/{mount}/track', cls.External.track),
         ])
         cors = aiohttp_cors.setup(app, defaults={
             "*": aiohttp_cors.ResourceOptions(

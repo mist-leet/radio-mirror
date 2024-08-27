@@ -4,8 +4,8 @@ import os
 from dataclasses import dataclass, field
 from typing import Iterator
 
-from radio_console.utils import env_config
-from radio_console.database import CRUD, Artist, Album, Track, TrackVibe, Vibe
+from utils import env_config
+from database import CRUD, Artist, Album, Track, TrackVibe, Vibe
 
 __all__ = ('MetadataParser',)
 
@@ -21,7 +21,7 @@ class MetadataParser:
             with open(meta_path, 'r', encoding='utf-8') as file:
                 meta_data = json.load(file)
                 processor = SongDataProcessor(
-                    vibe_info=meta_data['vibe'],
+                    vibe_info=meta_data['mount'],
                     artist_info=meta_data['artist'],
                     album_info=meta_data['album'],
                     track_list_info=meta_data['track_list'],
@@ -54,7 +54,7 @@ class SongDataProcessor:
     def __post_init__(self):
         self.vibe = CRUD.find(Vibe(name=self.vibe_info))
         if not self.vibe:
-            raise KeyError(f'{self.vibe_info=} not found')
+            self.vibe = CRUD.create(Vibe(name=self.vibe_info))
 
     @property
     def log(self) -> dict:
@@ -82,7 +82,7 @@ class SongDataProcessor:
             self.__log['album'] = 1
             self.album = CRUD.create(Album(
                 name=self.album_info['name'],
-                year=self.album_info['year'],
+                year=self.safe_int(self.album_info['year']),
                 path=self.album_info['path'],
                 artist_id=self.artist.id,
             ))
@@ -97,10 +97,10 @@ class SongDataProcessor:
                 continue
             track = CRUD.create(Track(
                 name=row['name'],
-                track_number=row['track_number'],
+                track_number=self.safe_int(row['track_number']),
                 artist_id=self.artist.id,
                 album_id=self.album.id,
-                year=self.album_info['year'],
+                duration=row['duration'],
                 filename=row['filename'],
             ))
             CRUD.create(TrackVibe(
@@ -108,3 +108,12 @@ class SongDataProcessor:
                 vibe_id=self.vibe.id,
             ))
             self.__log['track'] = self.__log.get('track', 0) + 1
+
+    @staticmethod
+    def safe_int(value: int | str | None) -> int | None:
+        if value is None:
+            return None
+        try:
+            return int(value)
+        except ValueError:
+            return None

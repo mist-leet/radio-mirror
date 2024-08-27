@@ -1,0 +1,74 @@
+* {
+    /*border: 0.01px solid black;*/
+    /*background-color: pink;*/
+}
+
+.is-active {
+    background: pink;
+}
+
+.main {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cover {
+}
+
+.playlist-block {
+}
+
+.cover-block {
+    margin-bottom: 50%;
+    max-width: 500px;
+    max-height: 500px;
+    padding-right: 50px;
+}
+
+.track-cover {
+    width: 75px;
+    height: 75px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+}
+
+/* playlist block */
+
+.playlist-block {
+    display: flex;
+    flex-direction: column;
+}
+
+/* track row */
+
+.track-row {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.track-info {
+    display: flex;
+    padding: 1px;
+    width: 500px;
+      justify-content: space-between;
+
+}
+
+.artist-info-block, .track-info-block, .additional-info {
+    padding-left: 5px;
+    min-height: 75px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.additional-info {
+    padding-right: 5px;
+}

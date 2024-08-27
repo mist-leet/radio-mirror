@@ -1,35 +1,39 @@
 from __future__ import annotations
+
 from enum import Enum
 
 
 class Mount(Enum):
-    main = 'main'
-    jazz = 'jazz'
+    tech = 'tech'
     ambient = 'ambient'
+    sex = 'sex'
+    rus = 'rus'
+    back = 'back'
 
-    @classmethod
-    def __int_map(cls) -> dict[Mount, int]:
+    @property
+    def __int_map(self) -> dict[Mount, int]:
         return {
-            cls.main: 1,
-            cls.jazz: 2,
-            cls.ambient: 3
+            Mount.tech: 1,
+            Mount.ambient: 2,
+            Mount.sex: 3,
+            Mount.rus: 4,
+            Mount.back: 5,
         }
 
-    @classmethod
-    def __int_rev_map(cls) -> dict[int, Mount]:
+    @property
+    def __int_rev_map(self) -> dict[int, Mount]:
         return {
-            1: cls.main,
-            2: cls.jazz,
-            3: cls.ambient,
+            value: key
+            for key, value in self.__class__.__int_map.items()
         }
 
     @classmethod
     def from_int(cls, value: int) -> Mount:
-        return cls.__int_rev_map().get(value)
+        return cls.__int_rev_map.get(value)
 
     @property
     def int(self) -> int:
-        return self.__int_map().get(self)
+        return self.__int_map.get(self)
 
     @property
     def playlist_name(self):

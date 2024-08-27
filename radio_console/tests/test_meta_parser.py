@@ -2,11 +2,11 @@ import json
 import os
 import unittest
 
-from radio_console.console import Config, QueueMode, Console
-from radio_console.database import DatabaseEngine
-from radio_console.database import Artist, Album, Track, TrackVibe, Vibe, CRUD
-from radio_console.utils import Mount
-from radio_console.meta._parser import SongDataProcessor
+from console import Config, QueueMode, Console
+from database import DatabaseEngine
+from database import Artist, Album, Track, TrackVibe, Vibe, CRUD
+from utils import Mount
+from meta._parser import SongDataProcessor
 
 
 class TestDataBaseEngine(DatabaseEngine):

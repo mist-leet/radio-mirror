@@ -4,7 +4,7 @@ ARG USER_UID=1000
 ARG USER_GID=1000
 
 COPY ezstream.xml /ezstream/ezstream.xml
-#COPY playlist_main.txt /ezstream/playlist_main.txt
+
 COPY server /server
 COPY requirements.txt /
 

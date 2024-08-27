@@ -7,18 +7,15 @@ def get_queue_random(mount_name: str, amount: int = 100) -> list[Track]:
     if not mount_name:
         raise KeyError(f'Invalid {mount_name=}')
     vibe_id = CRUD.find(Vibe(name=mount_name)).id
-    template = f"""
+    template = """
         SELECT 
             t.id as id, 
             t.name as name, 
             t.track_number as track_number, 
             t.artist_id as artist_id, 
             t.album_id as album_id, 
-            t.genre_id as genre_id, 
-            t.year as year, 
-            t.comment as comment, 
-            t.rating as rating, 
-            t.filename as filename
+            t.filename as filename, 
+            t.duration as duration
         FROM track_vibe tv
         LEFT JOIN track t ON t.id = tv.track_id
         WHERE tv.vibe_id = %s
@@ -32,6 +29,36 @@ def get_queue_random(mount_name: str, amount: int = 100) -> list[Track]:
         col_names = [desc[0] for desc in cursor.description]
         result.append(dict(zip(col_names, row)))
     return [Track.from_dict(row) for row in result]
+
+
+def build_track_info(track_id: int, album_id: int) -> list[dict]:
+    template = """
+    SELECT
+        track.id as id,
+        track.name as name,
+        track.track_number as track_number,
+        track.duration as duration,
+        album.name as album_name,
+        album.year as album_year,
+        artist.name as artist_name,
+        CASE
+            WHEN track.id = %s THEN TRUE
+        ELSE FALSE
+        END as is_active
+    FROM track
+    LEFT JOIN album ON track.album_id = album.id
+    LEFT JOIN artist ON album.artist_id = artist.id
+    WHERE
+        track.album_id = %s
+    ORDER BY track.track_number;
+    """
+    cursor.execute(template, (track_id, album_id))
+    rows = cursor.fetchall()
+    result = []
+    for row in rows:
+        col_names = [desc[0] for desc in cursor.description]
+        result.append(dict(zip(col_names, row)))
+    return result
 
 
 def playlist_paths(tracks: list[Track]) -> list[str]:
