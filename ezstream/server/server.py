@@ -67,13 +67,15 @@ class Utils:
 
     @classmethod
     def __get_pids(cls, mount: Mount) -> list[int]:
-        process_name = f'ezstream_{mount.value}'
+        process_name = f'"[e]zstream_{mount.value}"'
         cmd = "ps aux | grep {}".format(process_name)
         output = subprocess.check_output(cmd, shell=True).decode()
+        Logger.info(f'{cmd=}')
+        Logger.info(f'{output.splitlines()=}')
         pid_list = [
             int(line.split()[1])
             for line in output.splitlines()
-            if process_name in line
+            if f'ezstream_{mount.value}' in line
         ]
         return pid_list
 

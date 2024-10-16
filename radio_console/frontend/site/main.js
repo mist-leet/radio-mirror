@@ -1,27 +1,36 @@
 function init() {
 
+    function setUpMount() {
+        let regexp = RegExp('\/(.+)$')
+        mount = regexp.exec(window.location.href)[0]
+        player = document.getElementById('audio')
+        player.src = `http://0.0.0.0:8001/stream_${mount}`
+    }
+
     function initPLayer() {
         const audio = document.getElementById('audio');
         const playPause = document.getElementById('play-pause');
 
         playPause.addEventListener('click', () => {
             if (audio.paused) {
+                console.log('play')
                 audio.play();
                 playPause.classList.remove('play');
                 playPause.classList.add('pause');
                 playPause.textContent = 'Pause';
             } else {
+                console.log('pause')
                 audio.pause();
                 playPause.classList.remove('pause');
                 playPause.classList.add('play');
-                playPause.textContent = 'Play';
+                playPause.textContent = 'Play ';
             }
         });
     }
 
     function initNextButton() {
         document.getElementById('next-button').addEventListener('click', function () {
-            fetch('http://0.0.0.0:8888/tech/next').then((response) => console.log(response))
+            fetch('http://0.0.0.0:8080/tech/next').then((response) => console.log(response))
         })
     }
 
@@ -51,7 +60,7 @@ function init() {
                 .then(blob => {
                     const imageUrl = URL.createObjectURL(blob);
                     currentImageURL = imageUrl
-                    Array.from(document.getElementsByClassName('cover')).forEach(function (item) {
+                    Array.from(document.getElementsByClassName('cover')).forEach((item) => {
                         item.src = imageUrl;
                         item.width = 500; // Optional: Set width to 500
                         item.height = 500; // Optional: Set height to 500
@@ -127,4 +136,5 @@ function init() {
 
 let currentImageURL = ''
 let lastIsActiveTrackName = ''
+let mount = ''
 init()

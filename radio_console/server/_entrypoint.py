@@ -10,8 +10,8 @@ from ._internal_client import InternalClient
 
 class EntryPoint:
     configuration = {
-        Config(QueueMode.random, Mount.tech, queue_amount=10),
-        Config(QueueMode.random, Mount.ambient, queue_amount=10),
+        Config(QueueMode.random, Mount.tech, queue_amount=100),
+        # Config(QueueMode.random, Mount.ambient, queue_amount=10),
     }
 
     @classmethod
@@ -20,7 +20,7 @@ class EntryPoint:
         for config in cls.configuration:
             InternalClient.EZStream.create(config.mount)
             update_one(config)
-            time.sleep(5)
+            time.sleep(2)
 
 
 def update_one(config: Config):
@@ -31,10 +31,10 @@ def update_one(config: Config):
     InternalClient.EZStream.update(mount, track_list)
     next_update_delay = timedelta(seconds=queue.total_duration)
     queue_state.update(mount, queue)
-    Scheduler.create(execute_after=next_update_delay,
-                     function=update_one,
-                     args=(config,),
-                     description=f'Scheduler ({mount.name}) for queue {queue.amount}, {queue.total_duration=}')
+    # Scheduler.create(execute_after=next_update_delay,
+    #                  function=update_one,
+    #                  args=(config,),
+    #                  description=f'Scheduler ({mount.name}) for queue {queue.amount}, {queue.total_duration=}')
 
 
 @dataclass
@@ -58,7 +58,6 @@ class QueueState:
     def build_track_info(self, mount: Mount) -> dict:
         queue = self._configuration[mount]
         track_file_name = InternalClient.Icecast.track(mount)
-        Logger.info(f'find track: "{track_file_name=}"')
         track = next(filter(lambda track: track.filename == track_file_name, queue.tracks), None)
         if track is None:
             raise KeyError(f'Не найден {track_file_name=} в очереди {mount}, {queue=}')
@@ -75,5 +74,5 @@ class QueueState:
         return self._track_buffer[mount]
 
 
-
 queue_state = QueueState()
+EntryPoint.start()

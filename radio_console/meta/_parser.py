@@ -90,9 +90,9 @@ class SongDataProcessor:
     def _process_track_list(self):
         for row in self.track_list_info:
             if CRUD.find(Track(
-                    artist_id=self.artist.id,
-                    album_id=self.album.id,
-                    name=row['name']
+                artist_id=self.artist.id,
+                album_id=self.album.id,
+                name=row['name']
             )):
                 continue
             track = CRUD.create(Track(

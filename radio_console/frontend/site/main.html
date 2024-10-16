@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/static/main.css">
     <link href='https://fonts.googleapis.com/css?family=Courier Prime' rel='stylesheet'>
     <!--    <link rel="icon" href="./favicon.ico" type="image/x-icon">-->
 </head>
@@ -13,17 +13,16 @@
 <body>
 
 <video controls name="media" id="audio">
-    <source src="http://0.0.0.0:8001/stream_tech" type="audio/mpeg">
+    <source id="audio-source" src="http://0.0.0.0:8001/stream" type="audio/mpeg">
 </video>
 
 <div class="main">
-
     <div class="menu">
-        <div class="menu-row"><a href="/">tech </a></div>
-        <div class="menu-row"><a href="/">passion </a></div>
-        <div class="menu-row"><a href="/">sound scape </a></div>
-        <div class="menu-row"><a href="/">neoclassical </a></div>
-        <div class="menu-row"><a href="/">russian core </a></div>
+        <div class="menu-row"><a href="/tech">tech </a></div>
+        <div class="menu-row"><a href="/sex">passion </a></div>
+        <div class="menu-row"><a href="/ambient">sound scape </a></div>
+        <div class="menu-row"><a href="/class">neoclassical </a></div>
+        <div class="menu-row"><a href="/rus">russian core </a></div>
     </div>
 
     <div class="menu-control">
@@ -82,5 +81,5 @@
     </div>
 </div>
 </body>
-<script src="main.js"></script>
+<script src="/static/main.js"></script>
 </html>

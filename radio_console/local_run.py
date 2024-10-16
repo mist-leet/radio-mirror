@@ -12,4 +12,4 @@ from utils import *
 
 # MetadataParser.run()
 
-EntryPoint.start()
+RadioConsoleApi.start()

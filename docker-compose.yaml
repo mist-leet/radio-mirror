@@ -16,6 +16,8 @@ services:
       - "8080:8080"
     depends_on:
       - postgres
+      - ezstream
+      - icecast
     volumes:
       - ./source:/source
   ezstream:
@@ -29,7 +31,6 @@ services:
     volumes:
        - ./source:/source
     depends_on:
-      - api
       - icecast
   icecast:
     build:
@@ -42,5 +43,3 @@ services:
     volumes:
       - ./icecast/icecast.xml:/etc/icecast2/icecast.xml
       - ./icecast/logs:/var/log/icecast2 WTF?
-    depends_on:
-      - api

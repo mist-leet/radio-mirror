@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 from aiohttp import web
@@ -11,6 +12,7 @@ from meta import MetadataParser
 
 
 class RadioConsoleApi:
+    __static_path = r'/radio_console/frontend/site'
 
     class Frontend:
 
@@ -30,6 +32,12 @@ class RadioConsoleApi:
         async def update(cls, request: web.Request) -> web.Response:
             log = MetadataParser.run()
             return web.json_response(log)
+
+        @classmethod
+        async def next(cls, request: web.Request) -> web.Response:
+            mount = Mount(request.match_info.get('mount'))
+            InternalClient.EZStream.next(mount)
+            return web.json_response()
 
         @classmethod
         async def queue(cls, request: web.Request) -> web.Response:
@@ -70,8 +78,8 @@ class RadioConsoleApi:
     def start(cls):
         app = web.Application()
         app.add_routes([
-            web.get('/home/{mount}', cls.Frontend.home),
-
+            web.get('/', cls.Frontend.home),
+            web.get('/home', cls.Frontend.home),
             web.get('/health_check', cls.External.health_check),
             web.get('/update', cls.External.update),
             web.get('/start', cls.External.start),
@@ -79,6 +87,12 @@ class RadioConsoleApi:
             web.get('/{mount}/queue', cls.External.queue),
             web.get('/{mount}/track', cls.External.track),
             web.get('/{mount}/cover', cls.External.cover),
+            web.get('/{mount}/next', cls.External.next),
+
+            web.static('/static/', cls.__static_path)
+        ] + [
+            web.get(f'/{mount}', cls.Frontend.home)
+            for mount in Mount
         ])
         cors = aiohttp_cors.setup(app, defaults={
             "*": aiohttp_cors.ResourceOptions(
