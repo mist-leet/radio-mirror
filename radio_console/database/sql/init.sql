@@ -12,16 +12,16 @@ CREATE TABLE IF NOT EXISTS album
     name      TEXT,
     year      INT,
     path      TEXT,
-    artist_id INT REFERENCES artist (id)
-
+    artist_id INT REFERENCES artist (id),
+    UNIQUE (name, artist_id)
 );
 
 
-DROP TABLE IF EXISTS vibe CASCADE;
-CREATE TABLE IF NOT EXISTS vibe
+DROP TABLE IF EXISTS mount CASCADE;
+CREATE TABLE IF NOT EXISTS mount
 (
     id   SERIAL PRIMARY KEY,
-    name TEXT
+    name TEXT UNIQUE
 );
 
 DROP TABLE IF EXISTS track CASCADE;
@@ -33,22 +33,17 @@ CREATE TABLE IF NOT EXISTS track
     artist_id    INT REFERENCES artist (id),
     album_id     INT REFERENCES album (id),
     duration     TEXT,
-    filename     TEXT
+    filename     TEXT,
+    UNIQUE (artist_id, album_id, filename)
 );
 
-DROP TABLE IF EXISTS track_vibe CASCADE;
-CREATE TABLE IF NOT EXISTS track_vibe
+
+DROP TABLE IF EXISTS track_mount CASCADE;
+CREATE TABLE IF NOT EXISTS track_mount
 (
-    id       SERIAL PRIMARY KEY,
-    track_id INT REFERENCES track (id),
-    vibe_id  INT REFERENCES vibe (id)
+    id   SERIAL PRIMARY KEY,
+    track_id  INT REFERENCES track (id),
+    mount_id  INT REFERENCES mount (id),
+    UNIQUE (track_id, mount_id)
 );
 
-INSERT INTO vibe (name)
-
-VALUES ('tech'),
-       ('ambient'),
-       ('sex'),
-       ('rus'),
-       ('back')
-;

@@ -2,10 +2,9 @@ import os.path
 from mount import Mount
 
 
-class XMLCreator:
+class EZStreamConfig:
 
-    mount: Mount
-    __base_path = r'/ezstream'
+    base_path = r'/ezstream'
 
     @classmethod
     def create(cls, mount: Mount):
@@ -13,8 +12,15 @@ class XMLCreator:
             file.write(cls.__content(mount))
 
     @classmethod
+    def write_playlist(cls, mount: Mount, data: list[str]):
+        path = os.path.join(mount.playlist_name)
+        with open(path, 'w', encoding='utf-8') as f:
+            for line in data:
+                f.write(f'{line}\n')
+
+    @classmethod
     def __filepath(cls, mount: Mount):
-        return os.path.join(cls.__base_path, f'ezstream_{mount.value}.xml')
+        return os.path.join(cls.base_path, f'ezstream_{mount.value}.xml')
 
     @staticmethod
     def __content(mount: Mount):

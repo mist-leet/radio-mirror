@@ -1,119 +1,125 @@
-from __future__ import annotations
-import json
-import os
-from dataclasses import dataclass, field
-from typing import Iterator
-
-from utils import env_config
-from database import CRUD, Artist, Album, Track, TrackVibe, Vibe
+from database import cursor, fetch_all, fetch_one, to_json
 
 __all__ = ('MetadataParser',)
 
+from utils import Mount
+
 
 class MetadataParser:
-    source_path: str = env_config.get('SOURCE_PATH')
-    meta_file_name = 'meta.json'
 
     @classmethod
-    def run(cls):
-        result_log = {}
-        for meta_path in cls.__meta_files():
-            with open(meta_path, 'r', encoding='utf-8') as file:
-                meta_data = json.load(file)
-                processor = SongDataProcessor(
-                    vibe_info=meta_data['mount'],
-                    artist_info=meta_data['artist'],
-                    album_info=meta_data['album'],
-                    track_list_info=meta_data['track_list'],
+    def run(cls, data: list[dict]):
+        cls.drop_all()
+        for row in data:
+            mount_id = Mount(row['mount']).int
+            artist_id = cls.insert_artist(
+                title=row['artist']['name']
+            )
+            album_id = cls.insert_album(
+                name=row['album']['name'],
+                path=row['album']['path'],
+                year=row['album']['year'],
+                artist_id=artist_id,
+            )
+            cls.insert_track(
+                track_data=row['track_list'],
+                artist_id=artist_id,
+                album_id=album_id,
+                mount_id=mount_id
+            )
+
+    @classmethod
+    def build_tree(cls):
+        template = """
+            SELECT jsonb_object_agg(artist_name, albums) AS result
+            FROM (
+                SELECT artist_name, jsonb_object_agg(album_name, tracks) AS albums
+                FROM (
+                    SELECT artist.name AS artist_name,
+                           album.name AS album_name,
+                           jsonb_agg(track.name) AS tracks
+                    FROM artist
+                    LEFT JOIN album ON artist.id = album.artist_id
+                    LEFT JOIN track ON album.id = track.album_id
+                    GROUP BY artist.name, album.name
+                    ORDER BY artist.name, album.name
+                ) AS album_tracks
+                GROUP BY artist_name
+            ) AS artist_albums;
+        """
+        return fetch_one(template)
+
+    @classmethod
+    def insert_artist(cls, title: str) -> int:
+        template = """
+            INSERT INTO artist (name)
+            VALUES (%s)
+            ON CONFLICT (name) DO UPDATE SET name=excluded.name
+            RETURNING id
+        """
+        return fetch_one(template, title)['id']
+
+    @classmethod
+    def insert_album(cls, name: str, year: str, path: str, artist_id: int) -> int:
+        template = """
+            INSERT INTO album (name, year, path, artist_id)
+            VALUES (%s, %s, %s, %s)
+            ON CONFLICT (name, artist_id) DO UPDATE SET name=excluded.name
+            RETURNING id;
+        """
+        return fetch_one(template, name, year, path, artist_id)['id']
+
+    @classmethod
+    def insert_track(cls, track_data: list[dict], artist_id: int, album_id: int, mount_id: int) -> int:
+        json_data = [{
+            'name': row['name'],
+            'track_number': row['track_number'],
+            'duration': row['duration'],
+            'filename': row['filename'],
+            'artist_id': artist_id,
+            'album_id': album_id,
+        } for row in track_data]
+        template = """
+            INSERT INTO track (name, track_number, artist_id, album_id, duration, filename)
+            SELECT *
+            FROM JSON_TO_RECORDSET(%s::json) AS data(
+                name TEXT,
+                track_number SMALLINT,
+                artist_id INT,
+                album_id INT,
+                duration TEXT,
+                filename TEXT
                 )
-                processor.run()
-                result_log[meta_path] = processor.log
-        return result_log
+            ON CONFLICT (artist_id, album_id, filename) DO UPDATE SET name=excluded.name
+            RETURNING id;
+        """
+        result = fetch_all(template, to_json(json_data))
+        json_data = [{
+            'track_id': row['id'],
+            'mount_id': mount_id,
+        } for row in result]
+        template = '''
+            INSERT INTO track_mount (track_id, mount_id)
+            SELECT *
+            FROM json_to_recordset(%s::json) as data(
+                track_id INT,
+                mount_id INT
+            )
+            ON CONFLICT (track_id, mount_id) 
+            DO NOTHING
+            RETURNING *
+        '''
+        fetch_one(template, to_json(json_data))
 
     @classmethod
-    def __meta_files(cls) -> Iterator[str]:
-        for root, dirs, files in os.walk(cls.source_path):
-            for file in files:
-                if file == cls.meta_file_name:
-                    yield os.path.join(root, file)
-
-
-@dataclass
-class SongDataProcessor:
-    vibe_info: str
-    artist_info: dict
-    album_info: dict
-    track_list_info: list[dict]
-
-    vibe: Vibe = field(default=None, init=False)
-    artist: Artist = field(default=None, init=False)
-    album: Album = field(default=None, init=False)
-    track_list: list[Track] = field(default=None, init=False)
-    __log: dict[str, int] = field(default_factory=dict, init=False)
-
-    def __post_init__(self):
-        self.vibe = CRUD.find(Vibe(name=self.vibe_info))
-        if not self.vibe:
-            self.vibe = CRUD.create(Vibe(name=self.vibe_info))
-
-    @property
-    def log(self) -> dict:
-        return self.__log
-
-    def run(self):
-        self._process_artist()
-        self._process_album()
-        self._process_track_list()
-
-    def _process_artist(self):
-        self.artist = CRUD.find(Artist(
-            name=self.artist_info['name']
-        ))
-        if not self.artist:
-            self.__log['artist'] = 1
-            self.artist = CRUD.create(Artist(name=self.artist_info['name']))
-
-    def _process_album(self):
-        self.album = CRUD.find(Album(
-            name=self.album_info['name'],
-            artist_id=self.artist.id
-        ))
-        if not self.album:
-            self.__log['album'] = 1
-            self.album = CRUD.create(Album(
-                name=self.album_info['name'],
-                year=self.safe_int(self.album_info['year']),
-                path=self.album_info['path'],
-                artist_id=self.artist.id,
-            ))
-
-    def _process_track_list(self):
-        for row in self.track_list_info:
-            if CRUD.find(Track(
-                artist_id=self.artist.id,
-                album_id=self.album.id,
-                name=row['name']
-            )):
-                continue
-            track = CRUD.create(Track(
-                name=row['name'],
-                track_number=self.safe_int(row['track_number']),
-                artist_id=self.artist.id,
-                album_id=self.album.id,
-                duration=row['duration'],
-                filename=row['filename'],
-            ))
-            CRUD.create(TrackVibe(
-                track_id=track.id,
-                vibe_id=self.vibe.id,
-            ))
-            self.__log['track'] = self.__log.get('track', 0) + 1
-
-    @staticmethod
-    def safe_int(value: int | str | None) -> int | None:
-        if value is None:
-            return None
-        try:
-            return int(value)
-        except ValueError:
-            return None
+    def drop_all(cls):
+        tables = (
+            'artist',
+            'album',
+            'track',
+        )
+        for table in tables:
+            template = f"""
+                TRUNCATE TABLE {table} RESTART IDENTITY CASCADE;
+            """
+            cursor.execute(template)

@@ -1,5 +1,8 @@
+import json
 import time
 import os
+from typing import Any
+
 import psycopg2
 from utils import classproperty
 from utils import Logger
@@ -32,6 +35,7 @@ class DatabaseEngine:
 
     @classmethod
     def after_create(cls, cursor):
+        cls._init_mounts()
         if not cls.__check_tables(cursor):
             cls._init_database(cursor)
 
@@ -54,6 +58,25 @@ class DatabaseEngine:
         return f'postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}'
 
     @classmethod
+    def _init_mounts(cls):
+        from utils import Mount
+        template = """
+            INSERT INTO mount (id, name)
+            SELECT *
+            FROM JSON_TO_RECORDSET(%s::json) AS data(
+                 id INT,
+                 name TEXT
+            )
+            ON CONFLICT (name) DO NOTHING
+            RETURNING *
+        """
+        data = [{
+            'id': mount.int,
+            'name': mount.name,
+        } for mount in Mount]
+        fetch_one(template, to_json(data))
+
+    @classmethod
     def _init_database(cls, cursor):
         cursor.execute(cls._init_database_template)
 
@@ -70,12 +93,43 @@ class DatabaseEngine:
 
     @classproperty
     def _table_list(self) -> list[str]:
-        return ['artist', 'album', 'vibe', 'track', 'track_vibe']
+        return ['artist', 'album', 'mount', 'track', 'track_mount']
 
     @classproperty
     def _init_database_template(self) -> str:
         with open(self._init_path, 'r', encoding='utf-8') as f:
             return f.read()
+
+
+def to_json(data: list | dict) -> str:
+    return json.dumps(data, ensure_ascii=False, default=str)
+
+
+def fetch_one(template: str, *args) -> dict[str, Any]:
+    try:
+        cursor.execute(template, args)
+        row = cursor.fetchone()
+    except Exception as exc:
+        Logger.error(f'Ошибка SQL-запроса:\n{template}\n{args}')
+        raise
+    col_names = [desc[0] for desc in cursor.description]
+    if not row:
+        return {}
+    return dict(zip(col_names, row))
+
+
+def fetch_all(template: str, *args) -> list[dict[str, Any]]:
+    try:
+        cursor.execute(template, args)
+        rows = cursor.fetchall()
+    except Exception as exc:
+        Logger.error(f'Ошибка SQL-запроса:\n{template}\n{args}')
+        raise
+    result = []
+    for row in rows:
+        col_names = [desc[0] for desc in cursor.description]
+        result.append(dict(zip(col_names, row)))
+    return result
 
 
 cursor = DatabaseEngine.create()

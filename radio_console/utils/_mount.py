@@ -36,6 +36,13 @@ class Mount(Enum):
         }
 
     @classmethod
+    def from_url(cls, url: str) -> Mount | None:
+        for mount in Mount:
+            if mount.value in url:
+                return mount
+        return None
+
+    @classmethod
     def from_int(cls, value: int) -> Mount:
         return cls.__int_rev_map.get(value)
 

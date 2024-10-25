@@ -18,7 +18,8 @@ class RadioConsoleApi:
 
         @classmethod
         async def home(cls, request: web.Request) -> web.Response:
-            mount = Mount.safe_init(request.match_info.get('mount'))
+            Logger.info(f'{request.raw_path=}')
+            mount = Mount.from_url(request.raw_path)
             content = render_html_template(mount)
             return web.Response(text=content, content_type='text/html')
 
@@ -91,7 +92,7 @@ class RadioConsoleApi:
 
             web.static('/static/', cls.__static_path)
         ] + [
-            web.get(f'/{mount}', cls.Frontend.home)
+            web.get(f'/{mount.value}', cls.Frontend.home)
             for mount in Mount
         ])
         cors = aiohttp_cors.setup(app, defaults={
@@ -104,5 +105,4 @@ class RadioConsoleApi:
 
         for route in list(app.router.routes()):
             cors.add(route)
-
         web.run_app(app, host='0.0.0.0', port=8080)

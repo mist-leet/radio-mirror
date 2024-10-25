@@ -2,7 +2,7 @@ function init() {
 
     function setUpMount() {
         let regexp = RegExp('\/(.+)$')
-        mount = regexp.exec(window.location.href)[0]
+        mount = regexp.exec(window.location.pathname)[1]
         player = document.getElementById('audio')
         player.src = `http://0.0.0.0:8001/stream_${mount}`
     }
@@ -30,13 +30,13 @@ function init() {
 
     function initNextButton() {
         document.getElementById('next-button').addEventListener('click', function () {
-            fetch('http://0.0.0.0:8080/tech/next').then((response) => console.log(response))
+            fetch(`http://0.0.0.0:8080/${mount}/next`).then((response) => console.log(response))
         })
     }
 
     function setUpMetadataUpdater() {
         function updateMetaData() {
-            fetch('http://0.0.0.0:8080/tech/track')
+            fetch(`http://0.0.0.0:8080/${mount}/track`)
                 .then((res) => {
                     if (!res.ok) {
                         throw new Error
@@ -50,7 +50,7 @@ function init() {
                 .catch((error) =>
                     console.error("Unable to fetch data:", error)
                 )
-            fetch('http://0.0.0.0:8080/tech/cover')
+            fetch(`http://0.0.0.0:8080/${mount}/cover`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -128,7 +128,7 @@ function init() {
 
         setInterval(updateMetaData, 5000);
     }
-
+    setUpMount()
     initPLayer()
     initNextButton()
     setUpMetadataUpdater()

@@ -1,23 +1,26 @@
-FROM debian:12-slim
-LABEL author="quick.es@gmail.com"
-LABEL description="yandex disk"
+FROM ubuntu:22.04
 
-ENV DATA="/data" \
-    INTERVAL="60" \
-    EXCLUDE="" \
-    USER="" \
-    PASSWORD="" \
-    token="/yandex/passwd" \
-    OPTIONS=""
-COPY entrypoint.sh /
-RUN apt update && apt install -y wget \
-    && echo "deb http://repo.yandex.ru/yandex-disk/deb/ stable main" | tee -a /etc/apt/sources.list.d/yandex.list > /dev/null \
-    && wget http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG -O- | apt-key add - \
-    && apt-get update \
-    && apt-get install -y yandex-disk \
-    && chmod +x /entrypoint.sh \
-    && useradd -ms /bin/bash user \
-    && mkdir /yandex && chmod 777 /yandex
 
-ENTRYPOINT [ "/entrypoint.sh" ]
-CMD [ "start" ]
+RUN apt-get update \
+    # Upgrade
+    && apt-get upgrade -y \
+    && apt-get dist-upgrade -y \
+    # Install dependencies
+    && apt-get install wget -y \
+    # Download & Install Yandex.Disk
+    && wget https://repo.yandex.ru/yandex-disk/yandex-disk_latest_amd64.deb \
+    && dpkg -i yandex-disk_latest_amd64.deb \
+    && apt-get install -f -y \
+    # Cleanup
+    && rm *.deb \
+    && apt-get purge -y \
+    && apt-get autoremove -y \
+    && apt-get autoclean -y \
+    && mkdir /home/yandex-disk-data \
+    && mkdir /root/Yandex.Disk
+
+COPY .config /root/.config
+
+#ENTRYPOINT ["tail", "-f", "/dev/null"]
+
+CMD ["yandex-disk", "start", "--no-daemon", "--dir=/root/Yandex.Disk"]
