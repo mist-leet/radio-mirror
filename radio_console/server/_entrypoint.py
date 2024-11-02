@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 from datetime import timedelta
 
 from database import Track
+from meta import MetadataParser
 from utils import Mount, Logger
 from console import Config, Console, QueueMode, Scheduler, Queue
 from ._internal_client import InternalClient
@@ -16,6 +17,7 @@ class EntryPoint:
 
     @classmethod
     def start(cls):
+        MetadataParser.run()
         Logger.info('Create EZSTREAMs')
         for config in cls.configuration:
             InternalClient.EZStream.create(config.mount)

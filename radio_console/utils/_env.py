@@ -13,5 +13,5 @@ def redefine_env(env: str) -> dict:
     return env_config
 
 
-# env_config = redefine_env('.env')
-env_config = redefine_env('.local_env')
+env_config = redefine_env('.env')
+# env_config = redefine_env('.local_env')

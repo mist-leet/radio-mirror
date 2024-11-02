@@ -16,7 +16,7 @@ class Signal(Enum):
 
 
 @dataclass(frozen=True)
-class EZStream:
+class EZStreamController:
     mount: Mount
 
     @staticmethod
@@ -33,6 +33,7 @@ class EZStream:
     def create_instance(self):
         EZStreamConfig.create(self.mount)
         command = f'/usr/bin/ezstream -v -c /ezstream/ezstream_{self.mount.value}.xml'
+        self._before_create()
         process = subprocess.Popen(command, shell=True)
         return process
 
@@ -49,6 +50,16 @@ class EZStream:
 
     def send_update(self):
         self.__send_signal(Signal.UPDATE)
+
+    def _before_create(self):
+        Logger.info(f'Before create: ')
+        playlist_path = f'/ezstream/playlist_{self.mount.value}.txt'
+        with open(playlist_path, 'r', encoding='utf-8') as file:
+            file_paths = file.readlines()
+        for file_path in file_paths:
+            Logger.info(f'\t Read: {file_path=}')
+            with open(file_path, 'b') as file:
+                file.read()
 
     @property
     def __pid(self) -> int:

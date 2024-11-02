@@ -4,52 +4,51 @@ services:
   yandex-disk:
     build: ./disk
     container_name: yandex-disk
-#    volumes:
-#      - /opt/yandex.disk/data:/root/Yandex.Disk
-#      - ./source
+    volumes:
+      - /root/Yandex.Disk:/root/Yandex.Disk
+    restart: always
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - "1337:5432"
+    env_file: .env
+  api:
+    build:
+      context: ./radio_console
+    env_file: .env
+    container_name: api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - ezstream
+      - icecast
+    volumes:
+      - ./source:/source
+      - /root/Yandex.Disk:/root/Yandex.Disk
 
-#    volumes:
-#      - ./yandex-disk:/mnt/yandex-disk
-#    restart: always
-#  postgres:
-#    image: postgres
-#    container_name: postgres
-#    ports:
-#      - "1337:5432"
-#    env_file: .env
-#  api:
-#    build:
-#      context: ./radio_console
-#    env_file: .env
-#    container_name: api
-#    ports:
-#      - "8080:8080"
-#    depends_on:
-#      - postgres
-#      - ezstream
-#      - icecast
-#    volumes:
-#      - ./source:/source
-#  ezstream:
-#    build:
-#      context: ./ezstream
-#    container_name: ezstream
-#    ports:
-#      - "8888:8888"
-#    env_file:
-#      - .env
-#    volumes:
-#       - ./source:/source
-#    depends_on:
-#      - icecast
-#  icecast:
-#    build:
-#      context: ./icecast
-#    container_name: icecast
-#    ports:
-#      - "8000:8000"
-#      - "8001:8001"
-#      - "8002:8002"
-#    volumes:
-#      - ./icecast/icecast.xml:/etc/icecast2/icecast.xml
-#      - ./icecast/logs:/var/log/icecast2 WTF?
+  ezstream:
+    build:
+      context: ./ezstream
+    container_name: ezstream
+    ports:
+      - "8888:8888"
+    env_file:
+      - .env
+    volumes:
+       - ./source:/source
+       - /root/Yandex.Disk:/root/Yandex.Disk
+    depends_on:
+      - icecast
+  icecast:
+    build:
+      context: ./icecast
+    container_name: icecast
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "8002:8002"
+    volumes:
+      - ./icecast/icecast.xml:/etc/icecast2/icecast.xml
+      - ./icecast/logs:/var/log/icecast2 WTF?

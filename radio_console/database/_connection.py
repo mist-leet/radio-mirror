@@ -4,9 +4,11 @@ import os
 from typing import Any
 
 import psycopg2
+
 from utils import classproperty
 from utils import Logger
 from utils import env_config
+from ._models import TModel
 
 
 class DatabaseEngine:
@@ -35,9 +37,8 @@ class DatabaseEngine:
 
     @classmethod
     def after_create(cls, cursor):
+        cls._init_database(cursor)
         cls._init_mounts()
-        if not cls.__check_tables(cursor):
-            cls._init_database(cursor)
 
     @classmethod
     def __create(cls):
@@ -105,20 +106,22 @@ def to_json(data: list | dict) -> str:
     return json.dumps(data, ensure_ascii=False, default=str)
 
 
-def fetch_one(template: str, *args) -> dict[str, Any]:
+def fetch_one(template: str, *args, cast_model: type[TModel] | None = None) -> dict[str, Any] | TModel:
     try:
         cursor.execute(template, args)
         row = cursor.fetchone()
     except Exception as exc:
-        Logger.error(f'Ошибка SQL-запроса:\n{template}\n{args}')
+        Logger.error(f'Ошибка SQL-запроса:\n{template}\n{args}\n{exc}')
         raise
     col_names = [desc[0] for desc in cursor.description]
     if not row:
         return {}
+    if cast_model is not None:
+        return cast_model(dict(zip(col_names, row)))
     return dict(zip(col_names, row))
 
 
-def fetch_all(template: str, *args) -> list[dict[str, Any]]:
+def fetch_all(template: str, *args, cast_model: type[TModel] | None = None) -> list[dict[str, Any]] | list[TModel]:
     try:
         cursor.execute(template, args)
         rows = cursor.fetchall()
@@ -129,6 +132,8 @@ def fetch_all(template: str, *args) -> list[dict[str, Any]]:
     for row in rows:
         col_names = [desc[0] for desc in cursor.description]
         result.append(dict(zip(col_names, row)))
+    if cast_model is not None:
+        return [cast_model(**row) for row in result]
     return result
 
 

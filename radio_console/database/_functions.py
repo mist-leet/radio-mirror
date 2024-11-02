@@ -1,34 +1,28 @@
-from ._connection import cursor
-from ._models import Track, Vibe
-from ._crud import CRUD
+from utils import Mount, env_config
+from ._connection import fetch_all, fetch_one
+from ._models import Track
 
 
-def get_queue_random(mount_name: str, amount: int = 100) -> list[Track]:
-    if not mount_name:
-        raise KeyError(f'Invalid {mount_name=}')
-    vibe_id = CRUD.find(Vibe(name=mount_name)).id
+def get_queue_random(mount: str | Mount, amount: int = 100) -> list[Track]:
+    mount = Mount.safe_init(mount)
+    if not mount:
+        raise KeyError(f'Invalid {mount=}')
     template = """
         SELECT 
-            t.id as id, 
-            t.name as name, 
-            t.track_number as track_number, 
-            t.artist_id as artist_id, 
-            t.album_id as album_id, 
-            t.filename as filename, 
-            t.duration as duration
-        FROM track_vibe tv
-        LEFT JOIN track t ON t.id = tv.track_id
-        WHERE tv.vibe_id = %s
+            track.id as id, 
+            track.name as name, 
+            track.track_number as track_number, 
+            track.artist_id as artist_id, 
+            track.album_id as album_id, 
+            track.filename as filename, 
+            track.duration as duration
+        FROM track_mount
+        LEFT JOIN track ON track.id = track_mount.track_id
+        WHERE track_mount.mount_id = %s
         ORDER BY random()
         LIMIT %s;
     """
-    cursor.execute(template, (vibe_id, amount))
-    rows = cursor.fetchall()
-    result = []
-    for row in rows:
-        col_names = [desc[0] for desc in cursor.description]
-        result.append(dict(zip(col_names, row)))
-    return [Track.from_dict(row) for row in result]
+    return fetch_all(template, mount.int, amount, cast_model=Track)
 
 
 def build_track_info(track_id: int, album_id: int) -> list[dict]:
@@ -52,13 +46,7 @@ def build_track_info(track_id: int, album_id: int) -> list[dict]:
         track.album_id = %s
     ORDER BY track.track_number;
     """
-    cursor.execute(template, (track_id, album_id))
-    rows = cursor.fetchall()
-    result = []
-    for row in rows:
-        col_names = [desc[0] for desc in cursor.description]
-        result.append(dict(zip(col_names, row)))
-    return result
+    return fetch_all(template, track_id, album_id)
 
 
 def playlist_paths(tracks: list[Track]) -> list[str]:
@@ -66,19 +54,26 @@ def playlist_paths(tracks: list[Track]) -> list[str]:
     if list(filter(lambda value: not value or not isinstance(value, int), track_ids)):
         raise ValueError(f'Передан список треков: {tracks}')
     template = f"""
-        SELECT CONCAT(A.path, '/', T.filename) as path
-        FROM track T
-        INNER JOIN album A ON A.id = T.album_id
-        WHERE T.id = ANY (%s::INTEGER[])
+        SELECT CONCAT(album.path, '/', track.filename) as path
+        FROM track 
+        INNER JOIN album ON album.id = track.album_id
+        WHERE track.id = ANY (%s::INTEGER[])
     """
-    cursor.execute(template, (track_ids,))
-    rows = cursor.fetchall()
-    result = []
-    for row in rows:
-        col_names = [desc[0] for desc in cursor.description]
-        result.append(dict(zip(col_names, row)))
-    return [row['path'] for row in result]
+    result = fetch_all(template, track_ids)
+    root_path = env_config.get('YANDEX_DISK_PATH')
+    return [
+        root_path.replace('__source__', row['path']).replace('\\', '/')
+        for row in result
+    ]
 
 
 def cover_path(track: Track) -> str:
-    ...
+    template = """
+        SELECT album.path as path
+        FROM track
+        LEFT JOIN album ON album.id = track.album_id = album.id
+        WHERE track.id = 1
+        LIMIT 1;
+    """
+    path = fetch_one(template, track.id)['path']
+    return env_config.get('YANDEX_DISK_PATH').replace('__source__', path).replace('\\', '/')

@@ -2,8 +2,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from functools import lru_cache
 
-from database import Track, CRUD, build_track_info, Album
-from database import get_queue_random, playlist_paths
+from database import Track, build_track_info
+from database import get_queue_random, playlist_paths, cover_path
 from utils import find_cover
 from ._config import Config, QueueMode
 
@@ -39,12 +39,11 @@ class Console:
 
     @classmethod
     def cover(cls, track: Track) -> str | None:
-        path = CRUD.find(Album(id=track.album_id)).path
-        cover_path = next(find_cover(path), None)
+        path = cover_path(track)
+        path = next(find_cover(path), None)
         if not cover_path:
             raise KeyError(f'No cover for {track=}')
-        return cover_path
-
+        return path
 
     def __process_queue(self) -> Queue:
         if self.config.queue_mode == QueueMode.random:

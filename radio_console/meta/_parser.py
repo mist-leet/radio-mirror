@@ -1,3 +1,6 @@
+import json
+import os.path
+
 from database import cursor, fetch_all, fetch_one, to_json
 
 __all__ = ('MetadataParser',)
@@ -8,8 +11,11 @@ from utils import Mount
 class MetadataParser:
 
     @classmethod
-    def run(cls, data: list[dict]):
+    def run(cls):
         cls.drop_all()
+        path = os.path.join(os.path.dirname(__file__), 'meta.json')
+        with open(path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
         for row in data:
             mount_id = Mount(row['mount']).int
             artist_id = cls.insert_artist(
@@ -117,6 +123,7 @@ class MetadataParser:
             'artist',
             'album',
             'track',
+            'track_mount',
         )
         for table in tables:
             template = f"""

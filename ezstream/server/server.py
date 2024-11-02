@@ -5,7 +5,7 @@ import logging
 from aiohttp import web
 from log import Logger
 from mount import Mount
-from .ezstream import EZStream
+from conrotller import EZStreamController
 
 
 class Server:
@@ -13,12 +13,12 @@ class Server:
 
         @classmethod
         async def health_check(cls, request: web.Request) -> web.Response:
-            return web.json_response({'is_alive': True, 'ezstream': EZStream.info()})
+            return web.json_response({'is_alive': True, 'ezstream': EZStreamController.info()})
 
         @classmethod
         async def next(cls, request: web.Request) -> web.Response:
             mount = Mount(request.match_info.get('mount'))
-            EZStream(mount).send_next()
+            EZStreamController(mount).send_next()
             return web.Response()
 
         @classmethod
@@ -31,13 +31,13 @@ class Server:
             if not isinstance(body, list) or not isinstance(body[0], str):
                 return web.Response(status=400, text=f'Invalid data, type={type(body)}, type[0]={type(body[0])}')
             Logger.info(f'Got {len(body)} tracks for update: {body[0][:30]}...')
-            EZStream(mount).update_instance(body)
+            EZStreamController(mount).update_instance(body)
             return web.Response()
 
         @classmethod
         async def create(cls, request: web.Request) -> web.Response:
             mount = Mount(request.match_info.get('mount'))
-            EZStream(mount).create_instance()
+            EZStreamController(mount).create_instance()
             return web.json_response({})
 
     @classmethod

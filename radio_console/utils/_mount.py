@@ -21,9 +21,11 @@ class Mount(Enum):
         }
 
     @classmethod
-    def safe_init(cls, value: str | int | None) -> Mount | None:
+    def safe_init(cls, value: str | int | Mount | None) -> Mount | None:
         if value is None:
             return None
+        if isinstance(value, Mount):
+            return value
         if isinstance(value, int):
             return Mount.from_int(value)
         return cls(value)
