@@ -33,7 +33,7 @@ class EZStreamController:
     def create_instance(self):
         EZStreamConfig.create(self.mount)
         command = f'/usr/bin/ezstream -v -c /ezstream/ezstream_{self.mount.value}.xml'
-        self._before_create()
+        # self._before_create()
         process = subprocess.Popen(command, shell=True)
         return process
 

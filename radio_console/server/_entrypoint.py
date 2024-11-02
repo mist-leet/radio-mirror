@@ -20,6 +20,9 @@ class EntryPoint:
         MetadataParser.run()
         Logger.info('Create EZSTREAMs')
         for config in cls.configuration:
+            queue = Console.get_queue(config)
+            track_list = queue.track_list
+            InternalClient.EZStream.update(config.mount, track_list)
             InternalClient.EZStream.create(config.mount)
             update_one(config)
             time.sleep(2)
@@ -45,6 +48,7 @@ class QueueState:
     _track_buffer: dict[Mount, Track] = field(default_factory=dict, init=False)
 
     def update(self, mount: Mount, queue: Queue):
+        Logger.info(f'Update init configuration: {mount}, {queue}')
         self._configuration[mount] = queue
 
     def build_queue_info(self) -> dict:

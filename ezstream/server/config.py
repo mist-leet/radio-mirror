@@ -13,7 +13,7 @@ class EZStreamConfig:
 
     @classmethod
     def write_playlist(cls, mount: Mount, data: list[str]):
-        path = os.path.join(mount.playlist_name)
+        path = os.path.join(f'/ezstream/{mount.playlist_name}')
         with open(path, 'w', encoding='utf-8') as f:
             for line in data:
                 f.write(f'{line}\n')

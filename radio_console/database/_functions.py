@@ -71,8 +71,8 @@ def cover_path(track: Track) -> str:
     template = """
         SELECT album.path as path
         FROM track
-        LEFT JOIN album ON album.id = track.album_id = album.id
-        WHERE track.id = 1
+        LEFT JOIN album ON album.id = track.album_id
+        WHERE track.id = %s
         LIMIT 1;
     """
     path = fetch_one(template, track.id)['path']

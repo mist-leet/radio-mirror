@@ -1,26 +1,23 @@
+# Используем образ Ubuntu 22.04
 FROM ubuntu:22.04
 
+# Устанавливаем rclone и другие зависимости
+RUN apt-get update && apt-get install -y \
+    rclone \
+    nano \
+    fuse \
+    ca-certificates \
+    --no-install-recommends && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update \
-    # Upgrade
-    && apt-get upgrade -y \
-    && apt-get dist-upgrade -y \
-    # Install dependencies
-    && apt-get install wget -y \
-    # Download & Install Yandex.Disk
-    && wget https://repo.yandex.ru/yandex-disk/yandex-disk_latest_amd64.deb \
-    && dpkg -i yandex-disk_latest_amd64.deb \
-    && apt-get install -f -y \
-    # Cleanup
-    && rm *.deb \
-    && apt-get purge -y \
-    && apt-get autoremove -y \
-    && apt-get autoclean -y \
-    && mkdir /home/yandex-disk-data \
-    && mkdir /root/Yandex.Disk
+# Создаем директорию для монтирования и конфигурации rclone
+RUN mkdir -p /root/Yandex.Disk /root/.config/rclone
 
-COPY .config /root/.config
+# Копируем скрипт для работы с rclone
+COPY rclone_script.sh /usr/local/bin/rclone_script.sh
 
-#ENTRYPOINT ["tail", "-f", "/dev/null"]
+# Делаем скрипт исполняемым
+RUN chmod +x /usr/local/bin/rclone_script.sh
 
-CMD ["yandex-disk", "start", "--no-daemon", "--dir=/root/Yandex.Disk"]
+# Указываем ENTRYPOINT для запуска скрипта
+ENTRYPOINT ["/usr/local/bin/rclone_script.sh"]

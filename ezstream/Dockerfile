@@ -20,5 +20,6 @@ RUN apt install -y python3-pip
 
 RUN pip3 install -r requirements.txt --break-system-packages
 
+ENV PYTHONUNBUFFERED=1
 EXPOSE 8888
 CMD ["/usr/bin/python3", "-u", "server/server.py"]

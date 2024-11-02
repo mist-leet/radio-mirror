@@ -7,6 +7,7 @@ services:
     volumes:
       - /root/Yandex.Disk:/root/Yandex.Disk
     restart: always
+    privileged: true
   postgres:
     image: postgres
     container_name: postgres
