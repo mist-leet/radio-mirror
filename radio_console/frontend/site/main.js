@@ -18,7 +18,7 @@ function init() {
         let regexp = RegExp('\/(.+)$')
         mount = regexp.exec(window.location.pathname)[1]
         player = document.getElementById('audio')
-        url = new URL(document.url)
+        url = new URL(document.URL)
         url.port = mountPort[mount]
         player.src = `http://${url.toString()}/stream_${mount}`
     }
