@@ -1,10 +1,13 @@
+
+const host = window.location.host;
+
 function init() {
 
     function setUpMount() {
         let regexp = RegExp('\/(.+)$')
         mount = regexp.exec(window.location.pathname)[1]
         player = document.getElementById('audio')
-        player.src = `http://0.0.0.0:8001/stream_${mount}`
+        player.src = `http://${host}/stream_${mount}`
     }
 
     function initPLayer() {
@@ -30,13 +33,13 @@ function init() {
 
     function initNextButton() {
         document.getElementById('next-button').addEventListener('click', function () {
-            fetch(`http://0.0.0.0:8080/${mount}/next`).then((response) => console.log(response))
+            fetch(`http://${host}/${mount}/next`).then((response) => console.log(response))
         })
     }
 
     function setUpMetadataUpdater() {
         function updateMetaData() {
-            fetch(`http://0.0.0.0:8080/${mount}/track`)
+            fetch(`http://${host}/${mount}/track`)
                 .then((res) => {
                     if (!res.ok) {
                         throw new Error
@@ -50,7 +53,7 @@ function init() {
                 .catch((error) =>
                     console.error("Unable to fetch data:", error)
                 )
-            fetch(`http://0.0.0.0:8080/${mount}/cover`)
+            fetch(`http://${host}/${mount}/cover`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
