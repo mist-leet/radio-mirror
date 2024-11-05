@@ -8,7 +8,9 @@ class Mount(Enum):
     ambient = 'ambient'
     sex = 'sex'
     rus = 'rus'
-    back = 'back'
+    classic = 'class'
+    lounge = 'lounge'
+    other = 'other'
 
     @property
     def __int_map(self) -> dict[Mount, int]:
@@ -17,7 +19,9 @@ class Mount(Enum):
             Mount.ambient: 2,
             Mount.sex: 3,
             Mount.rus: 4,
-            Mount.back: 5,
+            Mount.classic: 5,
+            Mount.lounge: 6,
+            Mount.other: 7,
         }
 
     @property

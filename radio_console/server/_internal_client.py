@@ -14,7 +14,6 @@ class InternalClient:
             url = cls.build_url(mount)
             Logger.info(f'[GET] {url=}')
             response = requests.get(url)
-            Logger.info(f'got vclt: {response.text=}')
             match = re.search(r'__source__\/.*\/([^\/]+\.mp3)', response.text)
             if not match:
                 raise ValueError(f'Can\'t find TITLE in vclt: {response.text}')

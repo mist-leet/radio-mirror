@@ -12,7 +12,9 @@ from ._internal_client import InternalClient
 class EntryPoint:
     configuration = {
         Config(QueueMode.random, Mount.tech, queue_amount=100),
-        Config(QueueMode.random, Mount.ambient, queue_amount=10),
+        Config(QueueMode.random, Mount.ambient, queue_amount=100),
+        Config(QueueMode.random, Mount.classic, queue_amount=100),
+        Config(QueueMode.random, Mount.lounge, queue_amount=100),
     }
 
     @classmethod
@@ -54,7 +56,7 @@ class QueueState:
     def build_queue_info(self) -> dict:
         result = {}
         for mount, queue in self._configuration.items():
-            result[mount.name] = {
+            result[mount.value] = {
                 'queue_size': queue.amount,
                 'queue_config': str(queue.config),
                 'queue': str(queue.track_list[:3]),

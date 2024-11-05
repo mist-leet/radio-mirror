@@ -73,7 +73,7 @@ class DatabaseEngine:
         """
         data = [{
             'id': mount.int,
-            'name': mount.name,
+            'name': mount.value,
         } for mount in Mount]
         fetch_one(template, to_json(data))
 

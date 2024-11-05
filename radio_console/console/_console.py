@@ -50,7 +50,7 @@ class Console:
             return self.__process_random()
 
     def __process_random(self) -> Queue:
-        tracks = get_queue_random(self.config.mount.name, self.config.queue_amount)
+        tracks = get_queue_random(self.config.mount.value, self.config.queue_amount)
         return Queue(
             config=self.config,
             track_list=playlist_paths(tracks),
@@ -76,3 +76,6 @@ class Queue:
     @property
     def amount(self) -> int:
         return len(self.tracks)
+
+    def __str__(self):
+        return f'{len(self.track_list)=}'
