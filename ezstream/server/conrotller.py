@@ -33,7 +33,7 @@ class EZStreamController:
     def create_instance(self):
         EZStreamConfig.create(self.mount)
         command = f'/usr/bin/ezstream -v -c /ezstream/ezstream_{self.mount.value}.xml'
-        # self._before_create()
+        self._before_create()
         process = subprocess.Popen(command, shell=True)
         return process
 
@@ -56,7 +56,7 @@ class EZStreamController:
         playlist_path = f'/ezstream/playlist_{self.mount.value}.txt'
         with open(playlist_path, 'r', encoding='utf-8') as file:
             file_paths = file.readlines()
-        for file_path in file_paths:
+        for file_path in file_paths[:3]:
             Logger.info(f'\t Read: {file_path=}')
             with open(file_path, 'b') as file:
                 file.read()
