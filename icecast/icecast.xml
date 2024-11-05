@@ -27,6 +27,22 @@
         <port>8002</port>
         <shoutcast-mount>/stream_ambient</shoutcast-mount>
     </listen-socket>
+    <listen-socket>
+        <port>8003</port>
+        <shoutcast-mount>/stream_sex</shoutcast-mount>
+    </listen-socket>
+    <listen-socket>
+        <port>8004</port>
+        <shoutcast-mount>/stream_rus</shoutcast-mount>
+    </listen-socket>
+    <listen-socket>
+        <port>8005</port>
+        <shoutcast-mount>/stream_classic</shoutcast-mount>
+    </listen-socket>
+    <listen-socket>
+        <port>8006</port>
+        <shoutcast-mount>/stream_lounge</shoutcast-mount>
+    </listen-socket>
 
     <mount>
         <mount-name>/stream_tech</mount-name>
@@ -34,9 +50,32 @@
         <password>admin</password>
         <charset>UTF-8</charset>
     </mount>
-
     <mount>
         <mount-name>/stream_ambient</mount-name>
+        <username>source</username>
+        <password>admin</password>
+        <charset>UTF-8</charset>
+    </mount>
+    <mount>
+        <mount-name>/stream_sex</mount-name>
+        <username>source</username>
+        <password>admin</password>
+        <charset>UTF-8</charset>
+    </mount>
+    <mount>
+        <mount-name>/stream_rus</mount-name>
+        <username>source</username>
+        <password>admin</password>
+        <charset>UTF-8</charset>
+    </mount>
+    <mount>
+        <mount-name>/stream_classic</mount-name>
+        <username>source</username>
+        <password>admin</password>
+        <charset>UTF-8</charset>
+    </mount>
+    <mount>
+        <mount-name>/stream_lounge</mount-name>
         <username>source</username>
         <password>admin</password>
         <charset>UTF-8</charset>

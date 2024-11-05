@@ -11,8 +11,9 @@ services:
   postgres:
     image: postgres
     container_name: postgres
-    ports:
-      - "1337:5432"
+#    [debug]
+#    ports:
+#      - "1337:5432"
     env_file: .env
   api:
     build:
@@ -28,7 +29,6 @@ services:
     volumes:
       - ./source:/source
       - /root/Yandex.Disk:/root/Yandex.Disk
-
   ezstream:
     build:
       context: ./ezstream
@@ -50,6 +50,10 @@ services:
       - "8000:8000"
       - "8001:8001"
       - "8002:8002"
+      - "8003:8003"
+      - "8004:8004"
+      - "8005:8005"
+      - "8006:8006"
     volumes:
       - ./icecast/icecast.xml:/etc/icecast2/icecast.xml
       - ./icecast/logs:/var/log/icecast2 WTF?

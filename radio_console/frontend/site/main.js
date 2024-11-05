@@ -1,13 +1,26 @@
 
 const host = window.location.host;
 
+const mountPort = {
+    'tech': 8001,
+    'ambient': 8002,
+    'sex': 8003,
+    'rus': 8004,
+    'classic': 8005,
+    'lounge': 8006,
+    'other': 8007,
+}
+
+
 function init() {
 
     function setUpMount() {
         let regexp = RegExp('\/(.+)$')
         mount = regexp.exec(window.location.pathname)[1]
         player = document.getElementById('audio')
-        player.src = `http://${host}/stream_${mount}`
+        url = new URL(document.url)
+        url.port = mountPort[mount]
+        player.src = `http://${url.toString()}/stream_${mount}`
     }
 
     function initPLayer() {
