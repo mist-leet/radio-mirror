@@ -1,115 +1,166 @@
+/* Общий сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    /*border: 0.01px solid black;*/
-    /*background-color: pink;*/
-    background: #0A0A0A;
-}
-
-a, a:hover, a:visited, a:active {
-  color: inherit;
-  text-decoration: none;
- }
-
-#audio {
-    display: none;
-}
-
-.is-active {
-    /*color: #9A9A9A;*/
-    color: rgb(175, 175, 175);
-    border: 1px solid rgb(175, 175, 175) !important;
-}
-
-.main {
-    margin-right: 30px;
-    margin-top: 30px;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier Prime', monospace;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
+/* Основной контейнер */
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    position: relative;
+}
+
+/* Левое меню */
 .menu {
-    padding-right: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    left: 0;
+    top: 20%;
 }
 
-.menu-control {
-    padding-right: 150px;
+.menu-row a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.menu-row {
-    margin-top: 15px;
-    font-family: 'Courier Prime';
-    font-size: 22px;
+.menu-row a:hover {
+    color: #888;
     text-decoration: underline;
-    color: white;
+}
+
+/* Правое меню управления */
+.menu-control {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+
+.menu-control a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu-control a:hover {
+    color: #888;
+    text-decoration: underline;
+}
+
+/* Блок обложки */
+.cover-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cover {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+/* Плейлист */
 .playlist-block {
-    font-family: 'Courier Prime';
-    font-size: 18px;
-    color: #3D3D3D;
+    width: 300px;
+    background-color: #111;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 80vh;
+    margin-left: 20px;
 }
 
-.cover-block {
-    max-width: 500px;
-    max-height: 500px;
-    padding-right: 50px;
+.track-row {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.track-row:last-child {
+    border-bottom: none;
+}
+
+.track-cover-block {
+    margin-right: 15px;
 }
 
 .track-cover {
-    width: 75px;
-    height: 75px;
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 6px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-/* playlist block */
-
-.playlist-block {
-    display: flex;
-    flex-direction: column;
-}
-
-/* track row */
-
-.track-row{
-    display: flex;
-    align-items: center;
-    border: 1px solid #3D3D3D;
-}
-
-.track-row:not(:first-child) {
-    margin-top: 7px;
-}
-
+/* Информация о треке */
 .track-info {
     display: flex;
-    padding: 6px;
-    width: 500px;
-    justify-content: space-between;
-}
-
-.album-itle {
-    word-break: break-all;
-}
-
-.artist-info-block, .track-info-block, .additional-info {
-
-    padding-left: 5px;
-    min-height: 75px;
-    max-width: 150px;
-    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: flex-start;
-    align-content: flex-start;
+    flex-grow: 1;
+    color: #fff;
+}
+
+.artist-info-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artist-title {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.album-title {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.track-info-block {
+    margin-top: 5px;
+}
+
+.track-name {
+    font-size: 0.9em;
+    color: #ccc;
 }
 
 .additional-info {
-    padding-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Стили для аудиоплеера */
+#audio {
+    display: none; /* скрываем встроенный аудиоплеер */
 }
