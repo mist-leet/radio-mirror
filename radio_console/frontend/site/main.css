@@ -93,9 +93,15 @@ a, a:hover, a:visited, a:active {
     justify-content: space-between;
 }
 
+.album-itle {
+    word-break: break-all;
+}
+
 .artist-info-block, .track-info-block, .additional-info {
+
     padding-left: 5px;
     min-height: 75px;
+    max-width: 150px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
