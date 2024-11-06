@@ -10,11 +10,7 @@ const mountPort = {
     'lounge': 8006,
     'other': 8007,
 }
-url = URL(document.URL)
-url.port = 8080
-const getTrakUrl = `${url.host}/${mount}/track`
-const getCoverUrl = `${url.host}/${mount}/cover`
-const nextTrackUrl = `${url.host}/${mount}/next`
+
 
 function init() {
 
@@ -25,7 +21,9 @@ function init() {
         player = document.getElementById('audio')
         url = new URL(document.URL)
         url.port = mountPort[mount]
-        player.src = `${url.host()}/stream_${mount}`
+        url.pathname = `/stream_${mount}`
+        player.src = url.toString()
+        console.log(player.src)
     }
 
     function initPLayer() {
@@ -51,13 +49,13 @@ function init() {
 
     function initNextButton() {
         document.getElementById('next-button').addEventListener('click', function () {
-            fetch(nextTrackUrl).then((response) => console.log(response))
+            fetch(nextTrackUrl(mount)).then((response) => console.log(response))
         })
     }
 
     function setUpMetadataUpdater() {
         function updateMetaData() {
-            fetch(getTrakUrl)
+            fetch(getTrakUrl(mount))
                 .then((res) => {
                     if (!res.ok) {
                         throw new Error
@@ -71,7 +69,7 @@ function init() {
                 .catch((error) =>
                     console.error("Unable to fetch data:", error)
                 )
-            fetch(getCoverUrl)
+            fetch(getCoverUrl(mount))
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -158,4 +156,15 @@ function init() {
 let currentImageURL = ''
 let lastIsActiveTrackName = ''
 let mount = ''
+
+function getTrakUrl(mount) {
+    return `/${mount}/track`
+}
+function getCoverUrl(mount) {
+    return `/${mount}/cover`
+}
+function nextTrackUrl(mount) {
+    return `/${mount}/next`
+}
+
 init()

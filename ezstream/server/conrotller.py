@@ -54,12 +54,13 @@ class EZStreamController:
     def _before_create(self):
         Logger.info(f'Before create: ')
         playlist_path = f'/ezstream/playlist_{self.mount.value}.txt'
-        with open(playlist_path, 'r', encoding='utf-8') as file:
-            file_paths = file.readlines()
-        for file_path in file_paths[:3]:
-            Logger.info(f'\t Read: {file_path=}')
-            with open(file_path, 'b') as file:
-                file.read()
+        cmd = f'/utils/heat.sh {playlist_path}'
+        try:
+            output = subprocess.check_output(cmd, shell=True).decode()
+            Logger.info(output)
+        except Exception as e:
+            Logger.error(e)
+
 
     @property
     def __pid(self) -> int:
