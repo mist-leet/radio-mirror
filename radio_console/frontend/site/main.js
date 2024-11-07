@@ -6,7 +6,7 @@ const mountPort = {
     'ambient': 8002,
     'sex': 8003,
     'rus': 8004,
-    'classic': 8005,
+    'class': 8005,
     'lounge': 8006,
     'other': 8007,
 }
