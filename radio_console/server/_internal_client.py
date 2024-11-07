@@ -31,6 +31,7 @@ class InternalClient:
         class Action(Enum):
             next = 'next'
             update = 'update'
+            init_playlist = 'init_playlist'
             create = 'create'
 
         url = 'http://ezstream:8888'
@@ -56,6 +57,15 @@ class InternalClient:
         @classmethod
         def update(cls, mount: Mount, data: list[str]) -> bool:
             url = cls.build_url(mount, cls.Action.update)
+            Logger.info(f'[POST] {url=}')
+            response = requests.post(url, json=data)
+            if response.status_code == 200:
+                return True
+            Logger.error(f'[ERROR] {response.text}')
+
+        @classmethod
+        def init_playlist(cls, mount: Mount, data: list[str]) -> bool:
+            url = cls.build_url(mount, cls.Action.init_playlist)
             Logger.info(f'[POST] {url=}')
             response = requests.post(url, json=data)
             if response.status_code == 200:

@@ -10,6 +10,7 @@ from ._internal_client import InternalClient
 
 
 class EntryPoint:
+
     configuration = {
         Config(QueueMode.random, Mount.tech, queue_amount=100),
         Config(QueueMode.random, Mount.ambient, queue_amount=100),
@@ -24,10 +25,22 @@ class EntryPoint:
         for config in cls.configuration:
             queue = Console.get_queue(config)
             track_list = queue.track_list
-            InternalClient.EZStream.update(config.mount, track_list)
+            InternalClient.EZStream.init_playlist(config.mount, track_list)
             InternalClient.EZStream.create(config.mount)
-            update_one(config)
-            time.sleep(2)
+            init_one(config)
+
+    @classmethod
+    def get_mounts(cls) -> list[Mount]:
+        return [config.mount for config in cls.configuration]
+
+
+def init_one(config: Config):
+    Logger.info(f'Init function: {config=}')
+    queue = Console.get_queue(config)
+    mount = queue.config.mount
+    track_list = queue.track_list
+    InternalClient.EZStream.init_playlist(mount, track_list)
+    queue_state.update(mount, queue)
 
 
 def update_one(config: Config):
@@ -42,6 +55,16 @@ def update_one(config: Config):
     #                  function=update_one,
     #                  args=(config,),
     #                  description=f'Scheduler ({mount.name}) for queue {queue.amount}, {queue.total_duration=}')
+
+
+def restart_broken():
+    mounts = EntryPoint.get_mounts()
+    to_update = []
+    for mount in mounts:
+        if queue_state.is_empty(mount):
+            to_update.append(mount)
+
+
 
 
 @dataclass
@@ -62,6 +85,9 @@ class QueueState:
                 'queue': str(queue.track_list[:3]),
             }
         return result
+
+    def is_empty(self, mount: Mount) -> bool:
+        return bool(self._configuration[mount].track_list)
 
     def build_track_info(self, mount: Mount) -> dict:
         queue = self._configuration[mount]

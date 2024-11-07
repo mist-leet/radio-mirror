@@ -22,6 +22,19 @@ class Server:
             return web.Response()
 
         @classmethod
+        async def init_playlist(cls, request: web.Request) -> web.Response:
+            mount = Mount(request.match_info.get('mount'))
+            body: str = await request.text()
+            body: list[str] = json.loads(body.encode('utf-8'))
+            if not body:
+                return web.Response(status=200, text='No data')
+            if not isinstance(body, list) or not isinstance(body[0], str):
+                return web.Response(status=400, text=f'Invalid data, type={type(body)}, type[0]={type(body[0])}')
+            Logger.info(f'Got {len(body)} tracks for update: {body[0][:30]}...')
+            EZStreamController(mount).update_playlist(body)
+            return web.Response()
+
+        @classmethod
         async def update(cls, request: web.Request) -> web.Response:
             mount = Mount(request.match_info.get('mount'))
             body: str = await request.text()
@@ -47,6 +60,7 @@ class Server:
             web.get('/health_check', cls.__Handlers.health_check),
             web.get('/{mount}/next', cls.__Handlers.next),
             web.post('/{mount}/update', cls.__Handlers.update),
+            web.post('/{mount}/init_playlist', cls.__Handlers.init_playlist),
             web.get('/{mount}/create', cls.__Handlers.create),
         ])
         web.run_app(app, host='0.0.0.0', port=8888)

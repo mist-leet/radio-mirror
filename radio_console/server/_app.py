@@ -61,6 +61,11 @@ class RadioConsoleApi:
             EntryPoint.start()
             return web.json_response({})
 
+        @classmethod
+        async def restart(cls, request: web.Request) -> web.Response:
+
+            return web.json_response({})
+
     class Internal:
 
         @classmethod
@@ -84,6 +89,7 @@ class RadioConsoleApi:
             web.get('/health_check', cls.External.health_check),
             web.get('/update', cls.External.update),
             web.get('/start', cls.External.start),
+            web.get('/restart', cls.External.start),
 
             web.get('/{mount}/queue', cls.External.queue),
             web.get('/{mount}/track', cls.External.track),

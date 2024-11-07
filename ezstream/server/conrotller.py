@@ -42,6 +42,9 @@ class EZStreamController:
         self.send_update()
         self.send_next()
 
+    def update_playlist(self, data: list[str]):
+        EZStreamConfig.write_playlist(self.mount, data)
+
     def write_playlist(self, data: list[str]):
         EZStreamConfig.write_playlist(self.mount, data)
 
@@ -66,7 +69,10 @@ class EZStreamController:
     def __pid(self) -> int:
         process_name = f'"[e]zstream_{self.mount.value}"'
         cmd = "ps aux | grep {}".format(process_name)
-        output = subprocess.check_output(cmd, shell=True).decode()
+        try:
+            output = subprocess.check_output(cmd, shell=True).decode()
+        except subprocess.CalledProcessError:
+            raise KeyError(f'Не найден процесс EZSTTEAM по {self.mount.value}')
         ezstream_process = next(filter(
             lambda line: f'ezstream_{self.mount.value}' in line,
             output.splitlines()
