@@ -36,6 +36,10 @@ body {
     position: absolute;
     left: 0;
     top: 20%;
+
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Черная полупрозрачная тень */
+    font-size: 24px;
 }
 
 .menu-row a {
@@ -56,8 +60,9 @@ body {
     flex-direction: column;
     gap: 20px;
     position: absolute;
-    right: 0;
+    left: 30%;
     top: 20%;
+    font-size: 24px;
 }
 
 .menu-control a {
@@ -88,13 +93,20 @@ body {
 
 /* Плейлист */
 .playlist-block {
-    width: 300px;
+    /*overflow: hidden;*/
+    scrollbar-width: none;
+    width: 500px;
     background-color: #111;
     padding: 15px;
     border-radius: 8px;
-    overflow-y: auto;
     max-height: 80vh;
     margin-left: 20px;
+    overflow-y: scroll; /* Прокрутка по вертикали */
+    scrollbar-width: none; /* Для Firefox */
+}
+
+.playlist-block::-webkit-scrollbar{
+    display: none;
 }
 
 .track-row {
