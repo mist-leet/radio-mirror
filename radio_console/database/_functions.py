@@ -8,19 +8,24 @@ def get_queue_random(mount: str | Mount, amount: int = 100) -> list[Track]:
     if not mount:
         raise KeyError(f'Invalid {mount=}')
     template = """
-        SELECT 
-            track.id as id, 
-            track.name as name, 
-            track.track_number as track_number, 
-            track.artist_id as artist_id, 
-            track.album_id as album_id, 
-            track.filename as filename, 
-            track.duration as duration
-        FROM track_mount
-        LEFT JOIN track ON track.id = track_mount.track_id
-        WHERE track_mount.mount_id = %s
-        ORDER BY random()
-        LIMIT %s;
+        WITH numbered_tracks AS (
+            SELECT
+                track.id AS id,
+                track.name AS name,
+                track.track_number AS track_number,
+                track.artist_id AS artist_id,
+                track.album_id AS album_id,
+                track.filename AS filename,
+                track.duration AS duration,
+                ROW_NUMBER() OVER (PARTITION BY track.album_id ORDER BY random()) AS rn
+            FROM track_mount
+            LEFT JOIN track ON track.id = track_mount.track_id
+            WHERE track_mount.mount_id = %s
+            LIMIT %s
+        )
+        SELECT id, name, track_number, artist_id, album_id, filename, duration
+        FROM numbered_tracks
+        ORDER BY rn, random();
     """
     return fetch_all(template, mount.int, amount, cast_model=Track)
 
