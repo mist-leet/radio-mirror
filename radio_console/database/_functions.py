@@ -59,16 +59,17 @@ def playlist_paths(tracks: list[Track]) -> list[str]:
     if list(filter(lambda value: not value or not isinstance(value, int), track_ids)):
         raise ValueError(f'Передан список треков: {tracks}')
     template = f"""
-        SELECT CONCAT(album.path, '/', track.filename) as path
+        SELECT CONCAT(album.path, '/', track.filename) as path, track.id as id
         FROM track 
         INNER JOIN album ON album.id = track.album_id
         WHERE track.id = ANY (%s::INTEGER[])
     """
     result = fetch_all(template, track_ids)
+    result = {row['id']: row['path'] for row in result}
     root_path = env_config.get('YANDEX_DISK_PATH')
     return [
-        root_path.replace('__source__', row['path']).replace('\\', '/')
-        for row in result
+        root_path.replace('__source__', result[track_id]).replace('\\', '/')
+        for track_id in track_ids
     ]
 
 

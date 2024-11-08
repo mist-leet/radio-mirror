@@ -1,4 +1,3 @@
-
 const host = window.location.host;
 
 const mountPort = {
@@ -94,13 +93,12 @@ function init() {
         }
 
         function UpdateContent(data) {
-
             let activeTrack = data.track_list.find((track) => track.is_active == true)
             if (activeTrack.name == lastIsActiveTrackName) {
                 return
             }
-            lastIsActiveTrackName = activeTrack.name
 
+            lastIsActiveTrackName = activeTrack.name
             let playlistBlock = document.getElementsByClassName('playlist-block')[0]
             let currentTrackRows = document.getElementsByClassName('track-row')
             Array.from(currentTrackRows).forEach(function (item) {
@@ -143,10 +141,20 @@ function init() {
                 }
                 playlistBlock.appendChild(trackRowBlock)
             })
+
+            let trackRows = document.getElementsByClassName('track-row')
+            let trackRowArray = Array.from(trackRows)
+            let isActiveIndex = trackRowArray.findIndex(row => {
+                return row.className.indexOf('is-active') !== -1
+            })
+            if (isActiveIndex !== 0) {
+                trackRowArray[isActiveIndex - 1].className = 'track-row before-active'
+            }
         }
 
         setInterval(updateMetaData, 5000);
     }
+
     setUpMount()
     initPLayer()
     initNextButton()
@@ -160,9 +168,11 @@ let mount = ''
 function getTrakUrl(mount) {
     return `/${mount}/track`
 }
+
 function getCoverUrl(mount) {
     return `/${mount}/cover`
 }
+
 function nextTrackUrl(mount) {
     return `/${mount}/next`
 }
