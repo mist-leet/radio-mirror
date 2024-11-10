@@ -1,0 +1,23 @@
+/* Общий сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier Prime', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: 100%;
+    }
+}

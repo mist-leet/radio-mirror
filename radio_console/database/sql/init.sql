@@ -41,9 +41,21 @@ CREATE TABLE IF NOT EXISTS track
 DROP TABLE IF EXISTS track_mount CASCADE;
 CREATE TABLE IF NOT EXISTS track_mount
 (
-    id   SERIAL PRIMARY KEY,
-    track_id  INT REFERENCES track (id),
-    mount_id  INT REFERENCES mount (id),
+    id       SERIAL PRIMARY KEY,
+    track_id INT REFERENCES track (id),
+    mount_id INT REFERENCES mount (id),
     UNIQUE (track_id, mount_id)
 );
 
+
+DROP TABLE IF EXISTS stats CASCADE;
+CREATE TABLE IF NOT EXISTS stats
+(
+    id             SERIAL PRIMARY KEY,
+    mount_id       INT REFERENCES mount (id),
+    track_id       INT REFERENCES track (id),
+    stream_start   TIME,
+    created_at     TIME DEFAULT NOW(),
+    listeners      INT,
+    listeners_peak INT
+);

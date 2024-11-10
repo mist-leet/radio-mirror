@@ -7,7 +7,8 @@ from utils import Logger, Mount
 class InternalClient:
     class Icecast:
 
-        url = 'http://icecast:{port}/{mount}.vclt'
+        base_url = 'http://icecast:8001'
+        vclt_url = 'http://icecast:{port}/{mount}.vclt'
 
         @classmethod
         def track(cls, mount: Mount) -> str:
@@ -20,8 +21,15 @@ class InternalClient:
             return match.group(1)
 
         @classmethod
+        def stats(cls) -> dict:
+            url = f'{cls.base_url}/status-json.xsl'
+            Logger.info(f'[GET] {url=}')
+            response = requests.get(url)
+            return response.json()
+
+        @classmethod
         def build_url(cls, mount: Mount) -> str:
-            return cls.url.format(
+            return cls.vclt_url.format(
                 port=f'800{mount.int}',
                 mount=f'stream_{mount.value}'
             )

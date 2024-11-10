@@ -11,6 +11,7 @@ class Mount(Enum):
     classic = 'class'
     lounge = 'lounge'
     other = 'other'
+    lofi_house = 'lofi_house'
 
     @property
     def __int_map(self) -> dict[Mount, int]:
@@ -22,6 +23,7 @@ class Mount(Enum):
             Mount.classic: 5,
             Mount.lounge: 6,
             Mount.other: 7,
+            Mount.lofi_house: 8,
         }
 
     @classmethod

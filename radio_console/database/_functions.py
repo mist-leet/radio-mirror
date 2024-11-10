@@ -1,3 +1,7 @@
+from typing import re
+
+from sqlalchemy.engine import row
+
 from utils import Mount, env_config
 from ._connection import fetch_all, fetch_one
 from ._models import Track
@@ -83,3 +87,22 @@ def cover_path(track: Track) -> str:
     """
     path = fetch_one(template, track.id)['path']
     return env_config.get('YANDEX_DISK_PATH').replace('__source__', path).replace('\\', '/')
+
+
+def find_tracks_by_path(paths: list[str]) -> dict[str, int]:
+    filenames = []
+    for path in paths:
+        match = re.search(r'__source__\/.*\/([^\/]+\.mp3)', path)
+        if match:
+            filenames.append(match.group(1))
+        else:
+            raise ValueError(f'Не найден трек {path=}')
+    template = """
+        SELECT id, filename
+        FROM track
+        WHERE filename = ANY(%s::TEXT[])
+    """
+    return {
+        row['filename']: row['id']
+        for row in fetch_all(template, filenames)
+    }
