@@ -98,7 +98,8 @@ class RadioConsoleApi:
             web.get('/{mount}/next', cls.External.next),
 
             # web.static('/static/', cls.__static_path),
-            web.static('/static/', cls.__svelte_path),
+            # web.static('/static/', cls.__svelte_path),
+            web.static('/', cls.__svelte_path),
             # ] + [
             #     web.get(f'/{mount.value}', cls.Frontend.home)
             #     for mount in Mount

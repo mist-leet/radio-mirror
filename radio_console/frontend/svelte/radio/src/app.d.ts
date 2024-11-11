@@ -9,7 +9,4 @@ declare global {
         // interface Platform {}
     }
 }
-export const prerender = true;
-export const ssr = true;
-
 export {};

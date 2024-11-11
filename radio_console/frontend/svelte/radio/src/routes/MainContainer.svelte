@@ -5,28 +5,18 @@
         justify-content: space-between;
         align-items: center;
         width: 90%;
-        /*max-width: 1200px;*/
         height: 100%;
         position: relative;
     }
 
-    .empty {
-        /*width: 10vw;*/
-    }
-
-    /* Стили для аудиоплеера */
-    #audio {
-        display: none; /* скрываем встроенный аудиоплеер */
+    #audio, #player {
+        display: none;
     }
 
     @media (max-width: 768px) {
         .main {
             flex-direction: column;
             width: 100%;
-        }
-
-        .empty {
-            width: 0;
         }
     }
 </style>
@@ -35,53 +25,68 @@
     import MainCover from "./MainCover/MainCover.svelte";
     import Playlist from "./Playlist/Playlist.svelte";
     import Menu from "./Menu/Menu.svelte";
-    import {ApiController, Mount, MountManager} from './Api.ts'
-    import {onMount, onDestroy} from 'svelte';
+    import {ApiController, MountManager} from './Api.ts'
+    import {onMount} from 'svelte';
     import type {Rows} from "./Playlist/Track";
-    import {currentMount} from "../stores";
+    import {currentMount, playerState} from "../stores";
 
+
+    let player;
     let playlistResponse: Rows = $state()
     let currentCoverPath: string = $state('/img.png')
-    let streamURL = $state('');
+    let streamURL = $state('')
+
     let previousAlbum = ''
     let currentAlbum = $derived(playlistResponse?.album?.name)
+
     let mountManager = new MountManager()
 
     function updateEverySecond() {
         const apiController = new ApiController()
         apiController.trackRequest().then(value => {
             playlistResponse = value.data as Rows
-            // console.log($state.snapshot(playlistResponse));
         });
         if (previousAlbum !== currentAlbum) {
-            apiController.coverRequest().then(value => {
-                const blob = new Blob([value.data], {type: 'image/jpeg'}); // Замените тип на нужный, если изображение не PNG
-                const url = URL.createObjectURL(blob);
-                currentCoverPath = url
-                console.log(url)
+            apiController.coverRequest().then(response => {
+                currentCoverPath = URL.createObjectURL(response.data);
             });
         }
         previousAlbum = currentAlbum
     }
 
+    async function togglePlayer(newState: boolean) {
+        if (newState) {
+            await player.play();
+        } else if (!newState && !player.paused) {
+            await player.pause();
+        }
+    }
+
     let interval;
     onMount(() => {
-        updateEverySecond(); // Получаем данные один раз при монтировании
-        interval = setInterval(updateEverySecond, 1000);
-        const unsubscribe = currentMount.subscribe(() => {
+        updateEverySecond();
+        interval = setInterval(updateEverySecond, 5000);
+        const unsubscribeOnMountChange = currentMount.subscribe(() => {
             streamURL = mountManager.streamURL();
+            player.load()
+        });
+        const unsubscribeOnPlayerStateChange = playerState.subscribe((value) => {
+            togglePlayer(value).then()
         });
 
-        return () => clearInterval(interval); // Очищаем таймер при размонтировании компонента
+        return () => {
+            clearInterval(interval);
+            unsubscribeOnMountChange();
+            unsubscribeOnPlayerStateChange();
+        }
     });
 </script>
 
 <div class="main">
-    <video controls name="media" id="audio">
-        <source id="audio-source" src="{streamURL}" type="audio/mpeg">
+    <video controls bind:this={player} id="player">
+        <source id="audio" src="{streamURL}" type="audio/mpeg">
     </video>
     <Menu/>
     <MainCover cover="{currentCoverPath}"/>
-    <div class="empty"></div>
     <Playlist rows={playlistResponse} cover={currentCoverPath}/>
 </div>

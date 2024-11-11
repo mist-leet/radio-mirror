@@ -1,12 +1,12 @@
-import axios from "axios";
+import axios from 'axios';
 import {currentMount} from "../stores";
 
 export function mountFromText(text: string) {
     let mapping = {
-        'tech': [Mount.tech],
-        'neoclassical': [Mount.classic],
-        'lounge': [Mount.lounge],
-        'soundscape': [Mount.ambient],
+        'tech': Mount.tech,
+        'neoclassical': Mount.classic,
+        'lounge': Mount.lounge,
+        'soundscape': Mount.ambient,
     }
     return mapping[text]
 }
@@ -49,7 +49,6 @@ export class MountManager {
 }
 
 export class ApiController {
-    url: URL
     mount: Mount
 
     constructor() {
@@ -67,14 +66,22 @@ export class ApiController {
         }
     }
 
-    async coverRequest() {
-        let url = new URL(this.url.toString())
+    async nextTrackRequest() {
+        let url = new URL(document.URL)
         url.port = '8080'
-        url.pathname = `${this.mount}/cover`
+        url.pathname = `${this.mount}/next`
         try {
             return await axios.get(url.toString());
         } catch (exception) {
             console.log(exception)
         }
+    }
+
+    async coverRequest() {
+        let url = new URL(document.URL)
+        url.port = '8080'
+        url.pathname = `${this.mount}/cover`
+        const config = {url: url.toString(), method: "get", responseType: "blob"} as axios.AxiosRequestConfig
+        return await axios.request(config)
     }
 }

@@ -7,7 +7,7 @@ export default {
         }),
         paths: {
             // relative: true,
-            base: '/static'
+            // base: '/static'
         }
     }
 };
