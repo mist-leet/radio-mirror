@@ -30,7 +30,9 @@
     import type {Rows, TrackRow} from "./Track";
 
     function extractRow(data: Rows): TrackRow[] {
-        if (!data.track_list) {return []}
+        if (!data.track_list) {
+            return []
+        }
         const albumName = data.album.name;
         const albumYear = data.album.year;
         const artistName = data.artist.name;
@@ -66,15 +68,15 @@
             {id: 56, name: "Panorama", track_number: 11, duration: "06:40", is_active: false}
         ]
     };
-
-    // let rows = $props()
-    let {rows = defaultRows} = $props();
-
-    console.log($state.snapshot(rows));
-    const trackList = extractRow(rows);
+    let {
+        rows = defaultRows,
+        cover = '/img.png'
+    } = $props()
+    // export let rows = defaultRows;
+    // export let cover = 'img.png';
 </script>
 <div class="playlist-block">
-    {#each trackList as row}
-        <PlaylistRow {row}/>
+    {#each extractRow(rows) as row}
+        <PlaylistRow row={row} cover={cover}/>
     {/each}
 </div>

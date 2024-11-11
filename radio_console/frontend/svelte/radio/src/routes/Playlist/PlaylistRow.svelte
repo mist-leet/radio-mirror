@@ -78,13 +78,15 @@
 </style>
 <script lang="ts">
     import type {TrackRow} from "./Track";
-    export let row: TrackRow;
-    // console.log(row)
+    let {
+        row,
+        cover = '/img.png'
+    } = $props()
 </script>
 
 <div class="track-row {row.activeClass}">
     <div class="track-cover-block">
-        <img class="track-cover" src="/img.png">
+        <img class="track-cover" src="{cover}">
     </div>
     <div class="track-info">
         <div class="artist-info-block">

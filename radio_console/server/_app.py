@@ -13,15 +13,17 @@ from meta import MetadataParser
 
 class RadioConsoleApi:
     __static_path = r'/radio_console/frontend/site'
+    __svelte_path = r'/radio_console/frontend/svelte/radio/build'
 
     class Frontend:
 
         @classmethod
-        async def home(cls, request: web.Request) -> web.Response:
-            Logger.info(f'{request.raw_path=}')
-            mount = Mount.from_url(request.raw_path)
-            content = render_html_template(mount)
-            return web.Response(text=content, content_type='text/html')
+        async def home(cls, request: web.Request) -> web.FileResponse:
+            return web.FileResponse(r'/radio_console/frontend/svelte/radio/build/index.html')
+            # Logger.info(f'{request.raw_path=}')
+            # mount = Mount.from_url(request.raw_path)
+            # content = render_html_template(mount)
+            # return web.Response(text=content, content_type='text/html')
 
     class External:
 
@@ -63,7 +65,6 @@ class RadioConsoleApi:
 
         @classmethod
         async def restart(cls, request: web.Request) -> web.Response:
-
             return web.json_response({})
 
     class Internal:
@@ -85,7 +86,7 @@ class RadioConsoleApi:
         app = web.Application()
         app.add_routes([
             web.get('/', cls.Frontend.home),
-            web.get('/home', cls.Frontend.home),
+            # web.get('/home', cls.Frontend.home),
             web.get('/health_check', cls.External.health_check),
             web.get('/update', cls.External.update),
             web.get('/start', cls.External.start),
@@ -96,10 +97,11 @@ class RadioConsoleApi:
             web.get('/{mount}/cover', cls.External.cover),
             web.get('/{mount}/next', cls.External.next),
 
-            web.static('/static/', cls.__static_path)
-        ] + [
-            web.get(f'/{mount.value}', cls.Frontend.home)
-            for mount in Mount
+            # web.static('/static/', cls.__static_path),
+            web.static('/static/', cls.__svelte_path),
+            # ] + [
+            #     web.get(f'/{mount.value}', cls.Frontend.home)
+            #     for mount in Mount
         ])
         cors = aiohttp_cors.setup(app, defaults={
             "*": aiohttp_cors.ResourceOptions(

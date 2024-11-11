@@ -1,12 +1,22 @@
 import axios from "axios";
 import {currentMount} from "../stores";
 
+export function mountFromText(text: string) {
+    let mapping = {
+        'tech': [Mount.tech],
+        'neoclassical': [Mount.classic],
+        'lounge': [Mount.lounge],
+        'soundscape': [Mount.ambient],
+    }
+    return mapping[text]
+}
+
 export enum Mount {
     tech = 'tech',
     ambient = 'ambient',
     sex = 'sex',
     rus = 'rus',
-    classic = 'classic',
+    classic = 'class',
     lounge = 'lounge',
     other = 'other',
     lofi_house = 'lofi_house',
@@ -27,19 +37,14 @@ export class MountManager {
     };
 
     constructor() {
-        this.mount = $currentMount
-        // Проверяем, является ли строка значением перечисления Mount
-        if (Object.values(Mount).includes(mount as Mount)) {
-            this.mount = mount as Mount;
-        }
+        currentMount.subscribe(value => this.mount = value)
     }
 
-    streamPath() {
-        return `/stream_${this.mount}`;
-    }
-
-    streamPort() {
-        return 8000 + this.intMap[this.mount]
+    streamURL(): string {
+        let url = new URL(document.URL)
+        url.port = (8000 + this.intMap[this.mount]) as string
+        url.pathname = `/stream_${this.mount}`;
+        return url.toString()
     }
 }
 
@@ -49,11 +54,10 @@ export class ApiController {
 
     constructor() {
         currentMount.subscribe(value => this.mount = value)
-        this.url = new URL(document.URL)
     }
 
     async trackRequest() {
-        let url = new URL(this.url)
+        let url = new URL(document.URL)
         url.port = '8080'
         url.pathname = `${this.mount}/track`
         try {

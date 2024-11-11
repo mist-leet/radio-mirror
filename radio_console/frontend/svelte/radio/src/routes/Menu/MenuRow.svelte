@@ -15,10 +15,12 @@
 
 <script lang="ts">
     import {currentMount} from "../../stores";
-    import {Mount} from '../Api.ts'
+    import {mountFromText, Mount} from '../Api.ts'
     function onClick(event) {
-        // console.log($currentMount)
-        currentMount.set(event.target?.innerText as Mount);
+        // currentMount.set(event.target?.innerText as Mount);
+        currentMount.set(
+            mountFromText(event.target?.innerText) as Mount
+        );
 
     }
     let {text} = $props()

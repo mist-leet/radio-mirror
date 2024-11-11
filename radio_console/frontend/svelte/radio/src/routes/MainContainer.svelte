@@ -14,6 +14,11 @@
         /*width: 10vw;*/
     }
 
+    /* Стили для аудиоплеера */
+    #audio {
+        display: none; /* скрываем встроенный аудиоплеер */
+    }
+
     @media (max-width: 768px) {
         .main {
             flex-direction: column;
@@ -30,41 +35,53 @@
     import MainCover from "./MainCover/MainCover.svelte";
     import Playlist from "./Playlist/Playlist.svelte";
     import Menu from "./Menu/Menu.svelte";
-    import {ApiController, Mount} from './Api.ts'
-    import {onMount} from 'svelte';
+    import {ApiController, Mount, MountManager} from './Api.ts'
+    import {onMount, onDestroy} from 'svelte';
     import type {Rows} from "./Playlist/Track";
+    import {currentMount} from "../stores";
 
-    let playlistResponse: Rows
-
-    // async function updateEverySecond() {
-    //     console.log('update')
-    //     const apiController = new ApiController()
-    //
-    //     const value = await apiController.trackRequest();
-    //     playlistResponse = value as Rows;
-    // }
+    let playlistResponse: Rows = $state()
+    let currentCoverPath: string = $state('/img.png')
+    let streamURL = $state('');
+    let previousAlbum = ''
+    let currentAlbum = $derived(playlistResponse?.album?.name)
+    let mountManager = new MountManager()
 
     function updateEverySecond() {
-        console.log('update')
         const apiController = new ApiController()
         apiController.trackRequest().then(value => {
             playlistResponse = value.data as Rows
-            console.log(playlistResponse)
+            // console.log($state.snapshot(playlistResponse));
         });
-        // playlistResponse = value as Rows;
+        if (previousAlbum !== currentAlbum) {
+            apiController.coverRequest().then(value => {
+                const blob = new Blob([value.data], {type: 'image/jpeg'}); // Замените тип на нужный, если изображение не PNG
+                const url = URL.createObjectURL(blob);
+                currentCoverPath = url
+                console.log(url)
+            });
+        }
+        previousAlbum = currentAlbum
     }
 
     let interval;
     onMount(() => {
         updateEverySecond(); // Получаем данные один раз при монтировании
         interval = setInterval(updateEverySecond, 1000);
+        const unsubscribe = currentMount.subscribe(() => {
+            streamURL = mountManager.streamURL();
+        });
+
         return () => clearInterval(interval); // Очищаем таймер при размонтировании компонента
     });
 </script>
 
 <div class="main">
+    <video controls name="media" id="audio">
+        <source id="audio-source" src="{streamURL}" type="audio/mpeg">
+    </video>
     <Menu/>
-    <MainCover/>
+    <MainCover cover="{currentCoverPath}"/>
     <div class="empty"></div>
-    <Playlist {playlistResponse}/>
+    <Playlist rows={playlistResponse} cover={currentCoverPath}/>
 </div>

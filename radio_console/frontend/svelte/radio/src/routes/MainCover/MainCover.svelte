@@ -21,6 +21,11 @@
     }
 </style>
 
+<script>
+    // let {cover = 'img.png'} = $props();
+    let {cover = '/img.png'} = $props()
+</script>
+
 <div class="cover-block">
-    <img class="cover" src="/img.png">
+    <img class="cover" src="{cover}" alt="cover">
 </div>
