@@ -22,7 +22,7 @@
         .playlist-block {
             width: 100vw;
             margin-left: 0;
-            max-height: calc(100vh - 100vh);
+            max-height: calc(100vh - 100vw);
         }
     }
 </style>
