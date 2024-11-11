@@ -67,6 +67,7 @@
         updateEverySecond();
         interval = setInterval(updateEverySecond, 5000);
         const unsubscribeOnMountChange = currentMount.subscribe(() => {
+            updateEverySecond()
             streamURL = mountManager.streamURL();
             player.load()
         });

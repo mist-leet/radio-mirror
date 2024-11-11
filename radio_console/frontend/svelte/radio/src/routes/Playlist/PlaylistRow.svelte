@@ -33,6 +33,7 @@
     .artist-info-block {
         display: flex;
         justify-content: space-between;
+        text-align: right;
     }
 
     .artist-title {

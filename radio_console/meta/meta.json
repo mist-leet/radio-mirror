@@ -6159,7 +6159,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "emosplash",
       "description": ""
@@ -6180,7 +6180,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "emosplash, Джэйн Вернись",
       "description": ""
@@ -6261,7 +6261,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "emosplash, Avenax",
       "description": ""
@@ -6300,7 +6300,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "тула",
       "description": ""
@@ -6435,7 +6435,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "vrdnprvchk, 島々からの女の子",
       "description": ""
@@ -6552,7 +6552,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "𝔻𝔼𝕄𝕌𝕁𝔸",
       "description": ""
@@ -13179,7 +13179,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "тула feat. Бэкстрит",
       "description": ""
@@ -13398,7 +13398,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "mosl",
       "description": ""
@@ -13449,7 +13449,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "Acji, Ugly Nick, Nmnvndl",
       "description": ""
@@ -13482,7 +13482,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "splav",
       "description": ""
@@ -13599,7 +13599,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "N95",
       "description": ""
@@ -13662,7 +13662,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "Рябина",
       "description": ""
@@ -13779,7 +13779,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "NMNVNDL B2B ACJI & UGLY NICK",
       "description": ""
@@ -13950,7 +13950,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "AL-90 feat. Spurv",
       "description": ""
@@ -14073,7 +14073,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "AL-90 feat. Monokle",
       "description": ""
@@ -14112,7 +14112,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "AL-90 feat. Spurv",
       "description": ""
@@ -14211,7 +14211,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "AL-90",
       "description": ""
@@ -14268,7 +14268,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "AL-90",
       "description": ""
@@ -14301,7 +14301,7 @@
     ]
   },
   {
-    "mount": "tech",
+    "mount": "lofi_house",
     "artist": {
       "name": "AL-90",
       "description": ""
@@ -32156,6 +32156,705 @@
   {
     "mount": "tech",
     "artist": {
+      "name": "Developer",
+      "description": ""
+    },
+    "album": {
+      "name": "Rhythms Translated in Volstron",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\Developer - Rhythms Translated in Volstron 2024"
+    },
+    "track_list": [
+      {
+        "filename": "01.Hexican.mp3",
+        "name": "Hexican",
+        "duration": "07:28",
+        "track_number": 1
+      },
+      {
+        "filename": "02.When they come knocking.mp3",
+        "name": "When they come knocking",
+        "duration": "07:16",
+        "track_number": 2
+      },
+      {
+        "filename": "03.She says shes good.mp3",
+        "name": "She says shes good",
+        "duration": "08:27",
+        "track_number": 3
+      },
+      {
+        "filename": "04.Black Oceanz.mp3",
+        "name": "Black Oceanz",
+        "duration": "07:42",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "DJ Boneyard",
+      "description": ""
+    },
+    "album": {
+      "name": "Bonestyle",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\tech\\DJ Boneyard - Bonestyle 2023\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "DJ Boneyard - Bonestyle.mp3",
+        "name": "Bonestyle",
+        "duration": "08:35",
+        "track_number": 1
+      },
+      {
+        "filename": "DJ Boneyard - Flutter.mp3",
+        "name": "Flutter",
+        "duration": "09:49",
+        "track_number": 2
+      },
+      {
+        "filename": "DJ Boneyard - Prefecture 666.mp3",
+        "name": "Prefecture 666",
+        "duration": "11:23",
+        "track_number": 5
+      },
+      {
+        "filename": "DJ Boneyard - Pump.mp3",
+        "name": "Pump",
+        "duration": "10:32",
+        "track_number": 6
+      },
+      {
+        "filename": "DJ Boneyard - Slap Slap Slap.mp3",
+        "name": "Slap Slap Slap",
+        "duration": "11:27",
+        "track_number": 3
+      },
+      {
+        "filename": "DJ Boneyard - Toting A Gun.mp3",
+        "name": "Toting A Gun",
+        "duration": "09:44",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Ilya Dubrovin",
+      "description": ""
+    },
+    "album": {
+      "name": "25",
+      "description": "",
+      "year": 2018,
+      "path": "__source__\\tech\\ilya dubrovin\\25_-2000831309_3831309"
+    },
+    "track_list": [
+      {
+        "filename": "Ilya Dubrovin - Friendly Neighbor.mp3",
+        "name": "Friendly Neighbor",
+        "duration": "06:32",
+        "track_number": 3
+      },
+      {
+        "filename": "Ilya Dubrovin - Mouse Holes.mp3",
+        "name": "Mouse Holes",
+        "duration": "05:02",
+        "track_number": 1
+      },
+      {
+        "filename": "Ilya Dubrovin - Party na hate.mp3",
+        "name": "Party na hate",
+        "duration": "06:55",
+        "track_number": 6
+      },
+      {
+        "filename": "Ilya Dubrovin - Purple.mp3",
+        "name": "Purple.",
+        "duration": "06:39",
+        "track_number": 5
+      },
+      {
+        "filename": "Ilya Dubrovin - Seven in the Morning.mp3",
+        "name": "Seven in the Morning",
+        "duration": "06:32",
+        "track_number": 2
+      },
+      {
+        "filename": "Ilya Dubrovin - Wave Motion.mp3",
+        "name": "Wave Motion",
+        "duration": "06:56",
+        "track_number": 4
+      },
+      {
+        "filename": "Ilya Dubrovin - We Went to Eat.mp3",
+        "name": "We Went to Eat",
+        "duration": "05:10",
+        "track_number": 7
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Ilya Dubrovin",
+      "description": ""
+    },
+    "album": {
+      "name": "Chi-Chi",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\tech\\ilya dubrovin\\Chi-Chi_-2000718471_5718471"
+    },
+    "track_list": [
+      {
+        "filename": "Ilya Dubrovin - Ikia.mp3",
+        "name": "Ikia",
+        "duration": "05:20",
+        "track_number": 3
+      },
+      {
+        "filename": "Ilya Dubrovin - Pontius Pilate.mp3",
+        "name": "Pontius Pilate",
+        "duration": "06:20",
+        "track_number": 1
+      },
+      {
+        "filename": "Ilya Dubrovin - Rhythm.mp3",
+        "name": "Rhythm",
+        "duration": "05:48",
+        "track_number": 2
+      },
+      {
+        "filename": "Ilya Dubrovin - Self Talk.mp3",
+        "name": "Self Talk",
+        "duration": "08:01",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Ilya Dubrovin",
+      "description": ""
+    },
+    "album": {
+      "name": "Eto Moskva",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\tech\\ilya dubrovin\\Eto Moskva_-2000415222_5415222"
+    },
+    "track_list": [
+      {
+        "filename": "Ilya Dubrovin - Moskva.mp3",
+        "name": "Moskva",
+        "duration": "04:52",
+        "track_number": 1
+      },
+      {
+        "filename": "Ilya Dubrovin - Picnic.mp3",
+        "name": "Picnic",
+        "duration": "05:10",
+        "track_number": 2
+      },
+      {
+        "filename": "Ilya Dubrovin - Polter.mp3",
+        "name": "Polter",
+        "duration": "05:30",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Ilya Dubrovin",
+      "description": ""
+    },
+    "album": {
+      "name": "Ob4 EP",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\tech\\ilya dubrovin\\Ob4 EP_-2000549504_11549504"
+    },
+    "track_list": [
+      {
+        "filename": "Ilya Dubrovin - Ob4.mp3",
+        "name": "Ob4",
+        "duration": "08:56",
+        "track_number": 1
+      },
+      {
+        "filename": "Ilya Dubrovin - W8Rhytm.mp3",
+        "name": "W8Rhytm",
+        "duration": "06:38",
+        "track_number": 2
+      },
+      {
+        "filename": "Ilya Dubrovin - You die.mp3",
+        "name": "You die",
+        "duration": "06:39",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Ilya Dubrovin",
+      "description": ""
+    },
+    "album": {
+      "name": "Shot Me",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\tech\\ilya dubrovin\\Shot Me_-2000169929_6169929"
+    },
+    "track_list": [
+      {
+        "filename": "Ilya Dubrovin - Shirts.mp3",
+        "name": "Shirts",
+        "duration": "05:35",
+        "track_number": 2
+      },
+      {
+        "filename": "Ilya Dubrovin - Shot Me.mp3",
+        "name": "Shot Me",
+        "duration": "06:21",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Ilya Dubrovin",
+      "description": ""
+    },
+    "album": {
+      "name": "Wonka EP",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\tech\\ilya dubrovin\\Wonka EP_-2000787845_12787845"
+    },
+    "track_list": [
+      {
+        "filename": "Ilya Dubrovin - Banzay.mp3",
+        "name": "Banzay",
+        "duration": "07:26",
+        "track_number": 1
+      },
+      {
+        "filename": "Ilya Dubrovin - Shura.mp3",
+        "name": "Shura",
+        "duration": "07:00",
+        "track_number": 2
+      },
+      {
+        "filename": "Ilya Dubrovin - Wonka.mp3",
+        "name": "Wonka",
+        "duration": "06:09",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Symbol, Ilya Dubrovin",
+      "description": ""
+    },
+    "album": {
+      "name": "Музыка",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\tech\\ilya dubrovin\\Музыка_-2000217876_19217876"
+    },
+    "track_list": [
+      {
+        "filename": "Symbol, Ilya Dubrovin - Музыка.mp3",
+        "name": "Музыка",
+        "duration": "02:51",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Ilya Dubrovin",
+      "description": ""
+    },
+    "album": {
+      "name": "Самоуважение",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\tech\\ilya dubrovin\\Самоуважение_-2000094968_18094968"
+    },
+    "track_list": [
+      {
+        "filename": "Ilya Dubrovin - Sadnotstyle.mp3",
+        "name": "Sadnotstyle",
+        "duration": "05:10",
+        "track_number": 2
+      },
+      {
+        "filename": "Ilya Dubrovin - Самоуважение.mp3",
+        "name": "Самоуважение",
+        "duration": "03:56",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Intersecta",
+      "description": ""
+    },
+    "album": {
+      "name": "Fomo Sapiens",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\Intersecta - Fomo Sapiens 2024\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "Intersecta - Sharing This.mp3",
+        "name": "Sharing This",
+        "duration": "07:25",
+        "track_number": 3
+      },
+      {
+        "filename": "Intersecta - Synthetic Dawn.mp3",
+        "name": "Synthetic Dawn",
+        "duration": "08:54",
+        "track_number": 2
+      },
+      {
+        "filename": "Intersecta - That Moment.mp3",
+        "name": "That Moment",
+        "duration": "08:16",
+        "track_number": 4
+      },
+      {
+        "filename": "Intersecta - You Tell Me.mp3",
+        "name": "You Tell Me",
+        "duration": "06:31",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Jorg Kuning",
+      "description": ""
+    },
+    "album": {
+      "name": "Jorg Kuning - BH002",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\tech\\Jorg Kuning\\Jorg Kuning - BH002"
+    },
+    "track_list": [
+      {
+        "filename": "01 Jorg Kuning - Hibbert.mp3",
+        "name": "Hibbert",
+        "duration": "07:19",
+        "track_number": 1
+      },
+      {
+        "filename": "02 Jorg Kuning - Tunnels.mp3",
+        "name": "Tunnels",
+        "duration": "06:12",
+        "track_number": 2
+      },
+      {
+        "filename": "03 Jorg Kuning - Algotherapy.mp3",
+        "name": "Algotherapy",
+        "duration": "06:31",
+        "track_number": 3
+      },
+      {
+        "filename": "04 Jorg Kuning - Bumrush.mp3",
+        "name": "Bumrush",
+        "duration": "05:42",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Jorg Kuning",
+      "description": ""
+    },
+    "album": {
+      "name": "Jorg Kuning - BH003",
+      "description": "",
+      "year": 2020,
+      "path": "__source__\\tech\\Jorg Kuning\\Jorg Kuning - BH003"
+    },
+    "track_list": [
+      {
+        "filename": "01 Jorg Kuning - Vera.mp3",
+        "name": "Vera",
+        "duration": "06:42",
+        "track_number": 1
+      },
+      {
+        "filename": "02 Jorg Kuning - Quixo.mp3",
+        "name": "Quixo",
+        "duration": "06:28",
+        "track_number": 2
+      },
+      {
+        "filename": "03 Jorg Kuning - Spirals.mp3",
+        "name": "Spirals",
+        "duration": "06:37",
+        "track_number": 3
+      },
+      {
+        "filename": "04 Jorg Kuning - Aevr.mp3",
+        "name": "Aevr",
+        "duration": "06:07",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Jorg Kuning",
+      "description": ""
+    },
+    "album": {
+      "name": "Jorg Kuning - BH005",
+      "description": "",
+      "year": 2022,
+      "path": "__source__\\tech\\Jorg Kuning\\Jorg Kuning - BH005"
+    },
+    "track_list": [
+      {
+        "filename": "01 Jorg Kuning - Simmons.mp3",
+        "name": "Simmons",
+        "duration": "07:03",
+        "track_number": 1
+      },
+      {
+        "filename": "02 Jorg Kuning - Transplant.mp3",
+        "name": "Transplant",
+        "duration": "08:07",
+        "track_number": 2
+      },
+      {
+        "filename": "03 Jorg Kuning - Dripgroove.mp3",
+        "name": "Dripgroove",
+        "duration": "07:04",
+        "track_number": 3
+      },
+      {
+        "filename": "04 Jorg Kuning - Bodyscan.mp3",
+        "name": "Bodyscan",
+        "duration": "08:02",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Jorg Kuning",
+      "description": ""
+    },
+    "album": {
+      "name": "Jorg Kuning - BH007",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\tech\\Jorg Kuning\\Jorg Kuning - BH007"
+    },
+    "track_list": [
+      {
+        "filename": "01 Jorg Kuning - Klarneto.mp3",
+        "name": "Klarneto",
+        "duration": "06:01",
+        "track_number": 1
+      },
+      {
+        "filename": "02 Jorg Kuning - Rodeo Romeo.mp3",
+        "name": "Rodeo Romeo",
+        "duration": "06:49",
+        "track_number": 2
+      },
+      {
+        "filename": "03 Jorg Kuning - Robotomy.mp3",
+        "name": "Robotomy",
+        "duration": "07:10",
+        "track_number": 3
+      },
+      {
+        "filename": "04 Jorg Kuning - Quirl.mp3",
+        "name": "Quirl",
+        "duration": "07:37",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "schuttle",
+      "description": ""
+    },
+    "album": {
+      "name": "Schuttle - BH001",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\tech\\Jorg Kuning\\schuttle\\Schuttle - BH001"
+    },
+    "track_list": [
+      {
+        "filename": "01 schuttle - Grade 1.mp3",
+        "name": "Grade 1",
+        "duration": "06:35",
+        "track_number": 1
+      },
+      {
+        "filename": "02 schuttle - Speke.mp3",
+        "name": "Speke",
+        "duration": "06:24",
+        "track_number": 2
+      },
+      {
+        "filename": "03 schuttle - Utensil.mp3",
+        "name": "Utensil",
+        "duration": "06:03",
+        "track_number": 3
+      },
+      {
+        "filename": "04 schuttle - Grade 2.mp3",
+        "name": "Grade 2",
+        "duration": "05:40",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "schuttle",
+      "description": ""
+    },
+    "album": {
+      "name": "schuttle - BH004",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\tech\\Jorg Kuning\\schuttle\\schuttle - BH004"
+    },
+    "track_list": [
+      {
+        "filename": "01 schuttle - Ritual Master.mp3",
+        "name": "Ritual Master",
+        "duration": "07:01",
+        "track_number": 1
+      },
+      {
+        "filename": "02 schuttle - Heretic.mp3",
+        "name": "Heretic",
+        "duration": "06:04",
+        "track_number": 2
+      },
+      {
+        "filename": "03 schuttle - Ekt.mp3",
+        "name": "Ekt",
+        "duration": "07:11",
+        "track_number": 3
+      },
+      {
+        "filename": "04 schuttle - Weaver.mp3",
+        "name": "Weaver",
+        "duration": "05:05",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "schuttle",
+      "description": ""
+    },
+    "album": {
+      "name": "schuttle - BH006",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\tech\\Jorg Kuning\\schuttle\\schuttle - BH006"
+    },
+    "track_list": [
+      {
+        "filename": "01 schuttle - Shadout.mp3",
+        "name": "Shadout",
+        "duration": "06:05",
+        "track_number": 1
+      },
+      {
+        "filename": "02 schuttle - Souvlaki.mp3",
+        "name": "Souvlaki",
+        "duration": "06:15",
+        "track_number": 2
+      },
+      {
+        "filename": "03 schuttle - Swords Dance (Parts 1 & 2).mp3",
+        "name": "Swords Dance (Parts 1 & 2)",
+        "duration": "10:04",
+        "track_number": 3
+      },
+      {
+        "filename": "04 schuttle - Junkman.mp3",
+        "name": "Junkman",
+        "duration": "06:34",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "schuttle & Jorg Kuning",
+      "description": ""
+    },
+    "album": {
+      "name": "BHTAPES001",
+      "description": "",
+      "year": 2022,
+      "path": "__source__\\tech\\Jorg Kuning\\schuttle & Jorg Kuning\\BHTAPES001"
+    },
+    "track_list": [
+      {
+        "filename": "01 schuttle & Jorg Kuning - Side A - schuttle.mp3",
+        "name": "Side A - schuttle",
+        "duration": "44:58",
+        "track_number": 1
+      },
+      {
+        "filename": "02 schuttle & Jorg Kuning - Side B - Jorg Kuning.mp3",
+        "name": "Side B - Jorg Kuning",
+        "duration": "43:32",
+        "track_number": 2
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
       "name": "Karkossyn",
       "description": ""
     },
@@ -32201,6 +32900,255 @@
         "name": "Troubled Youth",
         "duration": "06:01",
         "track_number": 6
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Mr. Ho",
+      "description": ""
+    },
+    "album": {
+      "name": "'Michaelsoft'",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\tech\\Mr. Ho – Michaelsoft 2021\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "Mr. Ho - 'Michaelsoft' - 02 In-best.mp3",
+        "name": "In-best",
+        "duration": "09:27",
+        "track_number": 2
+      },
+      {
+        "filename": "Mr. Ho - 'Michaelsoft' - 03 Ngomee (ft. Xiaolin).mp3",
+        "name": "Ngomee (ft. Xiaolin)",
+        "duration": "09:56",
+        "track_number": 3
+      },
+      {
+        "filename": "Mr. Ho - 'Michaelsoft' - 04 Bail-E.mp3",
+        "name": "Bail-E",
+        "duration": "15:50",
+        "track_number": 4
+      },
+      {
+        "filename": "Mr. Ho - 'Michaelsoft' - 05 Quit Startin'.mp3",
+        "name": "Quit Startin'",
+        "duration": "09:59",
+        "track_number": 5
+      },
+      {
+        "filename": "Mr. Ho - 'Michaelsoft' - 06 Perfect Round.mp3",
+        "name": "Perfect Round",
+        "duration": "10:48",
+        "track_number": 6
+      },
+      {
+        "filename": "Mr. Ho - 'Michaelsoft' - 07 Mind Pollution.mp3",
+        "name": "Mind Pollution",
+        "duration": "12:55",
+        "track_number": 7
+      },
+      {
+        "filename": "Mr. Ho - 'Michaelsoft' - 08 14ME.mp3",
+        "name": "14ME",
+        "duration": "09:41",
+        "track_number": 8
+      },
+      {
+        "filename": "Mr_Ho_'Michaelsoft'_01_000Baby_Alternative_Mix.mp3",
+        "name": "000Baby (Alternative Mix)",
+        "duration": "14:34",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Mutant Joe",
+      "description": ""
+    },
+    "album": {
+      "name": "Operation Chaos",
+      "description": "",
+      "year": 2020,
+      "path": "__source__\\tech\\Mutant Joe\\Operation Chaos"
+    },
+    "track_list": [
+      {
+        "filename": "01 Mutant Joe - Hokus Pokus [Ft. Freddie Dredd].mp3",
+        "name": "Hokus Pokus [Ft. Freddie Dredd]",
+        "duration": "03:37",
+        "track_number": 1
+      },
+      {
+        "filename": "02 Mutant Joe - What U Thinkin [Ft. Freddie Dredd + Julien Andreas].mp3",
+        "name": "What U Thinkin [Ft. Freddie Dredd + Julien Andreas]",
+        "duration": "04:40",
+        "track_number": 2
+      },
+      {
+        "filename": "03 Mutant Joe - Knick Knack [Ft. YVNCC].mp3",
+        "name": "Knick Knack [Ft. YVNCC]",
+        "duration": "06:42",
+        "track_number": 3
+      },
+      {
+        "filename": "04 Mutant Joe - Like a Blunt [Ft. Freddie Dredd].mp3",
+        "name": "Like a Blunt [Ft. Freddie Dredd]",
+        "duration": "03:35",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "N-Gynn",
+      "description": ""
+    },
+    "album": {
+      "name": "LONEWOLF 007 N-Gynn_2000 & Something",
+      "description": "",
+      "year": 2022,
+      "path": "__source__\\tech\\N-Gynn – 2000 & Something 2022\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "EYA_RECORDS_LONEWOLF_LONEWOLF_007_N_Gynn_2000_&_Something_01_2000.mp3",
+        "name": "2000 & Something",
+        "duration": "16:43",
+        "track_number": 1
+      },
+      {
+        "filename": "EYA_RECORDS_LONEWOLF_LONEWOLF_007_N_Gynn_2000_&_Something_02_Third.mp3",
+        "name": "Third Wave",
+        "duration": "10:54",
+        "track_number": 2
+      },
+      {
+        "filename": "EYA_RECORDS_LONEWOLF_LONEWOLF_007_N_Gynn_2000_&_Something_03_Ritmos.mp3",
+        "name": "Ritmos Oscuros",
+        "duration": "11:55",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Otis",
+      "description": ""
+    },
+    "album": {
+      "name": "Dias de D-D-D-D-Dope EP",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\tech\\Otis – Dias de D-D-D-D-Dope 2023\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "01 - Shed - EMCZ.mp3",
+        "name": "EMCZ",
+        "duration": "08:12",
+        "track_number": 1
+      },
+      {
+        "filename": "01 Anabol.mp3",
+        "name": "Anabol",
+        "duration": "12:55",
+        "track_number": 1
+      },
+      {
+        "filename": "01 Extra Dimension.mp3",
+        "name": "Extra Dimension",
+        "duration": "12:08",
+        "track_number": 1
+      },
+      {
+        "filename": "02 - Shed - TLSQ.mp3",
+        "name": "TLSQ",
+        "duration": "10:49",
+        "track_number": 2
+      },
+      {
+        "filename": "02 Catabol.mp3",
+        "name": "Catabol",
+        "duration": "10:18",
+        "track_number": 2
+      },
+      {
+        "filename": "02 E3rea.mp3",
+        "name": "E3rea",
+        "duration": "12:16",
+        "track_number": 2
+      },
+      {
+        "filename": "03 - Shed - UFO2.mp3",
+        "name": "UFO2",
+        "duration": "15:36",
+        "track_number": 3
+      },
+      {
+        "filename": "03 D-d-d-dope.mp3",
+        "name": "D-d-d-dope",
+        "duration": "12:10",
+        "track_number": 3
+      },
+      {
+        "filename": "03 Kibosh.mp3",
+        "name": "Kibosh",
+        "duration": "08:27",
+        "track_number": 3
+      },
+      {
+        "filename": "04 Floxy.mp3",
+        "name": "Floxy",
+        "duration": "12:47",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Peverelist",
+      "description": ""
+    },
+    "album": {
+      "name": "Pulse Echo EP",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\Peverelist - Pulse Echo 2024\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "Peverelist - Pulse XIII.mp3",
+        "name": "Pulse XIII",
+        "duration": "11:08",
+        "track_number": 1
+      },
+      {
+        "filename": "Peverelist - Pulse XIV.mp3",
+        "name": "Pulse XIV",
+        "duration": "12:07",
+        "track_number": 2
+      },
+      {
+        "filename": "Peverelist - Pulse XV.mp3",
+        "name": "Pulse XV",
+        "duration": "13:53",
+        "track_number": 3
+      },
+      {
+        "filename": "Peverelist - Pulse XVI.mp3",
+        "name": "Pulse XVI",
+        "duration": "13:11",
+        "track_number": 4
       }
     ]
   },
@@ -32794,6 +33742,507 @@
         "filename": "02 re_fraction - Narcotic 303 - Tales of Alpha Centauri (re_fraction remix).mp3",
         "name": "Narcotic 303 - Tales of Alpha Centauri (re:fraction remix)",
         "duration": "07:49",
+        "track_number": 2
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Soft Blade",
+      "description": ""
+    },
+    "album": {
+      "name": "Softic",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\tech\\Soft Blade - Softic 2021\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "Soft Blade - Koleni.mp3",
+        "name": "Koleni",
+        "duration": "03:52",
+        "track_number": 2
+      },
+      {
+        "filename": "Soft Blade - Ksv.mp3",
+        "name": "Ksv",
+        "duration": "06:38",
+        "track_number": 4
+      },
+      {
+        "filename": "Soft Blade - Ne Strashno.mp3",
+        "name": "Ne Strashno",
+        "duration": "04:39",
+        "track_number": 6
+      },
+      {
+        "filename": "Soft Blade - Ruchey.mp3",
+        "name": "Ruchey",
+        "duration": "08:43",
+        "track_number": 9
+      },
+      {
+        "filename": "Soft Blade - Silent People.mp3",
+        "name": "Silent People",
+        "duration": "05:53",
+        "track_number": 1
+      },
+      {
+        "filename": "Soft Blade - Softic Dnb.mp3",
+        "name": "Softic Dnb",
+        "duration": "07:25",
+        "track_number": 7
+      },
+      {
+        "filename": "Soft Blade - Swamp Electro (For Young Ladies).mp3",
+        "name": "Swamp Electro (For Young Ladies)",
+        "duration": "07:58",
+        "track_number": 5
+      },
+      {
+        "filename": "Soft Blade - Volca Vidra.mp3",
+        "name": "Volca Vidra",
+        "duration": "08:02",
+        "track_number": 8
+      },
+      {
+        "filename": "Soft Blade - Yugoslavskiy Groove.mp3",
+        "name": "Yugoslavskiy Groove",
+        "duration": "08:10",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Soichi Terada",
+      "description": ""
+    },
+    "album": {
+      "name": "Asakusa Light",
+      "description": "",
+      "year": 2022,
+      "path": "__source__\\tech\\Soichi Terada (寺田創一) - Asakusa Light 2022\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "01 - Soichi Terada - Silent Chord.mp3",
+        "name": "Silent Chord",
+        "duration": "09:40",
+        "track_number": 1
+      },
+      {
+        "filename": "02 - Soichi Terada - Double Spire.mp3",
+        "name": "Double Spire",
+        "duration": "09:01",
+        "track_number": 2
+      },
+      {
+        "filename": "03 - Soichi Terada - Bamboo Fighter.mp3",
+        "name": "Bamboo Fighter",
+        "duration": "09:16",
+        "track_number": 3
+      },
+      {
+        "filename": "04 - Soichi Terada - Diving Into Minds.mp3",
+        "name": "Diving Into Minds",
+        "duration": "09:05",
+        "track_number": 4
+      },
+      {
+        "filename": "05 - Soichi Terada - Marimbau.mp3",
+        "name": "Marimbau",
+        "duration": "07:33",
+        "track_number": 5
+      },
+      {
+        "filename": "06 - Soichi Terada - Takusambient.mp3",
+        "name": "Takusambient",
+        "duration": "08:46",
+        "track_number": 6
+      },
+      {
+        "filename": "07 - Soichi Terada - Soaking Dry.mp3",
+        "name": "Soaking Dry",
+        "duration": "09:20",
+        "track_number": 7
+      },
+      {
+        "filename": "08 - Soichi Terada - From Dusk.mp3",
+        "name": "From Dusk",
+        "duration": "09:15",
+        "track_number": 8
+      },
+      {
+        "filename": "09 - Soichi Terada - Runners.mp3",
+        "name": "Runners",
+        "duration": "09:23",
+        "track_number": 9
+      },
+      {
+        "filename": "10 - Soichi Terada - Blinker.mp3",
+        "name": "Blinker",
+        "duration": "08:13",
+        "track_number": 10
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "suki & Sniper1",
+      "description": ""
+    },
+    "album": {
+      "name": "19 - Rhythm Export EP",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\tech\\Suki & Sniper1 – Rhythm Export EP 2021\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "suki & Sniper1 - 19 - Rhythm Export EP - 03 Purple Haze.mp3",
+        "name": "Purple Haze",
+        "duration": "14:39",
+        "track_number": 3
+      },
+      {
+        "filename": "suki & Sniper1 - 19 - Rhythm Export EP - 04 Elezon.mp3",
+        "name": "Elezon",
+        "duration": "11:36",
+        "track_number": 4
+      },
+      {
+        "filename": "suki_&_Sniper1_19_Rhythm_Export_EP_01_Rhythm_Export.mp3",
+        "name": "Rhythm Export",
+        "duration": "12:24",
+        "track_number": 1
+      },
+      {
+        "filename": "suki_&_Sniper1_19_Rhythm_Export_EP_02_Georges_Discovery.mp3",
+        "name": "Georges Discovery",
+        "duration": "11:31",
+        "track_number": 2
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Seka",
+      "description": ""
+    },
+    "album": {
+      "name": "Banoffee Pies Digi 05",
+      "description": "",
+      "year": 2018,
+      "path": "__source__\\tech\\Various Artists – Banoffee Pies Digi 05 2018\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "Crump - Banoffee Pies Digi 05 - 01 JHE.mp3",
+        "name": "JHE",
+        "duration": "12:29",
+        "track_number": 1
+      },
+      {
+        "filename": "Ed Eldridge - Banoffee Pies Digi 05 - 06 290318.mp3",
+        "name": "290318",
+        "duration": "10:05",
+        "track_number": 6
+      },
+      {
+        "filename": "Gallegos - Banoffee Pies Digi 05 - 03 Be Who You Want To Be.mp3",
+        "name": "Be Who You Want To Be",
+        "duration": "15:26",
+        "track_number": 3
+      },
+      {
+        "filename": "Jay Anderson - Banoffee Pies Digi 05 - 07 Beyond Time.mp3",
+        "name": "Beyond Time",
+        "duration": "15:19",
+        "track_number": 7
+      },
+      {
+        "filename": "K-LONE - Banoffee Pies Digi 05 - 02 Clouds.mp3",
+        "name": "Clouds",
+        "duration": "14:56",
+        "track_number": 2
+      },
+      {
+        "filename": "KOKO_&_Niccolo_Borgi_Banoffee_Pies_Digi_05_05_Nor_Gri.mp3",
+        "name": "Nor Gri",
+        "duration": "17:33",
+        "track_number": 5
+      },
+      {
+        "filename": "Seka - Banoffee Pies Digi 05 - 04 Hanging Gardens.mp3",
+        "name": "Hanging Gardens",
+        "duration": "11:52",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "vladimir dubyshkin",
+      "description": ""
+    },
+    "album": {
+      "name": "Botox Queen",
+      "description": "",
+      "year": 2022,
+      "path": "__source__\\tech\\vladimir dubyshkin\\Botox Queen_-2000956569_16956569"
+    },
+    "track_list": [
+      {
+        "filename": "vladimir dubyshkin - No Tell Motel.mp3",
+        "name": "No Tell Motel",
+        "duration": "05:05",
+        "track_number": 1
+      },
+      {
+        "filename": "vladimir dubyshkin - Noodle Soup.mp3",
+        "name": "Noodle Soup",
+        "duration": "04:52",
+        "track_number": 2
+      },
+      {
+        "filename": "vladimir dubyshkin - Paranoid Thoughts.mp3",
+        "name": "Paranoid Thoughts",
+        "duration": "05:18",
+        "track_number": 3
+      },
+      {
+        "filename": "vladimir dubyshkin - Thousand Kisses.mp3",
+        "name": "Thousand Kisses",
+        "duration": "05:06",
+        "track_number": 4
+      },
+      {
+        "filename": "vladimir dubyshkin - Ticket to Childhood.mp3",
+        "name": "Ticket to Childhood",
+        "duration": "05:11",
+        "track_number": 5
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Vladimir Dubyshkin",
+      "description": ""
+    },
+    "album": {
+      "name": "Budni Nashego Kolhoza",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\tech\\vladimir dubyshkin\\Budni Nashego Kolhoza_-2000684365_14684365"
+    },
+    "track_list": [
+      {
+        "filename": "Vladimir Dubyshkin - customs & traditions.mp3",
+        "name": "customs & traditions",
+        "duration": "05:48",
+        "track_number": 3
+      },
+      {
+        "filename": "Vladimir Dubyshkin - elvis has left the building.mp3",
+        "name": "elvis has left the building",
+        "duration": "05:05",
+        "track_number": 4
+      },
+      {
+        "filename": "Vladimir Dubyshkin - grasshopper´s opinion.mp3",
+        "name": "grasshopper´s opinion",
+        "duration": "04:52",
+        "track_number": 2
+      },
+      {
+        "filename": "Vladimir Dubyshkin - lady of the night.mp3",
+        "name": "lady of the night",
+        "duration": "04:52",
+        "track_number": 5
+      },
+      {
+        "filename": "Vladimir Dubyshkin - rural woman.mp3",
+        "name": "rural woman",
+        "duration": "05:21",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Vladimir Dubyshkin",
+      "description": ""
+    },
+    "album": {
+      "name": "Cheerful Pessimist",
+      "description": "",
+      "year": 2018,
+      "path": "__source__\\tech\\vladimir dubyshkin\\Cheerful Pessimist_-2000343313_10343313"
+    },
+    "track_list": [
+      {
+        "filename": "Vladimir Dubyshkin - Belissimo.mp3",
+        "name": "Belissimo",
+        "duration": "06:00",
+        "track_number": 1
+      },
+      {
+        "filename": "Vladimir Dubyshkin - I Decided To Fly.mp3",
+        "name": "I Decided To Fly",
+        "duration": "05:46",
+        "track_number": 2
+      },
+      {
+        "filename": "Vladimir Dubyshkin - Machines Behave Badly.mp3",
+        "name": "Machines Behave Badly",
+        "duration": "04:50",
+        "track_number": 3
+      },
+      {
+        "filename": "Vladimir Dubyshkin - Pigeon Epilepsy.mp3",
+        "name": "Pigeon Epilepsy",
+        "duration": "05:16",
+        "track_number": 4
+      },
+      {
+        "filename": "Vladimir Dubyshkin - Rooyggbiv.mp3",
+        "name": "Rooyggbiv",
+        "duration": "04:29",
+        "track_number": 5
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "vladimir dubyshkin",
+      "description": ""
+    },
+    "album": {
+      "name": "Ivanovo Night Luxe",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\vladimir dubyshkin\\Ivanovo Night Luxe_-2000960752_19960752"
+    },
+    "track_list": [
+      {
+        "filename": "vladimir dubyshkin - Adrenochrome Breakfast.mp3",
+        "name": "Adrenochrome Breakfast",
+        "duration": "04:37",
+        "track_number": 3
+      },
+      {
+        "filename": "vladimir dubyshkin - Birthday Cake.mp3",
+        "name": "Birthday Cake",
+        "duration": "04:19",
+        "track_number": 7
+      },
+      {
+        "filename": "vladimir dubyshkin - Glucose Guardian.mp3",
+        "name": "Glucose Guardian",
+        "duration": "05:10",
+        "track_number": 5
+      },
+      {
+        "filename": "vladimir dubyshkin - Hilton's Bio Accessory.mp3",
+        "name": "Hilton's Bio Accessory",
+        "duration": "05:13",
+        "track_number": 10
+      },
+      {
+        "filename": "vladimir dubyshkin - Just a Happy Song.mp3",
+        "name": "Just a Happy Song",
+        "duration": "05:19",
+        "track_number": 6
+      },
+      {
+        "filename": "vladimir dubyshkin - Nothingburger.mp3",
+        "name": "Nothingburger",
+        "duration": "02:36",
+        "track_number": 8
+      },
+      {
+        "filename": "vladimir dubyshkin - Pixel Hunting.mp3",
+        "name": "Pixel Hunting",
+        "duration": "04:37",
+        "track_number": 2
+      },
+      {
+        "filename": "vladimir dubyshkin - Sinking Horse.mp3",
+        "name": "Sinking Horse",
+        "duration": "04:57",
+        "track_number": 4
+      },
+      {
+        "filename": "vladimir dubyshkin - The Rothschild Party.mp3",
+        "name": "The Rothschild Party",
+        "duration": "05:33",
+        "track_number": 1
+      },
+      {
+        "filename": "vladimir dubyshkin - We're Not in the Wonderland Anymore, Alice.mp3",
+        "name": "We're Not in the Wonderland Anymore, Alice",
+        "duration": "05:05",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Vladimir Dubyshkin",
+      "description": ""
+    },
+    "album": {
+      "name": "Pornographic Novel",
+      "description": "",
+      "year": 2020,
+      "path": "__source__\\tech\\vladimir dubyshkin\\Pornographic Novel_-2000684367_14684367"
+    },
+    "track_list": [
+      {
+        "filename": "Vladimir Dubyshkin - amphetamine freak.mp3",
+        "name": "amphetamine freak",
+        "duration": "05:07",
+        "track_number": 6
+      },
+      {
+        "filename": "Vladimir Dubyshkin - company of 302s.mp3",
+        "name": "company of 302s",
+        "duration": "04:39",
+        "track_number": 5
+      },
+      {
+        "filename": "Vladimir Dubyshkin - deaf artist.mp3",
+        "name": "deaf artist",
+        "duration": "03:44",
+        "track_number": 4
+      },
+      {
+        "filename": "Vladimir Dubyshkin - driving the bus.mp3",
+        "name": "driving the bus",
+        "duration": "04:31",
+        "track_number": 3
+      },
+      {
+        "filename": "Vladimir Dubyshkin - russian porn magazine.mp3",
+        "name": "russian porn magazine",
+        "duration": "05:23",
+        "track_number": 1
+      },
+      {
+        "filename": "Vladimir Dubyshkin - the return of the drunken son.mp3",
+        "name": "the return of the drunken son",
+        "duration": "05:47",
         "track_number": 2
       }
     ]
