@@ -1,7 +1,5 @@
 from typing import re
 
-from sqlalchemy.engine import row
-
 from utils import Mount, env_config
 from ._connection import fetch_all, fetch_one
 from ._models import Track

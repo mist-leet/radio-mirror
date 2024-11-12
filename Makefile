@@ -1,20 +1,20 @@
-up_all:
+nvm:
+	. ${NVM_DIR}/nvm.sh && nvm use 22.11.0
+
+npm_version:
+	@echo "npm version:" $(shell npm -v)
+
+rebuild_frontend:
+	make nvm
+	cd radio_console/frontend/svelte/radio && npm run build
+
+build:
+	$(MAKE) rebuild_frontend
 	docker-compose up --build
 
-restart_postgres:
-	docker-compose up -d --force-recreate --no-deps --build postgres
+build_d:
+	$(MAKE) rebuild_frontend
+	docker-compose up --build -d
 
-restart_api:
-	docker-compose up -d --force-recreate --no-deps --build api
-
-restart_ezstream:
-	docker-compose up -d --force-recreate --no-deps --build ezstream
-
-restart_icecast:
-	docker-compose up -d --force-recreate --no-deps --build icecast
-
-bash_api:
-	docker exec -it api bash
-
-bash_ezstream:
-	docker exec -it ezstream bash
+exec:
+	docker exec -it $(C) bash

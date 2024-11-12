@@ -37,11 +37,13 @@
     }
 
     .artist-title {
+        text-align: left;
         font-weight: bold;
         font-size: 1em;
     }
 
     .album-title {
+        text-align: right;
         font-size: 0.9em;
         color: #aaa;
     }
