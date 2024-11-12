@@ -18,3 +18,7 @@ build_d:
 
 exec:
 	docker exec -it $(C) bash
+
+
+update_mirror:
+	cd ../radio-mirror && git fetch -p origin && git push --mirror github
