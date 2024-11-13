@@ -40,7 +40,7 @@ class Console:
     @classmethod
     def cover(cls, track: Track) -> str | None:
         path = cover_path(track)
-        path = next(find_cover(path), None)
+        path = find_cover(path)
         if not cover_path:
             raise KeyError(f'No cover for {track=}')
         return path

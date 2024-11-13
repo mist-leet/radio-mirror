@@ -59,6 +59,10 @@ class Mount(Enum):
         return self.__int_map.get(self)
 
     @property
+    def stream_name(self) -> str:
+        return f'stream_{self.value}'
+
+    @property
     def playlist_name(self):
         return f'playlist_{self.value}.txt'
 

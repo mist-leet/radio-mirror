@@ -1,6 +1,7 @@
 <script>
     export const ssr = false;
-    import App from "./App.svelte";
+    import './Global.css'
+    import MainContainer from "./MainContainer.svelte";
 </script>
 
-<App/>
+<MainContainer/>

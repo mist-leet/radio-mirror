@@ -25,7 +25,7 @@ class StatsCollector:
     def _run_stats_collection(self):
         """Фоновый метод, который будет выполняться в отдельном потоке."""
         while self.running:
-            stats = InternalClient.Icecast.stats()
+            stats = InternalClient.Icecast.list_client()
             parsed = self.__parse_stats(stats)
             self.__write(parsed)
             time.sleep(60)  # Пауза на 60 секунд между запусками
