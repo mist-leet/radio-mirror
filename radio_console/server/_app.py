@@ -49,9 +49,7 @@ class RadioConsoleApi:
         @classmethod
         async def cover(cls, request: web.Request) -> web.Response:
             mount = Mount(request.match_info.get('mount'))
-            image_path = Path(queue_state.cover_path(mount))
-            image_data = image_path.read_bytes()
-            return web.Response(body=image_data, content_type="image/jpeg")
+            return web.Response(body=queue_state.cover_data(mount), content_type="image/jpeg")
 
         @classmethod
         async def start(cls, request: web.Request) -> web.Response:

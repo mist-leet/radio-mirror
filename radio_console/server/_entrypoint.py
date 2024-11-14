@@ -1,6 +1,8 @@
 import time
 from dataclasses import dataclass, field
 from datetime import timedelta
+from functools import lru_cache
+from pathlib import Path
 
 from database import Track
 from meta import MetadataParser
@@ -65,8 +67,6 @@ def restart_broken():
             to_update.append(mount)
 
 
-
-
 @dataclass
 class QueueState:
     _configuration: dict[Mount, Queue] = field(default_factory=dict, init=False)
@@ -101,8 +101,15 @@ class QueueState:
     def cover_path(self, mount: Mount) -> str:
         return Console.cover(self.current_track(mount))
 
+    @lru_cache(maxsize=10)
+    def cover_data(self, mount: Mount) -> bytes:
+        image_path = Path(queue_state.cover_path(mount))
+        return image_path.read_bytes()
+
     def _update_current_track(self, mount: Mount, track: Track):
         self._track_buffer[mount] = track
+        Console.cover(track)
+        self.cover_data(mount)
 
     def current_track(self, mount: Mount) -> Track:
         return self._track_buffer[mount]
