@@ -6,7 +6,7 @@ from pathlib import Path
 
 from database import Track
 from meta import MetadataParser
-from utils import Mount, Logger
+from utils import Mount, Logger, cover_data
 from console import Config, Console, QueueMode, Scheduler, Queue
 from ._internal_client import InternalClient
 
@@ -101,10 +101,8 @@ class QueueState:
     def cover_path(self, mount: Mount) -> str:
         return Console.cover(self.current_track(mount))
 
-    @lru_cache(maxsize=10)
     def cover_data(self, mount: Mount) -> bytes:
-        image_path = Path(queue_state.cover_path(mount))
-        return image_path.read_bytes()
+        return cover_data(self.cover_path(mount))
 
     def _update_current_track(self, mount: Mount, track: Track):
         self._track_buffer[mount] = track

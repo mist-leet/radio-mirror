@@ -38,7 +38,6 @@ class Console:
         }
 
     @classmethod
-    @lru_cache(maxsize=10)
     def cover(cls, track: Track) -> str | None:
         path = cover_path(track)
         path = find_cover(path)
