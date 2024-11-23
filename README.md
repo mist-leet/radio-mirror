@@ -10,6 +10,10 @@
     
     ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash```
 
+   for ```fish```
+
+   ```fisher install jorgebucaran/nvm.fish```
+
 2. [rclone](https://rclone.org/) - for local authenticate in Yandex.Disk
 
     ```sudo -v ; curl https://rclone.org/install.sh | sudo bash```
