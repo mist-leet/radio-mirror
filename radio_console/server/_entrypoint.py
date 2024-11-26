@@ -14,10 +14,10 @@ from ._internal_client import InternalClient
 class EntryPoint:
 
     configuration = {
-        Config(QueueMode.random, Mount.tech, queue_amount=5000),
-        Config(QueueMode.random, Mount.ambient, queue_amount=5000),
-        Config(QueueMode.random, Mount.classic, queue_amount=5000),
-        Config(QueueMode.random, Mount.lounge, queue_amount=5000),
+        Config(QueueMode.random, Mount.tech, queue_amount=10_000),
+        Config(QueueMode.random, Mount.ambient, queue_amount=10_000),
+        Config(QueueMode.random, Mount.classic, queue_amount=10_000),
+        Config(QueueMode.random, Mount.lounge, queue_amount=10_000),
     }
 
     @classmethod

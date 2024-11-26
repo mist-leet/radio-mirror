@@ -1,5 +1,6 @@
 import json
 import os.path
+import re
 
 from database import cursor, fetch_all, fetch_one, to_json
 
@@ -11,11 +12,31 @@ from utils import Mount
 class MetadataParser:
 
     @classmethod
+    def safe_str(cls, data: list[dict]):
+        if isinstance(data, list):
+            for i, row in enumerate(data):
+                if isinstance(row, str):
+                    data[i] = row.replace(chr(0x00), '')
+                else:
+                    data[i] = cls.safe_str(row)
+        if isinstance(data, dict):
+            for key, value in data.items():
+                if isinstance(value, str):
+                    data[key] = value.replace(chr(0x00), '')
+                else:
+                    data[key] = cls.safe_str(value)
+        return data
+
+
+
+
+    @classmethod
     def run(cls):
         cls.drop_all()
         path = os.path.join(os.path.dirname(__file__), 'meta.json')
-        with open(path, 'r', encoding='utf-8') as file:
+        with open(path, 'r', encoding='utf-8', errors='strict') as file:
             data = json.load(file)
+            data = cls.safe_str(data)
         for row in data:
             mount_id = Mount(row['mount']).int
             artist_id = cls.insert_artist(

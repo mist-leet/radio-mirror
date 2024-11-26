@@ -1367,6 +1367,1233 @@
   {
     "mount": "ambient",
     "artist": {
+      "name": "Max Richter; Preston Reed; Zack Ware",
+      "description": ""
+    },
+    "album": {
+      "name": "24 Postcards In Full Colour",
+      "description": "",
+      "year": 2014,
+      "path": "__source__\\ambient\\Max Richter\\24 Postcards In Full Colour\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Richter_ The Road Is A Grey Tape.mp3",
+        "name": "Richter: The Road Is A Grey Tape",
+        "duration": "02:04",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Richter_ Cathodes.mp3",
+        "name": "Richter: Cathodes",
+        "duration": "02:04",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Richter_ I Was Just Thinking.mp3",
+        "name": "Richter: I Was Just Thinking",
+        "duration": "02:00",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Richter_ A Song For H _ Far Away.mp3",
+        "name": "Richter: A Song For H / Far Away",
+        "duration": "04:18",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Richter_ Return To Prague.mp3",
+        "name": "Richter: Return To Prague",
+        "duration": "02:06",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Richter_ Broken Symmetries For Y.mp3",
+        "name": "Richter: Broken Symmetries For Y",
+        "duration": "02:07",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Richter_ Berlin By Overnight.mp3",
+        "name": "Richter: Berlin By Overnight",
+        "duration": "02:56",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Richter_ Cradle Song For A (Interstate B3).mp3",
+        "name": "Richter: Cradle Song For A (Interstate B3)",
+        "duration": "04:25",
+        "track_number": 16
+      },
+      {
+        "filename": "17 - Richter_ Kierling _ Doubt.mp3",
+        "name": "Richter: Kierling / Doubt",
+        "duration": "01:42",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - Richter_ From 553 W Elm Street_ Logan Illinois (Snow).mp3",
+        "name": "Richter: From 553 W Elm Street, Logan Illinois (Snow)",
+        "duration": "01:56",
+        "track_number": 18
+      },
+      {
+        "filename": "19 - Richter_ Tokyo Riddle Song.mp3",
+        "name": "Richter: Tokyo Riddle Song",
+        "duration": "02:01",
+        "track_number": 19
+      },
+      {
+        "filename": "2 - Richter_ H In New England.mp3",
+        "name": "Richter: H In New England",
+        "duration": "03:45",
+        "track_number": 2
+      },
+      {
+        "filename": "20 - Richter_ The Tartu Piano.mp3",
+        "name": "Richter: The Tartu Piano",
+        "duration": "04:18",
+        "track_number": 20
+      },
+      {
+        "filename": "21 - Richter_ Cold Fusion For G.mp3",
+        "name": "Richter: Cold Fusion For G",
+        "duration": "01:12",
+        "track_number": 21
+      },
+      {
+        "filename": "22 - Richter_ 32 Via San Nicolo.mp3",
+        "name": "Richter: 32 Via San Nicolo",
+        "duration": "02:48",
+        "track_number": 22
+      },
+      {
+        "filename": "23 - Richter_ Found Song For P_.mp3",
+        "name": "Richter: Found Song For P.",
+        "duration": "04:51",
+        "track_number": 23
+      },
+      {
+        "filename": "24 - Richter_ H Thinks A Journey.mp3",
+        "name": "Richter: H Thinks A Journey",
+        "duration": "01:54",
+        "track_number": 24
+      },
+      {
+        "filename": "25 - Richter_ Hope Strings Eternal.mp3",
+        "name": "Richter: Hope Strings Eternal",
+        "duration": "02:39",
+        "track_number": 25
+      },
+      {
+        "filename": "26 - Richter_ So Long Orpheus.mp3",
+        "name": "Richter: So Long Orpheus",
+        "duration": "04:49",
+        "track_number": 26
+      },
+      {
+        "filename": "27 - Richter_ Thermodynamics.mp3",
+        "name": "Richter: Thermodynamics",
+        "duration": "01:30",
+        "track_number": 27
+      },
+      {
+        "filename": "3 - Richter_ This Picture Of Us_ P_.mp3",
+        "name": "Richter: This Picture Of Us. P.",
+        "duration": "03:17",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Richter_ Lullaby From The Westcoast Sleepers.mp3",
+        "name": "Richter: Lullaby From The Westcoast Sleepers",
+        "duration": "04:05",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Richter_ When The Northern Lights _ Jasper And Louise.mp3",
+        "name": "Richter: When The Northern Lights / Jasper And Louise",
+        "duration": "02:02",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Richter_ Circles From The Rue Simon _ Crubellier.mp3",
+        "name": "Richter: Circles From The Rue Simon – Crubellier",
+        "duration": "02:14",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Richter_ Cascade NW By W.mp3",
+        "name": "Richter: Cascade NW By W",
+        "duration": "02:23",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Richter_ A Sudden Manhattan Of The Mind.mp3",
+        "name": "Richter: A Sudden Manhattan Of The Mind",
+        "duration": "05:39",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Richter_ In Louisville At 7.mp3",
+        "name": "Richter: In Louisville At 7",
+        "duration": "02:06",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Max Richter",
+      "description": ""
+    },
+    "album": {
+      "name": "Last Days on Mars: Original Motion Picture Soundtrack",
+      "description": "",
+      "year": 2014,
+      "path": "__source__\\ambient\\Max Richter\\Last Days on Mars_ Original Motion Picture Soundtrack"
+    },
+    "track_list": [
+      {
+        "filename": "15 - We Got An Emergency Down Here.mp3",
+        "name": "We Got An Emergency Down Here",
+        "duration": "04:01",
+        "track_number": 15
+      },
+      {
+        "filename": "17 - Runaway.mp3",
+        "name": "Runaway",
+        "duration": "04:01",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - Do You Think They Still Feel_.mp3",
+        "name": "Do You Think They Still Feel?",
+        "duration": "01:31",
+        "track_number": 18
+      },
+      {
+        "filename": "19 - Please Respond.mp3",
+        "name": "Please Respond",
+        "duration": "01:01",
+        "track_number": 19
+      },
+      {
+        "filename": "20 - Lane.mp3",
+        "name": "Lane",
+        "duration": "02:57",
+        "track_number": 20
+      },
+      {
+        "filename": "23 - Its Full Of Stars.mp3",
+        "name": "Its Full Of Stars",
+        "duration": "05:35",
+        "track_number": 23
+      },
+      {
+        "filename": "9 - The Return Of Dalby And Marko.mp3",
+        "name": "The Return Of Dalby And Marko",
+        "duration": "04:44",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Max Richter",
+      "description": ""
+    },
+    "album": {
+      "name": "Last Days on Mars: Original Motion Picture Soundtrack",
+      "description": "",
+      "year": 2014,
+      "path": "__source__\\ambient\\Max Richter\\Last Days on Mars_ Original Motion Picture Soundtrack\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Stormy Weather.mp3",
+        "name": "Stormy Weather",
+        "duration": "03:07",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - They Are Still Moving.mp3",
+        "name": "They Are Still Moving",
+        "duration": "05:16",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Escape.mp3",
+        "name": "Escape",
+        "duration": "01:02",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - The Plan.mp3",
+        "name": "The Plan",
+        "duration": "04:23",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - The Tunnel.mp3",
+        "name": "The Tunnel",
+        "duration": "08:22",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Return To Base.mp3",
+        "name": "Return To Base",
+        "duration": "11:05",
+        "track_number": 14
+      },
+      {
+        "filename": "16 - There Is No Escaping Out Of Here.mp3",
+        "name": "There Is No Escaping Out Of Here",
+        "duration": "05:58",
+        "track_number": 16
+      },
+      {
+        "filename": "2 - Aurora Mars Mission 2.mp3",
+        "name": "Aurora Mars Mission 2",
+        "duration": "02:14",
+        "track_number": 2
+      },
+      {
+        "filename": "21 - Do Not Open The Doors.mp3",
+        "name": "Do Not Open The Doors",
+        "duration": "04:42",
+        "track_number": 21
+      },
+      {
+        "filename": "22 - Ascent.mp3",
+        "name": "Ascent",
+        "duration": "05:50",
+        "track_number": 22
+      },
+      {
+        "filename": "3 - Lost In Space.mp3",
+        "name": "Lost In Space",
+        "duration": "06:25",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Airlock.mp3",
+        "name": "Airlock",
+        "duration": "02:27",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Secret Plan.mp3",
+        "name": "Secret Plan",
+        "duration": "02:54",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Final Briefing.mp3",
+        "name": "Final Briefing",
+        "duration": "02:32",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - After The Collapse.mp3",
+        "name": "After The Collapse",
+        "duration": "01:39",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Dalby And Marko.mp3",
+        "name": "Dalby And Marko",
+        "duration": "17:46",
+        "track_number": 8
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Max Richter;BBC Philharmonic;Rumon Gamba",
+      "description": ""
+    },
+    "album": {
+      "name": "Memoryhouse",
+      "description": "",
+      "year": 2002,
+      "path": "__source__\\ambient\\Max Richter\\Memoryhouse\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Europe_ After the Rain.mp3",
+        "name": "Europe, After the Rain",
+        "duration": "12:30",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Jan's Notebook.mp3",
+        "name": "Jan's Notebook",
+        "duration": "05:20",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Arbenita (11 Years).mp3",
+        "name": "Arbenita (11 Years)",
+        "duration": "14:17",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Garden (1973) _ Interior.mp3",
+        "name": "Garden (1973) / Interior",
+        "duration": "06:51",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Landscape with Figure (1922).mp3",
+        "name": "Landscape with Figure (1922)",
+        "duration": "10:30",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Fragment.mp3",
+        "name": "Fragment",
+        "duration": "02:55",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Lines on a Page (One Hundred Violins).mp3",
+        "name": "Lines on a Page (One Hundred Violins)",
+        "duration": "02:46",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Embers.mp3",
+        "name": "Embers",
+        "duration": "07:18",
+        "track_number": 16
+      },
+      {
+        "filename": "17 - Last Days.mp3",
+        "name": "Last Days",
+        "duration": "08:39",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - Quartet Fragment (1908).mp3",
+        "name": "Quartet Fragment (1908)",
+        "duration": "06:18",
+        "track_number": 18
+      },
+      {
+        "filename": "2 - Maria_ the Poet (1913).mp3",
+        "name": "Maria, the Poet (1913)",
+        "duration": "09:41",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Laika's Journey.mp3",
+        "name": "Laika's Journey",
+        "duration": "02:58",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - The Twins (Prague).mp3",
+        "name": "The Twins (Prague)",
+        "duration": "03:58",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Sarajevo.mp3",
+        "name": "Sarajevo",
+        "duration": "08:08",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Andras.mp3",
+        "name": "Andras",
+        "duration": "05:26",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Untitled (Figures).mp3",
+        "name": "Untitled (Figures)",
+        "duration": "06:55",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Sketchbook.mp3",
+        "name": "Sketchbook",
+        "duration": "03:53",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - November.mp3",
+        "name": "November",
+        "duration": "12:49",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Max Richter",
+      "description": ""
+    },
+    "album": {
+      "name": "Non-eternal (Piano Short Edit)",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\ambient\\Max Richter\\Non-eternal (Piano Short Edit)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Richter_ Non-eternal (Piano Short Edit).mp3",
+        "name": "Richter: Non-eternal (Piano Short Edit)",
+        "duration": "08:48",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Max Richter; Ben Russell; Yuki Numata; Caleb Burhans; Clarice Jensen; Brian Snow",
+      "description": ""
+    },
+    "album": {
+      "name": "Sleep (Faded)",
+      "description": "",
+      "year": 2018,
+      "path": "__source__\\ambient\\Max Richter\\Sleep (Faded)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Richter_ Dream 1 (before the wind blows it all away) (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Dream 1 (before the wind blows it all away) (Pt. 1 / Faded)",
+        "duration": "05:15",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Richter_ Cumulonimbus (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Cumulonimbus (Pt. 2 / Faded)",
+        "duration": "13:49",
+        "track_number": 10
+      },
+      {
+        "filename": "100 - Richter_ Chorale _ Glow (Pt_ 5 _ Faded).mp3",
+        "name": "Richter: Chorale / Glow (Pt. 5 / Faded)",
+        "duration": "04:05",
+        "track_number": 100
+      },
+      {
+        "filename": "11 - Richter_ Dream 2 (entropy) (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Dream 2 (entropy) (Pt. 1 / Faded)",
+        "duration": "04:58",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Richter_ Dream 2 (entropy) (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Dream 2 (entropy) (Pt. 2 / Faded)",
+        "duration": "04:53",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Richter_ Dream 2 (entropy) (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: Dream 2 (entropy) (Pt. 3 / Faded)",
+        "duration": "04:47",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Richter_ Dream 2 (entropy) (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: Dream 2 (entropy) (Pt. 4 / Faded)",
+        "duration": "06:08",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Richter_ Path 3 (7676) (Pt_ 1_ Faded).mp3",
+        "name": "Richter: Path 3 (7676) (Pt. 1/ Faded)",
+        "duration": "02:59",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Richter_ Path 3 (7676) (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Path 3 (7676) (Pt. 2 / Faded)",
+        "duration": "03:01",
+        "track_number": 16
+      },
+      {
+        "filename": "17 - Richter_ Path 3 (7676) (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: Path 3 (7676) (Pt. 3 / Faded)",
+        "duration": "04:04",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - Richter_ Path 3 (7676) (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: Path 3 (7676) (Pt. 4 / Faded)",
+        "duration": "06:50",
+        "track_number": 18
+      },
+      {
+        "filename": "19 - Richter_ Path 3 (7676) (Pt_ 5 _ Faded).mp3",
+        "name": "Richter: Path 3 (7676) (Pt. 5 / Faded)",
+        "duration": "06:53",
+        "track_number": 19
+      },
+      {
+        "filename": "2 - Richter_ Dream 1 (before the wind blows it all away) (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Dream 1 (before the wind blows it all away) (Pt. 2 / Faded)",
+        "duration": "04:53",
+        "track_number": 2
+      },
+      {
+        "filename": "20 - Richter_ whose name is written on water (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: whose name is written on water (Pt. 1 / Faded)",
+        "duration": "06:36",
+        "track_number": 20
+      },
+      {
+        "filename": "21 - Richter_ whose name is written on water (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: whose name is written on water (Pt. 2 / Faded)",
+        "duration": "03:55",
+        "track_number": 21
+      },
+      {
+        "filename": "22 - Richter_ whose name is written on water (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: whose name is written on water (Pt. 3 / Faded)",
+        "duration": "05:50",
+        "track_number": 22
+      },
+      {
+        "filename": "23 - Richter_ whose name is written on water (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: whose name is written on water (Pt. 4 / Faded)",
+        "duration": "07:08",
+        "track_number": 23
+      },
+      {
+        "filename": "24 - Richter_ Patterns (cypher) (Faded).mp3",
+        "name": "Richter: Patterns (cypher) (Faded)",
+        "duration": "05:43",
+        "track_number": 24
+      },
+      {
+        "filename": "25 - Richter_ Solo (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Solo (Pt. 1 / Faded)",
+        "duration": "05:55",
+        "track_number": 25
+      },
+      {
+        "filename": "26 - Richter_ Solo (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Solo (Pt. 2 / Faded)",
+        "duration": "08:26",
+        "track_number": 26
+      },
+      {
+        "filename": "27 - Richter_ Aria 1 (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Aria 1 (Pt. 1 / Faded)",
+        "duration": "05:54",
+        "track_number": 27
+      },
+      {
+        "filename": "28 - Richter_ Aria 1 (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Aria 1 (Pt. 2 / Faded)",
+        "duration": "04:18",
+        "track_number": 28
+      },
+      {
+        "filename": "29 - Richter_ Aria 1 (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: Aria 1 (Pt. 3 / Faded)",
+        "duration": "04:23",
+        "track_number": 29
+      },
+      {
+        "filename": "3 - Richter_ Dream 1 (before the wind blows it all away) (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: Dream 1 (before the wind blows it all away) (Pt. 3 / Faded)",
+        "duration": "04:47",
+        "track_number": 3
+      },
+      {
+        "filename": "30 - Richter_ Aria 1 (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: Aria 1 (Pt. 4 / Faded)",
+        "duration": "08:39",
+        "track_number": 30
+      },
+      {
+        "filename": "31 - Richter_ Return 2 (song).mp3",
+        "name": "Richter: Return 2 (song)",
+        "duration": "04:55",
+        "track_number": 31
+      },
+      {
+        "filename": "32 - Richter_ Return 2 (song) (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Return 2 (song) (Pt. 2 / Faded)",
+        "duration": "03:07",
+        "track_number": 32
+      },
+      {
+        "filename": "33 - Richter_ Return 2 (song) (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: Return 2 (song) (Pt. 3 / Faded)",
+        "duration": "03:13",
+        "track_number": 33
+      },
+      {
+        "filename": "34 - Richter_ Return 2 (song) (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: Return 2 (song) (Pt. 4 / Faded)",
+        "duration": "03:19",
+        "track_number": 34
+      },
+      {
+        "filename": "35 - Richter_ Return 2 (song) (Pt_ 5 _ Faded).mp3",
+        "name": "Richter: Return 2 (song) (Pt. 5 / Faded)",
+        "duration": "04:53",
+        "track_number": 35
+      },
+      {
+        "filename": "36 - Richter_ Return 2 (song) (Pt_ 6 _ Faded).mp3",
+        "name": "Richter: Return 2 (song) (Pt. 6 / Faded)",
+        "duration": "04:49",
+        "track_number": 36
+      },
+      {
+        "filename": "37 - Richter_ Return 2 (song) (Pt_ 7 _ Faded).mp3",
+        "name": "Richter: Return 2 (song) (Pt. 7 / Faded)",
+        "duration": "10:53",
+        "track_number": 37
+      },
+      {
+        "filename": "38 - Richter_ nor earth_ nor boundless sea (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: nor earth, nor boundless sea (Pt. 1 / Faded)",
+        "duration": "06:17",
+        "track_number": 38
+      },
+      {
+        "filename": "39 - Richter_ nor earth_ nor boundless sea (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: nor earth, nor boundless sea (Pt. 2 / Faded)",
+        "duration": "03:22",
+        "track_number": 39
+      },
+      {
+        "filename": "4 - Richter_ Dream 1 (before the wind blows it all away) (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: Dream 1 (before the wind blows it all away) (Pt. 4 / Faded)",
+        "duration": "04:36",
+        "track_number": 4
+      },
+      {
+        "filename": "40 - Richter_ nor earth_ nor boundless sea (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: nor earth, nor boundless sea (Pt. 3 / Faded)",
+        "duration": "03:13",
+        "track_number": 40
+      },
+      {
+        "filename": "41 - Richter_ nor earth_ nor boundless sea (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: nor earth, nor boundless sea (Pt. 4 / Faded)",
+        "duration": "03:17",
+        "track_number": 41
+      },
+      {
+        "filename": "42 - Richter_ nor earth_ nor boundless sea (Pt_ 5 _ Faded).mp3",
+        "name": "Richter: nor earth, nor boundless sea (Pt. 5 / Faded)",
+        "duration": "03:12",
+        "track_number": 42
+      },
+      {
+        "filename": "43 - Richter_ nor earth_ nor boundless sea (Pt_ 6 _ Faded).mp3",
+        "name": "Richter: nor earth, nor boundless sea (Pt. 6 / Faded)",
+        "duration": "03:13",
+        "track_number": 43
+      },
+      {
+        "filename": "44 - Richter_ nor earth_ nor boundless sea (Pt_ 7 _ Faded).mp3",
+        "name": "Richter: nor earth, nor boundless sea (Pt. 7 / Faded)",
+        "duration": "04:56",
+        "track_number": 44
+      },
+      {
+        "filename": "45 - Richter_ nor earth_ nor boundless sea (Pt_ 8 _ Faded).mp3",
+        "name": "Richter: nor earth, nor boundless sea (Pt. 8 / Faded)",
+        "duration": "04:54",
+        "track_number": 45
+      },
+      {
+        "filename": "46 - Richter_ nor earth_ nor boundless sea (Pt_ 9 _ Faded).mp3",
+        "name": "Richter: nor earth, nor boundless sea (Pt. 9 / Faded)",
+        "duration": "08:19",
+        "track_number": 46
+      },
+      {
+        "filename": "47 - Richter_ Dream 11 (whisper music) (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Dream 11 (whisper music) (Pt. 1 / Faded)",
+        "duration": "06:27",
+        "track_number": 47
+      },
+      {
+        "filename": "48 - Richter_ Dream 11 (whisper music) (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Dream 11 (whisper music) (Pt. 2 / Faded)",
+        "duration": "06:27",
+        "track_number": 48
+      },
+      {
+        "filename": "49 - Richter_ Dream 11 (whisper music) (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: Dream 11 (whisper music) (Pt. 3 / Faded)",
+        "duration": "06:44",
+        "track_number": 49
+      },
+      {
+        "filename": "5 - Richter_ Dream 1 (before the wind blows it all away) (Pt_ 5 _ Faded).mp3",
+        "name": "Richter: Dream 1 (before the wind blows it all away) (Pt. 5 / Faded)",
+        "duration": "04:55",
+        "track_number": 5
+      },
+      {
+        "filename": "50 - Richter_ Dream 11 (whisper music) (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: Dream 11 (whisper music) (Pt. 4 / Faded)",
+        "duration": "06:33",
+        "track_number": 50
+      },
+      {
+        "filename": "51 - Richter_ Dream 11 (whisper music) (Pt_ 5 _ Faded).mp3",
+        "name": "Richter: Dream 11 (whisper music) (Pt. 5 / Faded)",
+        "duration": "06:27",
+        "track_number": 51
+      },
+      {
+        "filename": "52 - Richter_ Dream 11 (whisper music) (Pt_ 6 _ Faded).mp3",
+        "name": "Richter: Dream 11 (whisper music) (Pt. 6 / Faded)",
+        "duration": "06:39",
+        "track_number": 52
+      },
+      {
+        "filename": "53 - Richter_ moth-like stars (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 1 / Faded)",
+        "duration": "03:56",
+        "track_number": 53
+      },
+      {
+        "filename": "54 - Richter_ moth-like stars (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 2 / Faded)",
+        "duration": "03:44",
+        "track_number": 54
+      },
+      {
+        "filename": "55 - Richter_ moth-like stars (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 3 / Faded)",
+        "duration": "03:37",
+        "track_number": 55
+      },
+      {
+        "filename": "56 - Richter_ moth-like stars (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 4 / Faded)",
+        "duration": "03:32",
+        "track_number": 56
+      },
+      {
+        "filename": "57 - Richter_ moth-like stars (Pt_ 5 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 5 / Faded)",
+        "duration": "03:17",
+        "track_number": 57
+      },
+      {
+        "filename": "58 - Richter_ moth-like stars (Pt_ 6 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 6 / Faded)",
+        "duration": "03:33",
+        "track_number": 58
+      },
+      {
+        "filename": "59 - Richter_ moth-like stars (Pt_ 7 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 7 / Faded)",
+        "duration": "03:33",
+        "track_number": 59
+      },
+      {
+        "filename": "6 - Richter_ Dream 1 (before the wind blows it all away) (Pt_ 6 _ Faded).mp3",
+        "name": "Richter: Dream 1 (before the wind blows it all away) (Pt. 6 / Faded)",
+        "duration": "04:53",
+        "track_number": 6
+      },
+      {
+        "filename": "60 - Richter_ moth-like stars (Pt_ 8 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 8 / Faded)",
+        "duration": "03:50",
+        "track_number": 60
+      },
+      {
+        "filename": "61 - Richter_ moth-like stars (Pt_ 9 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 9 / Faded)",
+        "duration": "03:22",
+        "track_number": 61
+      },
+      {
+        "filename": "62 - Richter_ moth-like stars (Pt_ 10 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 10 / Faded)",
+        "duration": "03:56",
+        "track_number": 62
+      },
+      {
+        "filename": "63 - Richter_ moth-like stars (Pt_ 11 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 11 / Faded)",
+        "duration": "03:31",
+        "track_number": 63
+      },
+      {
+        "filename": "64 - Richter_ moth-like stars (Pt_ 12 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 12 / Faded)",
+        "duration": "06:35",
+        "track_number": 64
+      },
+      {
+        "filename": "65 - Richter_ moth-like stars (Pt_ 13 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 13 / Faded)",
+        "duration": "06:34",
+        "track_number": 65
+      },
+      {
+        "filename": "66 - Richter_ moth-like stars (Pt_ 14 _ Faded).mp3",
+        "name": "Richter: moth-like stars (Pt. 14 / Faded)",
+        "duration": "07:31",
+        "track_number": 66
+      },
+      {
+        "filename": "67 - Richter_ Path 17 (Before the Ending of Daylight) (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Path 17 (Before the Ending of Daylight) (Pt. 1 / Faded)",
+        "duration": "05:38",
+        "track_number": 67
+      },
+      {
+        "filename": "68 - Richter_ Path 17 (Before the Ending of Daylight) (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Path 17 (Before the Ending of Daylight) (Pt. 2 / Faded)",
+        "duration": "04:10",
+        "track_number": 68
+      },
+      {
+        "filename": "69 - Richter_ Path 17 (Before the Ending of Daylight) (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: Path 17 (Before the Ending of Daylight) (Pt. 3 / Faded)",
+        "duration": "06:19",
+        "track_number": 69
+      },
+      {
+        "filename": "7 - Richter_ Dream 1 (before the wind blows it all away) (Pt_ 7 _ Faded).mp3",
+        "name": "Richter: Dream 1 (before the wind blows it all away) (Pt. 7 / Faded)",
+        "duration": "04:47",
+        "track_number": 7
+      },
+      {
+        "filename": "70 - Richter_ Path 17 (Before the Ending of Daylight) (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: Path 17 (Before the Ending of Daylight) (Pt. 4 / Faded)",
+        "duration": "07:26",
+        "track_number": 70
+      },
+      {
+        "filename": "71 - Richter_ Path 17 (Before the Ending of Daylight) (Pt_ 5 _ Faded).mp3",
+        "name": "Richter: Path 17 (Before the Ending of Daylight) (Pt. 5 / Faded)",
+        "duration": "06:35",
+        "track_number": 71
+      },
+      {
+        "filename": "72 - Richter_ Path 17 (Before the Ending of Daylight) (Pt_ 6 _ Faded).mp3",
+        "name": "Richter: Path 17 (Before the Ending of Daylight) (Pt. 6 / Faded)",
+        "duration": "07:56",
+        "track_number": 72
+      },
+      {
+        "filename": "73 - Richter_ Path 17 (Before the Ending of Daylight) (Pt_ 7 _ Faded).mp3",
+        "name": "Richter: Path 17 (Before the Ending of Daylight) (Pt. 7 / Faded)",
+        "duration": "17:11",
+        "track_number": 73
+      },
+      {
+        "filename": "74 - Richter_ Space 26 (epicardium) (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Space 26 (epicardium) (Pt. 1 / Faded)",
+        "duration": "06:58",
+        "track_number": 74
+      },
+      {
+        "filename": "75 - Richter_ Space 26 (epicardium) (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Space 26 (epicardium) (Pt. 2 / Faded)",
+        "duration": "07:13",
+        "track_number": 75
+      },
+      {
+        "filename": "76 - Richter_ Patterns (Lux) (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Patterns (Lux) (Pt. 1 / Faded)",
+        "duration": "03:02",
+        "track_number": 76
+      },
+      {
+        "filename": "77 - Richter_ Patterns (Lux) (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Patterns (Lux) (Pt. 2 / Faded)",
+        "duration": "03:17",
+        "track_number": 77
+      },
+      {
+        "filename": "78 - Richter_ Patterns (Lux) (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: Patterns (Lux) (Pt. 3 / Faded)",
+        "duration": "02:59",
+        "track_number": 78
+      },
+      {
+        "filename": "79 - Richter_ Patterns (Lux) (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: Patterns (Lux) (Pt. 4 / Faded)",
+        "duration": "03:11",
+        "track_number": 79
+      },
+      {
+        "filename": "8 - Richter_ Dream 1 (before the wind blows it all away) (Pt_ 8 _ Faded).mp3",
+        "name": "Richter: Dream 1 (before the wind blows it all away) (Pt. 8 / Faded)",
+        "duration": "04:07",
+        "track_number": 8
+      },
+      {
+        "filename": "80 - Richter_ Patterns (Lux) (Pt_ 5 _ Faded).mp3",
+        "name": "Richter: Patterns (Lux) (Pt. 5 / Faded)",
+        "duration": "02:59",
+        "track_number": 80
+      },
+      {
+        "filename": "81 - Richter_ Patterns (Lux) (Pt_ 6 _ Faded).mp3",
+        "name": "Richter: Patterns (Lux) (Pt. 6 / Faded)",
+        "duration": "03:13",
+        "track_number": 81
+      },
+      {
+        "filename": "82 - Richter_ Patterns (Lux) (Pt_ 7 _ Faded).mp3",
+        "name": "Richter: Patterns (Lux) (Pt. 7 / Faded)",
+        "duration": "02:57",
+        "track_number": 82
+      },
+      {
+        "filename": "83 - Richter_ Patterns (Lux) (Pt_ 8 _ Faded).mp3",
+        "name": "Richter: Patterns (Lux) (Pt. 8 / Faded)",
+        "duration": "03:39",
+        "track_number": 83
+      },
+      {
+        "filename": "84 - Richter_ Patterns (Lux) (Pt_ 9 _ Faded).mp3",
+        "name": "Richter: Patterns (Lux) (Pt. 9 / Faded)",
+        "duration": "05:10",
+        "track_number": 84
+      },
+      {
+        "filename": "85 - Richter_ Patterns (Lux) (Pt_ 10 _ Faded).mp3",
+        "name": "Richter: Patterns (Lux) (Pt. 10 / Faded)",
+        "duration": "06:15",
+        "track_number": 85
+      },
+      {
+        "filename": "86 - Richter_ Constellation 1 (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Constellation 1 (Pt. 1 / Faded)",
+        "duration": "03:05",
+        "track_number": 86
+      },
+      {
+        "filename": "87 - Richter_ Constellation 1 (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Constellation 1 (Pt. 2 / Faded)",
+        "duration": "03:59",
+        "track_number": 87
+      },
+      {
+        "filename": "88 - Richter_ Constellation 1 (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: Constellation 1 (Pt. 3 / Faded)",
+        "duration": "07:43",
+        "track_number": 88
+      },
+      {
+        "filename": "89 - Richter_ Constellation 2 (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Constellation 2 (Pt. 1 / Faded)",
+        "duration": "04:31",
+        "track_number": 89
+      },
+      {
+        "filename": "9 - Richter_ Cumulonimbus (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Cumulonimbus (Pt. 1 / Faded)",
+        "duration": "06:58",
+        "track_number": 9
+      },
+      {
+        "filename": "90 - Richter_ Constellation 2 (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Constellation 2 (Pt. 2 / Faded)",
+        "duration": "04:26",
+        "track_number": 90
+      },
+      {
+        "filename": "91 - Richter_ Constellation 2 (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: Constellation 2 (Pt. 3 / Faded)",
+        "duration": "07:37",
+        "track_number": 91
+      },
+      {
+        "filename": "92 - Richter_ Constellation 2 (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: Constellation 2 (Pt. 4 / Faded)",
+        "duration": "07:29",
+        "track_number": 92
+      },
+      {
+        "filename": "93 - Richter_ Constellation 2 (Pt_ 5 _ Faded).mp3",
+        "name": "Richter: Constellation 2 (Pt. 5 / Faded)",
+        "duration": "07:36",
+        "track_number": 93
+      },
+      {
+        "filename": "94 - Richter_ Space 2 (Slow Waves) (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Space 2 (Slow Waves) (Pt. 1 / Faded)",
+        "duration": "08:27",
+        "track_number": 94
+      },
+      {
+        "filename": "95 - Richter_ Space 2 (Slow Waves) (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Space 2 (Slow Waves) (Pt. 2 / Faded)",
+        "duration": "07:16",
+        "track_number": 95
+      },
+      {
+        "filename": "96 - Richter_ Chorale _ Glow (Pt_ 1 _ Faded).mp3",
+        "name": "Richter: Chorale / Glow (Pt. 1 / Faded)",
+        "duration": "04:21",
+        "track_number": 96
+      },
+      {
+        "filename": "97 - Richter_ Chorale _ Glow (Pt_ 2 _ Faded).mp3",
+        "name": "Richter: Chorale / Glow (Pt. 2 / Faded)",
+        "duration": "04:09",
+        "track_number": 97
+      },
+      {
+        "filename": "98 - Richter_ Chorale _ Glow (Pt_ 3 _ Faded).mp3",
+        "name": "Richter: Chorale / Glow (Pt. 3 / Faded)",
+        "duration": "04:09",
+        "track_number": 98
+      },
+      {
+        "filename": "99 - Richter_ Chorale _ Glow (Pt_ 4 _ Faded).mp3",
+        "name": "Richter: Chorale / Glow (Pt. 4 / Faded)",
+        "duration": "04:08",
+        "track_number": 99
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Max Richter",
+      "description": ""
+    },
+    "album": {
+      "name": "The Blue Notebooks (15 Years)",
+      "description": "",
+      "year": 2018,
+      "path": "__source__\\ambient\\Max Richter\\The Blue Notebooks (15 Years)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Richter_ The Blue Notebooks.mp3",
+        "name": "Richter: The Blue Notebooks",
+        "duration": "02:40",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Richter_ The Trees.mp3",
+        "name": "Richter: The Trees",
+        "duration": "15:50",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Richter_ Written on the Sky.mp3",
+        "name": "Richter: Written on the Sky",
+        "duration": "03:21",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Richter_ A Catalogue of Afternoons.mp3",
+        "name": "Richter: A Catalogue of Afternoons",
+        "duration": "03:38",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Richter_ On the Nature of Daylight (Orchestral Version).mp3",
+        "name": "Richter: On the Nature of Daylight (Orchestral Version)",
+        "duration": "13:15",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Richter_ Vladimir's Blues 2018.mp3",
+        "name": "Richter: Vladimir's Blues 2018",
+        "duration": "03:00",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Richter_ On the Nature of Daylight (Entropy).mp3",
+        "name": "Richter: On the Nature of Daylight (Entropy)",
+        "duration": "13:51",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Richter_ Vladimir's Blues (Jlin Remix).mp3",
+        "name": "Richter: Vladimir's Blues (Jlin Remix)",
+        "duration": "07:33",
+        "track_number": 16
+      },
+      {
+        "filename": "17 - Richter_ Iconography (Konx-Om-Pax Remix).mp3",
+        "name": "Richter: Iconography (Konx-Om-Pax Remix)",
+        "duration": "07:54",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - This Bitter Earth _ On The Nature Of Daylight.mp3",
+        "name": "This Bitter Earth / On The Nature Of Daylight",
+        "duration": "12:37",
+        "track_number": 18
+      },
+      {
+        "filename": "2 - Richter_ On The Nature Of Daylight.mp3",
+        "name": "Richter: On The Nature Of Daylight",
+        "duration": "12:31",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Richter_ Horizon Variations.mp3",
+        "name": "Richter: Horizon Variations",
+        "duration": "03:46",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Richter_ Shadow Journal.mp3",
+        "name": "Richter: Shadow Journal",
+        "duration": "16:59",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Richter_ Iconography.mp3",
+        "name": "Richter: Iconography",
+        "duration": "07:24",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Richter_ Vladimir's Blues.mp3",
+        "name": "Richter: Vladimir's Blues",
+        "duration": "02:37",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Richter_ Arboretum.mp3",
+        "name": "Richter: Arboretum",
+        "duration": "05:48",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Richter_ Old Song.mp3",
+        "name": "Richter: Old Song",
+        "duration": "04:24",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Richter_ Organum.mp3",
+        "name": "Richter: Organum",
+        "duration": "06:28",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
       "name": "Viktor Golumbevskii",
       "description": ""
     },
@@ -1418,6 +2645,2247 @@
         "name": "Надежда Hope",
         "duration": "05:01",
         "track_number": 7
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Alexei and the Spring (Original Motion Picture Soundtrack)",
+      "description": "",
+      "year": 2003,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Alexei and the Spring (Original Motion Picture Soundtrack)"
+    },
+    "track_list": [
+      {
+        "filename": "2 - Echo.mp3",
+        "name": "Echo",
+        "duration": "01:22",
+        "track_number": 2
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Alexei and the Spring (Original Motion Picture Soundtrack)",
+      "description": "",
+      "year": 2003,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Alexei and the Spring (Original Motion Picture Soundtrack)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Opening.mp3",
+        "name": "Opening",
+        "duration": "08:22",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Happiness.mp3",
+        "name": "Happiness",
+        "duration": "01:15",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Plod.mp3",
+        "name": "Plod",
+        "duration": "01:56",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Stream-A.mp3",
+        "name": "Stream-A",
+        "duration": "00:14",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Echo of the Forest.mp3",
+        "name": "Echo of the Forest",
+        "duration": "00:48",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Looming.mp3",
+        "name": "Looming",
+        "duration": "00:48",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Ending.mp3",
+        "name": "Ending",
+        "duration": "05:35",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Ending (Piano Version).mp3",
+        "name": "Ending (Piano Version)",
+        "duration": "03:51",
+        "track_number": 16
+      },
+      {
+        "filename": "3 - The Fences.mp3",
+        "name": "The Fences",
+        "duration": "01:42",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Winter.mp3",
+        "name": "Winter",
+        "duration": "01:42",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Glimmer Out.mp3",
+        "name": "Glimmer Out",
+        "duration": "01:16",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Xianren.mp3",
+        "name": "Xianren",
+        "duration": "01:53",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Stream.mp3",
+        "name": "Stream",
+        "duration": "00:48",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Izba.mp3",
+        "name": "Izba",
+        "duration": "01:33",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Ending (Short Version).mp3",
+        "name": "Ending (Short Version)",
+        "duration": "04:12",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Alva Noto\u0000Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Glass",
+      "description": "",
+      "year": 2018,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Alva Noto\\Glass"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Glass.mp3",
+        "name": "Glass",
+        "duration": "37:00",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Alva Noto",
+      "description": ""
+    },
+    "album": {
+      "name": "Insen",
+      "description": "",
+      "year": 2005,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Alva Noto\\Insen\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Aurora.mp3",
+        "name": "Aurora",
+        "duration": "17:48",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Morning.mp3",
+        "name": "Morning",
+        "duration": "10:58",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Logic Moon.mp3",
+        "name": "Logic Moon",
+        "duration": "13:44",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Moon.mp3",
+        "name": "Moon",
+        "duration": "12:18",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Berlin.mp3",
+        "name": "Berlin",
+        "duration": "12:37",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Iano.mp3",
+        "name": "Iano",
+        "duration": "13:49",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Avaol.mp3",
+        "name": "Avaol",
+        "duration": "05:45",
+        "track_number": 7
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Alva Noto",
+      "description": ""
+    },
+    "album": {
+      "name": "Revep",
+      "description": "",
+      "year": 2006,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Alva Noto\\Revep\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Siisx.mp3",
+        "name": "Siisx",
+        "duration": "14:54",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Mur.mp3",
+        "name": "Mur",
+        "duration": "16:33",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Ax Mr_ L_.mp3",
+        "name": "Ax Mr. L.",
+        "duration": "08:39",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Alva Noto",
+      "description": ""
+    },
+    "album": {
+      "name": "summvs",
+      "description": "",
+      "year": 2011,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Alva Noto\\summvs"
+    },
+    "track_list": [
+      {
+        "filename": "6 - Ionoscan.mp3",
+        "name": "Ionoscan",
+        "duration": "04:07",
+        "track_number": 6
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Alva Noto",
+      "description": ""
+    },
+    "album": {
+      "name": "summvs",
+      "description": "",
+      "year": 2011,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Alva Noto\\summvs\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Microon I.mp3",
+        "name": "Microon I",
+        "duration": "06:09",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - By This River - Phantom.mp3",
+        "name": "By This River - Phantom",
+        "duration": "17:04",
+        "track_number": 10
+      },
+      {
+        "filename": "2 - Reverso.mp3",
+        "name": "Reverso",
+        "duration": "13:58",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Halo.mp3",
+        "name": "Halo",
+        "duration": "14:24",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Microon II.mp3",
+        "name": "Microon II",
+        "duration": "05:17",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Pionier Ioo.mp3",
+        "name": "Pionier Ioo",
+        "duration": "11:32",
+        "track_number": 5
+      },
+      {
+        "filename": "7 - By This River.mp3",
+        "name": "By This River",
+        "duration": "08:18",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Naono.mp3",
+        "name": "Naono",
+        "duration": "22:46",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Microon III.mp3",
+        "name": "Microon III",
+        "duration": "06:02",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Alva Noto\u0000Ryuichi Sakamoto\u0000Alva Noto & Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Two (Live at Sydney Opera House)",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Alva Noto\\Two (Live at Sydney Opera House)"
+    },
+    "track_list": [
+      {
+        "filename": "9 - Kizuna (Live).mp3",
+        "name": "Kizuna (Live)",
+        "duration": "05:05",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Alva Noto; Ryuichi Sakamoto; Alva Noto & Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Two (Live at Sydney Opera House)",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Alva Noto\\Two (Live at Sydney Opera House)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Inosc (Live).mp3",
+        "name": "Inosc (Live)",
+        "duration": "15:06",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Gitrac (Live).mp3",
+        "name": "Gitrac (Live)",
+        "duration": "08:09",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Monomom (Live).mp3",
+        "name": "Monomom (Live)",
+        "duration": "13:48",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Panois (Live).mp3",
+        "name": "Panois (Live)",
+        "duration": "05:37",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Naono (Live).mp3",
+        "name": "Naono (Live)",
+        "duration": "22:37",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - The Revenant Theme (Live).mp3",
+        "name": "The Revenant Theme (Live)",
+        "duration": "12:32",
+        "track_number": 14
+      },
+      {
+        "filename": "2 - Propho (Live).mp3",
+        "name": "Propho (Live)",
+        "duration": "11:44",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Trioon II (Live).mp3",
+        "name": "Trioon II (Live)",
+        "duration": "11:34",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Scape I (Live).mp3",
+        "name": "Scape I (Live)",
+        "duration": "05:46",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Berlin (Live).mp3",
+        "name": "Berlin (Live)",
+        "duration": "11:07",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Scape II (Live).mp3",
+        "name": "Scape II (Live)",
+        "duration": "04:24",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Morning _ Iano (Live).mp3",
+        "name": "Morning + Iano (Live)",
+        "duration": "17:21",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Emspac (Live).mp3",
+        "name": "Emspac (Live)",
+        "duration": "09:33",
+        "track_number": 8
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Alva Noto; Ryuichi Sakamoto; Ensemble Modern",
+      "description": ""
+    },
+    "album": {
+      "name": "UTP_",
+      "description": "",
+      "year": 2009,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Alva Noto\\UTP_\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Attack_Transition.mp3",
+        "name": "Attack/Transition",
+        "duration": "14:52",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Plateaux 2_End.mp3",
+        "name": "Plateaux 2/End",
+        "duration": "26:05",
+        "track_number": 10
+      },
+      {
+        "filename": "2 - Grains.mp3",
+        "name": "Grains",
+        "duration": "12:51",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Particle 1.mp3",
+        "name": "Particle 1",
+        "duration": "13:24",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Transition.mp3",
+        "name": "Transition",
+        "duration": "07:05",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Broken Line 1.mp3",
+        "name": "Broken Line 1",
+        "duration": "13:07",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Plateaux 1.mp3",
+        "name": "Plateaux 1",
+        "duration": "16:18",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Silence.mp3",
+        "name": "Silence",
+        "duration": "13:46",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Particle 2.mp3",
+        "name": "Particle 2",
+        "duration": "14:04",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Broken Line 2.mp3",
+        "name": "Broken Line 2",
+        "duration": "13:01",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Alva Noto; Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Vrioon",
+      "description": "",
+      "year": 2002,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Alva Noto\\Vrioon\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Uoon I.mp3",
+        "name": "Uoon I",
+        "duration": "27:50",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Uoon II.mp3",
+        "name": "Uoon II",
+        "duration": "19:26",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Duoon.mp3",
+        "name": "Duoon",
+        "duration": "11:37",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Noon.mp3",
+        "name": "Noon",
+        "duration": "20:32",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Trioon I.mp3",
+        "name": "Trioon I",
+        "duration": "10:20",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Trioon II.mp3",
+        "name": "Trioon II",
+        "duration": "20:01",
+        "track_number": 6
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto\u0000Mr. Dan\u0000Rob da Bank",
+      "description": ""
+    },
+    "album": {
+      "name": "Bricolages",
+      "description": "",
+      "year": 2006,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Bricolages"
+    },
+    "track_list": [
+      {
+        "filename": "10 - 20 msec_ (Craig Armstrong Remix).mp3",
+        "name": "20 msec. (Craig Armstrong Remix)",
+        "duration": "05:36",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Ngo (bitmix_ Slicker Remix).mp3",
+        "name": "Ngo (bitmix; Slicker Remix)",
+        "duration": "04:46",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - break with (Steve Jansen Remix).mp3",
+        "name": "break with (Steve Jansen Remix)",
+        "duration": "07:12",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Motopiate (Thomas Knak Remix).mp3",
+        "name": "Motopiate (Thomas Knak Remix)",
+        "duration": "04:09",
+        "track_number": 13
+      },
+      {
+        "filename": "2 - undercooled (Skuli Sverrisson Remix).mp3",
+        "name": "undercooled (Skuli Sverrisson Remix)",
+        "duration": "05:34",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - War _ Peace (Cornelius Remix).mp3",
+        "name": "War & Peace (Cornelius Remix)",
+        "duration": "05:20",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - 20 msec_ (Fennesz Remix).mp3",
+        "name": "20 msec. (Fennesz Remix)",
+        "duration": "05:18",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - undercooled (Alva Noto Remodel).mp3",
+        "name": "undercooled (Alva Noto Remodel)",
+        "duration": "04:44",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - World Citizen (Taylor Deupree Remix).mp3",
+        "name": "World Citizen (Taylor Deupree Remix)",
+        "duration": "05:55",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - only love can conquer hate (snd_ Remix).mp3",
+        "name": "only love can conquer hate (snd. Remix)",
+        "duration": "07:02",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Seven Samurai (Richard Devine Remix).mp3",
+        "name": "Seven Samurai (Richard Devine Remix)",
+        "duration": "08:17",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - word (Rob Da Bank _ Mr_ Dan Remix).mp3",
+        "name": "word (Rob Da Bank & Mr. Dan Remix)",
+        "duration": "04:22",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto; Haruomi Hosono",
+      "description": ""
+    },
+    "album": {
+      "name": "Bricolages",
+      "description": "",
+      "year": 2006,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Bricolages\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - War _ Peace (AOKI Takamasa Remix).mp3",
+        "name": "War & Peace (AOKI Takamasa Remix)",
+        "duration": "11:04",
+        "track_number": 1
+      },
+      {
+        "filename": "14 - lamento (Haruomi Hosono Remix).mp3",
+        "name": "lamento (Haruomi Hosono Remix)",
+        "duration": "05:56",
+        "track_number": 14
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Comica",
+      "description": "",
+      "year": 2002,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Comica"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Dawn.mp3",
+        "name": "Dawn",
+        "duration": "07:04",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Day.mp3",
+        "name": "Day",
+        "duration": "09:49",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Sunset.mp3",
+        "name": "Sunset",
+        "duration": "08:46",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Night.mp3",
+        "name": "Night",
+        "duration": "07:37",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - D2.mp3",
+        "name": "D2",
+        "duration": "10:07",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Radical Fashion.mp3",
+        "name": "Radical Fashion",
+        "duration": "05:07",
+        "track_number": 6
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Derrida",
+      "description": "",
+      "year": 2003,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Derrida"
+    },
+    "track_list": [
+      {
+        "filename": "1 - jd203.mp3",
+        "name": "jd203",
+        "duration": "02:20",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - jd008.mp3",
+        "name": "jd008",
+        "duration": "01:29",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - jd028.mp3",
+        "name": "jd028",
+        "duration": "04:51",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - jd009.mp3",
+        "name": "jd009",
+        "duration": "03:23",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - jd001.mp3",
+        "name": "jd001",
+        "duration": "01:02",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - jd010.mp3",
+        "name": "jd010",
+        "duration": "01:37",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - jd002.mp3",
+        "name": "jd002",
+        "duration": "03:23",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - jd011.mp3",
+        "name": "jd011",
+        "duration": "01:32",
+        "track_number": 16
+      },
+      {
+        "filename": "17 - jd003.mp3",
+        "name": "jd003",
+        "duration": "00:18",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - jd012.mp3",
+        "name": "jd012",
+        "duration": "01:30",
+        "track_number": 18
+      },
+      {
+        "filename": "19 - jd018.mp3",
+        "name": "jd018",
+        "duration": "03:01",
+        "track_number": 19
+      },
+      {
+        "filename": "2 - jd004.mp3",
+        "name": "jd004",
+        "duration": "04:18",
+        "track_number": 2
+      },
+      {
+        "filename": "20 - jd013.mp3",
+        "name": "jd013",
+        "duration": "01:52",
+        "track_number": 20
+      },
+      {
+        "filename": "21 - jd019.mp3",
+        "name": "jd019",
+        "duration": "03:03",
+        "track_number": 21
+      },
+      {
+        "filename": "22 - jd014.mp3",
+        "name": "jd014",
+        "duration": "01:12",
+        "track_number": 22
+      },
+      {
+        "filename": "23 - jd020.mp3",
+        "name": "jd020",
+        "duration": "02:40",
+        "track_number": 23
+      },
+      {
+        "filename": "24 - jd015.mp3",
+        "name": "jd015",
+        "duration": "02:53",
+        "track_number": 24
+      },
+      {
+        "filename": "25 - jd021.mp3",
+        "name": "jd021",
+        "duration": "02:40",
+        "track_number": 25
+      },
+      {
+        "filename": "26 - jd016.mp3",
+        "name": "jd016",
+        "duration": "03:52",
+        "track_number": 26
+      },
+      {
+        "filename": "27 - jd029.mp3",
+        "name": "jd029",
+        "duration": "02:15",
+        "track_number": 27
+      },
+      {
+        "filename": "28 - jd017.mp3",
+        "name": "jd017",
+        "duration": "00:58",
+        "track_number": 28
+      },
+      {
+        "filename": "29 - jd022.mp3",
+        "name": "jd022",
+        "duration": "04:52",
+        "track_number": 29
+      },
+      {
+        "filename": "3 - jd024.mp3",
+        "name": "jd024",
+        "duration": "00:31",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - jd005.mp3",
+        "name": "jd005",
+        "duration": "02:10",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - jd025.mp3",
+        "name": "jd025",
+        "duration": "00:46",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - jd006.mp3",
+        "name": "jd006",
+        "duration": "01:04",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - jd026.mp3",
+        "name": "jd026",
+        "duration": "02:40",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - jd007.mp3",
+        "name": "jd007",
+        "duration": "01:52",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - jd027.mp3",
+        "name": "jd027",
+        "duration": "02:19",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto\u0000Taylor Deupree",
+      "description": ""
+    },
+    "album": {
+      "name": "Disappearance",
+      "description": "",
+      "year": 2013,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Disappearance"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Jyaku.mp3",
+        "name": "Jyaku",
+        "duration": "09:59",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Frozen Fountain.mp3",
+        "name": "Frozen Fountain",
+        "duration": "05:26",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Ghost Road.mp3",
+        "name": "Ghost Road",
+        "duration": "07:01",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - This Window.mp3",
+        "name": "This Window",
+        "duration": "10:10",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto;Taylor Deupree",
+      "description": ""
+    },
+    "album": {
+      "name": "Disappearance",
+      "description": "",
+      "year": 2013,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Disappearance\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "5 - Curl To Me.mp3",
+        "name": "Curl To Me",
+        "duration": "24:46",
+        "track_number": 5
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Discord",
+      "description": "",
+      "year": 1998,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Discord"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Grief.mp3",
+        "name": "Grief",
+        "duration": "17:38",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Anger.mp3",
+        "name": "Anger",
+        "duration": "05:39",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Prayer.mp3",
+        "name": "Prayer",
+        "duration": "17:50",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Salvation.mp3",
+        "name": "Salvation",
+        "duration": "13:35",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Elephantism",
+      "description": "",
+      "year": 2002,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Elephantism"
+    },
+    "track_list": [
+      {
+        "filename": "10 - Elephantism 9.mp3",
+        "name": "Elephantism 9",
+        "duration": "02:24",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - MOSARETU Women.mp3",
+        "name": "MOSARETU Women",
+        "duration": "02:15",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Masai Children's Songs.mp3",
+        "name": "Masai Children's Songs",
+        "duration": "03:13",
+        "track_number": 12
+      },
+      {
+        "filename": "4 - Elmolo Dance.mp3",
+        "name": "Elmolo Dance",
+        "duration": "04:12",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Great Africa.mp3",
+        "name": "Great Africa",
+        "duration": "04:44",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Serenity.mp3",
+        "name": "Serenity",
+        "duration": "05:06",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Masai Dance.mp3",
+        "name": "Masai Dance",
+        "duration": "05:04",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Mpata.mp3",
+        "name": "Mpata",
+        "duration": "06:21",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Elephant Dance.mp3",
+        "name": "Elephant Dance",
+        "duration": "06:24",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Elephantism",
+      "description": "",
+      "year": 2002,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Elephantism\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Elephantism Theme.mp3",
+        "name": "Elephantism Theme",
+        "duration": "01:53",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Embassy.mp3",
+        "name": "Embassy",
+        "duration": "07:17",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Elephantism 2.mp3",
+        "name": "Elephantism 2",
+        "duration": "09:34",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Fennesz\u0000Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Flumina",
+      "description": "",
+      "year": 2011,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Fennesz\\Flumina"
+    },
+    "track_list": [
+      {
+        "filename": "1 - 0405.mp3",
+        "name": "0405",
+        "duration": "04:50",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - 0401.mp3",
+        "name": "0401",
+        "duration": "04:55",
+        "track_number": 10
+      },
+      {
+        "filename": "10 - 0425.mp3",
+        "name": "0425",
+        "duration": "06:56",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - 0402.mp3",
+        "name": "0402",
+        "duration": "06:15",
+        "track_number": 11
+      },
+      {
+        "filename": "11 - 0428.mp3",
+        "name": "0428",
+        "duration": "04:54",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - 0404.mp3",
+        "name": "0404",
+        "duration": "04:34",
+        "track_number": 12
+      },
+      {
+        "filename": "12 - 0429.mp3",
+        "name": "0429",
+        "duration": "05:58",
+        "track_number": 12
+      },
+      {
+        "filename": "2 - 0407.mp3",
+        "name": "0407",
+        "duration": "04:37",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - 0409.mp3",
+        "name": "0409",
+        "duration": "04:52",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - 0322.mp3",
+        "name": "0322",
+        "duration": "05:35",
+        "track_number": 4
+      },
+      {
+        "filename": "4 - 0411.mp3",
+        "name": "0411",
+        "duration": "05:22",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - 0324.mp3",
+        "name": "0324",
+        "duration": "06:48",
+        "track_number": 5
+      },
+      {
+        "filename": "5 - 0415.mp3",
+        "name": "0415",
+        "duration": "05:13",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - 0325.mp3",
+        "name": "0325",
+        "duration": "04:20",
+        "track_number": 6
+      },
+      {
+        "filename": "6 - 0417.mp3",
+        "name": "0417",
+        "duration": "03:44",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - 0327.mp3",
+        "name": "0327",
+        "duration": "05:30",
+        "track_number": 7
+      },
+      {
+        "filename": "7 - 0419.mp3",
+        "name": "0419",
+        "duration": "04:59",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - 0328.mp3",
+        "name": "0328",
+        "duration": "05:30",
+        "track_number": 8
+      },
+      {
+        "filename": "8 - 0423.mp3",
+        "name": "0423",
+        "duration": "05:17",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - 0330.mp3",
+        "name": "0330",
+        "duration": "04:44",
+        "track_number": 9
+      },
+      {
+        "filename": "9 - 0424.mp3",
+        "name": "0424",
+        "duration": "04:28",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Fennesz;Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Flumina",
+      "description": "",
+      "year": 2011,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Fennesz\\Flumina\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - 0318.mp3",
+        "name": "0318",
+        "duration": "08:57",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - 0319.mp3",
+        "name": "0319",
+        "duration": "11:22",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - 0320.mp3",
+        "name": "0320",
+        "duration": "09:28",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto\u0000David Toop",
+      "description": ""
+    },
+    "album": {
+      "name": "GARDEN OF SHADOWS AND LIGHT",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\GARDEN OF SHADOWS AND LIGHT"
+    },
+    "track_list": [
+      {
+        "filename": "1 - GARDEN OF SHADOWS AND LIGHT.mp3",
+        "name": "GARDEN OF SHADOWS AND LIGHT",
+        "duration": "46:00",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "GOHATTO (Original Motion Picture Soundtrack)",
+      "description": "",
+      "year": 1999,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\GOHATTO (Original Motion Picture Soundtrack)"
+    },
+    "track_list": [
+      {
+        "filename": "10 - Affair.mp3",
+        "name": "Affair",
+        "duration": "02:48",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Murder.mp3",
+        "name": "Murder",
+        "duration": "06:17",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Supper.mp3",
+        "name": "Supper",
+        "duration": "07:14",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Funeral.mp3",
+        "name": "Funeral",
+        "duration": "02:13",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Persuasion.mp3",
+        "name": "Persuasion",
+        "duration": "03:46",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Prostitute.mp3",
+        "name": "Prostitute",
+        "duration": "02:44",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Assassination.mp3",
+        "name": "Assassination",
+        "duration": "01:22",
+        "track_number": 16
+      },
+      {
+        "filename": "17 - Duty.mp3",
+        "name": "Duty",
+        "duration": "01:38",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - Ugetsu.mp3",
+        "name": "Ugetsu",
+        "duration": "03:54",
+        "track_number": 18
+      },
+      {
+        "filename": "19 - Killing.mp3",
+        "name": "Killing",
+        "duration": "03:06",
+        "track_number": 19
+      },
+      {
+        "filename": "2 - Souzaburoh.mp3",
+        "name": "Souzaburoh",
+        "duration": "02:04",
+        "track_number": 2
+      },
+      {
+        "filename": "20 - Gohatto (End Theme).mp3",
+        "name": "Gohatto (End Theme)",
+        "duration": "05:01",
+        "track_number": 20
+      },
+      {
+        "filename": "21 - Gohatto (Piano Version).mp3",
+        "name": "Gohatto (Piano Version)",
+        "duration": "04:32",
+        "track_number": 21
+      },
+      {
+        "filename": "5 - Execution.mp3",
+        "name": "Execution",
+        "duration": "02:49",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Match.mp3",
+        "name": "Match",
+        "duration": "03:56",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Gate.mp3",
+        "name": "Gate",
+        "duration": "02:09",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Temple.mp3",
+        "name": "Temple",
+        "duration": "00:50",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Suggestion.mp3",
+        "name": "Suggestion",
+        "duration": "02:08",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "GOHATTO (Original Motion Picture Soundtrack)",
+      "description": "",
+      "year": 1999,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\GOHATTO (Original Motion Picture Soundtrack)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Gohatto (Opening Theme).mp3",
+        "name": "Gohatto (Opening Theme)",
+        "duration": "04:05",
+        "track_number": 1
+      },
+      {
+        "filename": "3 - Taboos.mp3",
+        "name": "Taboos",
+        "duration": "04:20",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - In Bed.mp3",
+        "name": "In Bed",
+        "duration": "04:19",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto\u0000Taylor Deupree",
+      "description": ""
+    },
+    "album": {
+      "name": "Live In London",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Live In London"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Live In London.mp3",
+        "name": "Live In London",
+        "duration": "55:14",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Love is the Devil (Original Motion Picture Soundtrack)",
+      "description": "",
+      "year": 1998,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Love is the Devil (Original Motion Picture Soundtrack)"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Lock.mp3",
+        "name": "Lock",
+        "duration": "02:21",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Bed-Museum.mp3",
+        "name": "Bed-Museum",
+        "duration": "01:08",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Nightmares.mp3",
+        "name": "Nightmares",
+        "duration": "01:14",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Switch.mp3",
+        "name": "Switch",
+        "duration": "02:19",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Sex 2.mp3",
+        "name": "Sex 2",
+        "duration": "01:08",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Redman 1.mp3",
+        "name": "Redman 1",
+        "duration": "00:36",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - George In Rain.mp3",
+        "name": "George In Rain",
+        "duration": "01:21",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Redman 2.mp3",
+        "name": "Redman 2",
+        "duration": "00:29",
+        "track_number": 16
+      },
+      {
+        "filename": "17 - Toilet.mp3",
+        "name": "Toilet",
+        "duration": "01:54",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - Redman 3.mp3",
+        "name": "Redman 3",
+        "duration": "01:15",
+        "track_number": 18
+      },
+      {
+        "filename": "19 - Owl.mp3",
+        "name": "Owl",
+        "duration": "02:20",
+        "track_number": 19
+      },
+      {
+        "filename": "2 - Fall.mp3",
+        "name": "Fall",
+        "duration": "01:23",
+        "track_number": 2
+      },
+      {
+        "filename": "20 - Couch_ Set up_ Canvas.mp3",
+        "name": "Couch, Set up, Canvas",
+        "duration": "01:22",
+        "track_number": 20
+      },
+      {
+        "filename": "21 - Bed.mp3",
+        "name": "Bed",
+        "duration": "00:22",
+        "track_number": 21
+      },
+      {
+        "filename": "22 - NY.mp3",
+        "name": "NY",
+        "duration": "01:10",
+        "track_number": 22
+      },
+      {
+        "filename": "23 - Water Drop.mp3",
+        "name": "Water Drop",
+        "duration": "01:07",
+        "track_number": 23
+      },
+      {
+        "filename": "24 - Paint it Blue.mp3",
+        "name": "Paint it Blue",
+        "duration": "01:25",
+        "track_number": 24
+      },
+      {
+        "filename": "25 - Car Crash.mp3",
+        "name": "Car Crash",
+        "duration": "01:18",
+        "track_number": 25
+      },
+      {
+        "filename": "26 - Suicide.mp3",
+        "name": "Suicide",
+        "duration": "02:10",
+        "track_number": 26
+      },
+      {
+        "filename": "27 - Monologue.mp3",
+        "name": "Monologue",
+        "duration": "02:22",
+        "track_number": 27
+      },
+      {
+        "filename": "28 - Love Is The Devil.mp3",
+        "name": "Love Is The Devil",
+        "duration": "05:29",
+        "track_number": 28
+      },
+      {
+        "filename": "3 - Walk.mp3",
+        "name": "Walk",
+        "duration": "01:07",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Sex.mp3",
+        "name": "Sex",
+        "duration": "00:20",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Museum.mp3",
+        "name": "Museum",
+        "duration": "00:51",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Bathroom.mp3",
+        "name": "Bathroom",
+        "duration": "04:56",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Boxing.mp3",
+        "name": "Boxing",
+        "duration": "01:03",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Museum 2.mp3",
+        "name": "Museum 2",
+        "duration": "00:45",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Atelier.mp3",
+        "name": "Atelier",
+        "duration": "01:08",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "out of noise",
+      "description": "",
+      "year": 2009,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\out of noise"
+    },
+    "track_list": [
+      {
+        "filename": "10 - glacier.mp3",
+        "name": "glacier",
+        "duration": "09:44",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - composition 0919.mp3",
+        "name": "composition 0919",
+        "duration": "05:30",
+        "track_number": 11
+      },
+      {
+        "filename": "5 - tama.mp3",
+        "name": "tama",
+        "duration": "04:01",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - nostalgia.mp3",
+        "name": "nostalgia",
+        "duration": "03:39",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - firewater.mp3",
+        "name": "firewater",
+        "duration": "04:10",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - disko.mp3",
+        "name": "disko",
+        "duration": "03:37",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - ice.mp3",
+        "name": "ice",
+        "duration": "03:34",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "out of noise",
+      "description": "",
+      "year": 2009,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\out of noise\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - hibari.mp3",
+        "name": "hibari",
+        "duration": "18:09",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - hwit.mp3",
+        "name": "hwit",
+        "duration": "13:02",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - still life.mp3",
+        "name": "still life",
+        "duration": "09:32",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - in the red.mp3",
+        "name": "in the red",
+        "duration": "11:07",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto\u0000Taylor Deupree\u0000Illuha",
+      "description": ""
+    },
+    "album": {
+      "name": "Perpetual",
+      "description": "",
+      "year": 2015,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Perpetual"
+    },
+    "track_list": [
+      {
+        "filename": "2 - Movement_ 2.mp3",
+        "name": "Movement, 2",
+        "duration": "19:29",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Movement_ 3.mp3",
+        "name": "Movement, 3",
+        "duration": "12:51",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto;Taylor Deupree;Illuha",
+      "description": ""
+    },
+    "album": {
+      "name": "Perpetual",
+      "description": "",
+      "year": 2015,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Perpetual\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Movement_ 1.mp3",
+        "name": "Movement, 1",
+        "duration": "34:59",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Shining Boy & Little Randy (Original Motion Picture Soundtrack)",
+      "description": "",
+      "year": 2005,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Shining Boy _ Little Randy (Original Motion Picture Soundtrack)"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Shining Boy _ Little Randy - Opening Title.mp3",
+        "name": "Shining Boy & Little Randy - Opening Title",
+        "duration": "02:15",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Reunion.mp3",
+        "name": "Reunion",
+        "duration": "01:54",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Drawing.mp3",
+        "name": "Drawing",
+        "duration": "01:10",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Date.mp3",
+        "name": "Date",
+        "duration": "02:39",
+        "track_number": 12
+      },
+      {
+        "filename": "14 - Stepfather.mp3",
+        "name": "Stepfather",
+        "duration": "02:05",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Elephant Show.mp3",
+        "name": "Elephant Show",
+        "duration": "02:31",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Affirming.mp3",
+        "name": "Affirming",
+        "duration": "05:31",
+        "track_number": 16
+      },
+      {
+        "filename": "17 - Funeral.mp3",
+        "name": "Funeral",
+        "duration": "03:30",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - Mother and Boy.mp3",
+        "name": "Mother and Boy",
+        "duration": "03:06",
+        "track_number": 18
+      },
+      {
+        "filename": "19 - Shining Boy _ Little Randy - Endroll.mp3",
+        "name": "Shining Boy & Little Randy - Endroll",
+        "duration": "05:24",
+        "track_number": 19
+      },
+      {
+        "filename": "2 - Smile.mp3",
+        "name": "Smile",
+        "duration": "01:09",
+        "track_number": 2
+      },
+      {
+        "filename": "20 - Shining Boy _ Little Randy.mp3",
+        "name": "Shining Boy & Little Randy",
+        "duration": "04:01",
+        "track_number": 20
+      },
+      {
+        "filename": "3 - Adieu.mp3",
+        "name": "Adieu",
+        "duration": "01:08",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Decision.mp3",
+        "name": "Decision",
+        "duration": "02:49",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Flying for Thailand.mp3",
+        "name": "Flying for Thailand",
+        "duration": "04:30",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Tears of Fah.mp3",
+        "name": "Tears of Fah",
+        "duration": "01:37",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Escape.mp3",
+        "name": "Escape",
+        "duration": "01:46",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Oracle of White Elephant.mp3",
+        "name": "Oracle of White Elephant",
+        "duration": "02:16",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Adventure.mp3",
+        "name": "Adventure",
+        "duration": "04:16",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Shining Boy & Little Randy (Original Motion Picture Soundtrack)",
+      "description": "",
+      "year": 2005,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Shining Boy _ Little Randy (Original Motion Picture Soundtrack)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "13 - In the Sea.mp3",
+        "name": "In the Sea",
+        "duration": "03:04",
+        "track_number": 13
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "The Fortress (Original Motion Picture Soundtrack)",
+      "description": "",
+      "year": 2017,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\The Fortress (Original Motion Picture Soundtrack)"
+    },
+    "track_list": [
+      {
+        "filename": "10 - Absurd Order - Battle 3.mp3",
+        "name": "Absurd Order - Battle 3",
+        "duration": "06:38",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Escape 1.mp3",
+        "name": "Escape 1",
+        "duration": "01:08",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Kahn's Letter.mp3",
+        "name": "Kahn's Letter",
+        "duration": "01:16",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Traitor.mp3",
+        "name": "Traitor",
+        "duration": "01:06",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Escape 2.mp3",
+        "name": "Escape 2",
+        "duration": "02:56",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Battle 4.mp3",
+        "name": "Battle 4",
+        "duration": "05:36",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Chilbok.mp3",
+        "name": "Chilbok",
+        "duration": "02:45",
+        "track_number": 16
+      },
+      {
+        "filename": "17 - Farewell.mp3",
+        "name": "Farewell",
+        "duration": "01:33",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - King's March.mp3",
+        "name": "King's March",
+        "duration": "03:06",
+        "track_number": 18
+      },
+      {
+        "filename": "19 - Return.mp3",
+        "name": "Return",
+        "duration": "04:42",
+        "track_number": 19
+      },
+      {
+        "filename": "20 - Traitor (Piano version).mp3",
+        "name": "Traitor (Piano version)",
+        "duration": "05:34",
+        "track_number": 20
+      },
+      {
+        "filename": "21 - King's March (Spinet version).mp3",
+        "name": "King's March (Spinet version)",
+        "duration": "02:46",
+        "track_number": 21
+      },
+      {
+        "filename": "22 - Traitor (Strings version).mp3",
+        "name": "Traitor (Strings version)",
+        "duration": "05:09",
+        "track_number": 22
+      },
+      {
+        "filename": "3 - The Fortress Title.mp3",
+        "name": "The Fortress Title",
+        "duration": "01:13",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Dispute.mp3",
+        "name": "Dispute",
+        "duration": "03:21",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Yong's Threat.mp3",
+        "name": "Yong's Threat",
+        "duration": "01:59",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - King's Letter.mp3",
+        "name": "King's Letter",
+        "duration": "02:19",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Battle 1.mp3",
+        "name": "Battle 1",
+        "duration": "01:28",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Blacksmith - Battle 2.mp3",
+        "name": "Blacksmith - Battle 2",
+        "duration": "02:02",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Straw Bag - Good Meal.mp3",
+        "name": "Straw Bag - Good Meal",
+        "duration": "02:23",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "The Fortress (Original Motion Picture Soundtrack)",
+      "description": "",
+      "year": 2017,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\The Fortress (Original Motion Picture Soundtrack)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Kings March (Strings version).mp3",
+        "name": "Kings March (Strings version)",
+        "duration": "08:36",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Vacant Throne.mp3",
+        "name": "Vacant Throne",
+        "duration": "03:01",
+        "track_number": 2
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto\u0000Jaques Morelenbaum\u0000Judy Kang",
+      "description": ""
+    },
+    "album": {
+      "name": "Three",
+      "description": "",
+      "year": 2012,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Three"
+    },
+    "track_list": [
+      {
+        "filename": "11 - Sakamoto_ Harakiri (Death Of A Samurai) Endroll.mp3",
+        "name": "Sakamoto: Harakiri (Death Of A Samurai) Endroll",
+        "duration": "05:05",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Sakamoto_ Tamago 2004.mp3",
+        "name": "Sakamoto: Tamago 2004",
+        "duration": "03:19",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Sakamoto_ Parolibre.mp3",
+        "name": "Sakamoto: Parolibre",
+        "duration": "04:51",
+        "track_number": 13
+      },
+      {
+        "filename": "2 - Sakamoto_ The Last Emperor.mp3",
+        "name": "Sakamoto: The Last Emperor",
+        "duration": "06:23",
+        "track_number": 2
+      },
+      {
+        "filename": "4 - Sakamoto_ High Heels.mp3",
+        "name": "Sakamoto: High Heels",
+        "duration": "03:46",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Sakamoto_ Seven Samurai - Ending Theme.mp3",
+        "name": "Sakamoto: Seven Samurai - Ending Theme",
+        "duration": "05:45",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Sakamoto_ A Flower Is Not A Flower.mp3",
+        "name": "Sakamoto: A Flower Is Not A Flower",
+        "duration": "07:19",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Sakamoto_ Still Life In A.mp3",
+        "name": "Sakamoto: Still Life In A",
+        "duration": "05:43",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Sakamoto_ Nostalgia.mp3",
+        "name": "Sakamoto: Nostalgia",
+        "duration": "03:40",
+        "track_number": 8
+      }
+    ]
+  },
+  {
+    "mount": "ambient",
+    "artist": {
+      "name": "Ryuichi Sakamoto; Jaques Morelenbaum; Judy Kang",
+      "description": ""
+    },
+    "album": {
+      "name": "Three",
+      "description": "",
+      "year": 2012,
+      "path": "__source__\\ambient\\Ryuichi Sakamoto\\Three\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Sakamoto_ Happy End.mp3",
+        "name": "Sakamoto: Happy End",
+        "duration": "10:48",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Sakamoto_ Merry Christmas Mr_ Lawrence.mp3",
+        "name": "Sakamoto: Merry Christmas Mr. Lawrence",
+        "duration": "11:13",
+        "track_number": 10
+      },
+      {
+        "filename": "3 - Sakamoto_ Bibo No Aozora.mp3",
+        "name": "Sakamoto: Bibo No Aozora",
+        "duration": "14:11",
+        "track_number": 3
+      },
+      {
+        "filename": "9 - Sakamoto_ Tango.mp3",
+        "name": "Sakamoto: Tango",
+        "duration": "10:58",
+        "track_number": 9
       }
     ]
   },
@@ -2921,6 +6389,597 @@
   {
     "mount": "class",
     "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "August",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\classic\\Infinite Stream\\August\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - August.mp3",
+        "name": "August",
+        "duration": "05:19",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Autumn Waltz",
+      "description": "",
+      "year": 2022,
+      "path": "__source__\\classic\\Infinite Stream\\Autumn Waltz\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Autumn Waltz.mp3",
+        "name": "Autumn Waltz",
+        "duration": "04:15",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Barefoot in the Rain",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\classic\\Infinite Stream\\Barefoot in the Rain\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Barefoot in the Rain.mp3",
+        "name": "Barefoot in the Rain",
+        "duration": "06:55",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Beat of the Sea",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\classic\\Infinite Stream\\Beat of the Sea\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Beat of the Sea.mp3",
+        "name": "Beat of the Sea",
+        "duration": "05:45",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Dark Life Note; Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Between Us",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\classic\\Infinite Stream\\Between Us\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Between Us.mp3",
+        "name": "Between Us",
+        "duration": "07:05",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Candle Dance",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\classic\\Infinite Stream\\Candle Dance\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Candle Dance.mp3",
+        "name": "Candle Dance",
+        "duration": "04:22",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Kite",
+      "description": "",
+      "year": 2016,
+      "path": "__source__\\classic\\Infinite Stream\\Kite\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Kite.mp3",
+        "name": "Kite",
+        "duration": "06:29",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "La tristesse durera toujours",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\classic\\Infinite Stream\\La tristesse durera toujours\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - La tristesse durera toujours.mp3",
+        "name": "La tristesse durera toujours",
+        "duration": "05:11",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Lighthouse",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\classic\\Infinite Stream\\Lighthouse\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Lighthouse.mp3",
+        "name": "Lighthouse",
+        "duration": "04:26",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Lost",
+      "description": "",
+      "year": 2022,
+      "path": "__source__\\classic\\Infinite Stream\\Lost\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Childhood.mp3",
+        "name": "Childhood",
+        "duration": "05:40",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Despair.mp3",
+        "name": "Despair",
+        "duration": "06:32",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Storm.mp3",
+        "name": "Storm",
+        "duration": "08:04",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Waterfall.mp3",
+        "name": "Waterfall",
+        "duration": "04:50",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Blizzard.mp3",
+        "name": "Blizzard",
+        "duration": "05:05",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Lumos.mp3",
+        "name": "Lumos",
+        "duration": "06:11",
+        "track_number": 14
+      },
+      {
+        "filename": "2 - So Far Away.mp3",
+        "name": "So Far Away",
+        "duration": "05:00",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Eternal Wait.mp3",
+        "name": "Eternal Wait",
+        "duration": "04:54",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Astronaut and Butterfly.mp3",
+        "name": "Astronaut and Butterfly",
+        "duration": "05:23",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Lost.mp3",
+        "name": "Lost",
+        "duration": "05:06",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Inside of Me.mp3",
+        "name": "Inside of Me",
+        "duration": "05:15",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Saudade.mp3",
+        "name": "Saudade",
+        "duration": "05:26",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Constellation.mp3",
+        "name": "Constellation",
+        "duration": "04:01",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Shooting Stars.mp3",
+        "name": "Shooting Stars",
+        "duration": "04:42",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Melancholic Waltz",
+      "description": "",
+      "year": 2022,
+      "path": "__source__\\classic\\Infinite Stream\\Melancholic Waltz\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Melancholic Waltz.mp3",
+        "name": "Melancholic Waltz",
+        "duration": "06:37",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Midnight Waltz",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\classic\\Infinite Stream\\Midnight Waltz\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Midnight Waltz.mp3",
+        "name": "Midnight Waltz",
+        "duration": "05:22",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Midnight Waltz (Slowed)",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\classic\\Infinite Stream\\Midnight Waltz (Slowed)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Midnight Waltz (Slowed).mp3",
+        "name": "Midnight Waltz (Slowed)",
+        "duration": "06:26",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Midnight Waltz (Version 2)",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\classic\\Infinite Stream\\Midnight Waltz (Version 2)"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Midnight Waltz (Version 2).mp3",
+        "name": "Midnight Waltz (Version 2)",
+        "duration": "02:39",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Ocean",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\classic\\Infinite Stream\\Ocean\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Ocean.mp3",
+        "name": "Ocean",
+        "duration": "06:26",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Oceans",
+      "description": "",
+      "year": 2016,
+      "path": "__source__\\classic\\Infinite Stream\\Oceans\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Oceans.mp3",
+        "name": "Oceans",
+        "duration": "06:13",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Requiem 2019",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\classic\\Infinite Stream\\Requiem 2019\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - White Crow.mp3",
+        "name": "White Crow",
+        "duration": "04:29",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Whales.mp3",
+        "name": "Whales",
+        "duration": "04:59",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Nostalgia.mp3",
+        "name": "Nostalgia",
+        "duration": "05:17",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Requiem 2019.mp3",
+        "name": "Requiem 2019",
+        "duration": "05:06",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Friend_ Please.mp3",
+        "name": "Friend, Please",
+        "duration": "04:11",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Wave After Wave.mp3",
+        "name": "Wave After Wave",
+        "duration": "04:21",
+        "track_number": 6
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Sadness Will Last Forever",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\classic\\Infinite Stream\\Sadness Will Last Forever\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Sadness Will Last Forever.mp3",
+        "name": "Sadness Will Last Forever",
+        "duration": "05:59",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Summer Waltz",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\classic\\Infinite Stream\\Summer Waltz\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Summer Waltz.mp3",
+        "name": "Summer Waltz",
+        "duration": "04:12",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "When Dreams Are Born",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\classic\\Infinite Stream\\When Dreams Are Born\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - When Dreams Are Born.mp3",
+        "name": "When Dreams Are Born",
+        "duration": "06:11",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Why",
+      "description": "",
+      "year": 2022,
+      "path": "__source__\\classic\\Infinite Stream\\Why\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Why.mp3",
+        "name": "Why",
+        "duration": "05:37",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Winter Waltz",
+      "description": "",
+      "year": 2023,
+      "path": "__source__\\classic\\Infinite Stream\\Winter Waltz\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Winter Waltz.mp3",
+        "name": "Winter Waltz",
+        "duration": "04:11",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Infinite Stream",
+      "description": ""
+    },
+    "album": {
+      "name": "Yesterday and Always",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\classic\\Infinite Stream\\Yesterday and Always\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Yesterday and Always.mp3",
+        "name": "Yesterday and Always",
+        "duration": "06:18",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
       "name": "Joep Beving, Maarten Vos",
       "description": ""
     },
@@ -4379,6 +8438,294 @@
   {
     "mount": "class",
     "artist": {
+      "name": "Grace Davidson; Ben Russell; Yuki Numata Resnick; Caleb Burhans; Brian Snow; Clarice Jensen",
+      "description": ""
+    },
+    "album": {
+      "name": "From Sleep",
+      "description": "",
+      "year": 2015,
+      "path": "__source__\\classic\\Max Richter\\From Sleep\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Richter_ Dream 3 (in the midst of my life).mp3",
+        "name": "Richter: Dream 3 (in the midst of my life)",
+        "duration": "20:12",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Richter_ Path 5 (delta).mp3",
+        "name": "Richter: Path 5 (delta)",
+        "duration": "22:34",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Richter_ Space 11 (Invisible Pages Over).mp3",
+        "name": "Richter: Space 11 (Invisible Pages Over)",
+        "duration": "10:34",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Richter_ Dream 13 (minus even).mp3",
+        "name": "Richter: Dream 13 (minus even)",
+        "duration": "17:50",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Richter_ Space 21 (petrichor).mp3",
+        "name": "Richter: Space 21 (petrichor)",
+        "duration": "09:38",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Richter_ Path 19 (yet frailest).mp3",
+        "name": "Richter: Path 19 (yet frailest)",
+        "duration": "15:45",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Richter_ Dream 8 (late and soon).mp3",
+        "name": "Richter: Dream 8 (late and soon)",
+        "duration": "23:53",
+        "track_number": 7
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ben Russell; Yuki Numata Resnick; Max Richter",
+      "description": ""
+    },
+    "album": {
+      "name": "Voyager - Essential Max Richter",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\classic\\Max Richter\\Voyager - Essential Max Richter\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Richter_ On The Nature Of Daylight.mp3",
+        "name": "Richter: On The Nature Of Daylight",
+        "duration": "12:31",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Richter_ Hope Strings Eternal.mp3",
+        "name": "Richter: Hope Strings Eternal",
+        "duration": "02:39",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Richter_ Iconography.mp3",
+        "name": "Richter: Iconography",
+        "duration": "07:24",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Richter_ Circles From The Rue Simon _ Crubellier.mp3",
+        "name": "Richter: Circles From The Rue Simon – Crubellier",
+        "duration": "02:14",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Richter_ Infra 8.mp3",
+        "name": "Richter: Infra 8",
+        "duration": "06:41",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Richter_ Three Worlds_ Music from Woolf Works _ Mrs Dalloway - War Anthem.mp3",
+        "name": "Richter: Three Worlds: Music from Woolf Works / Mrs Dalloway - War Anthem",
+        "duration": "13:53",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Richter_ Lullaby From The Westcoast Sleepers.mp3",
+        "name": "Richter: Lullaby From The Westcoast Sleepers",
+        "duration": "04:05",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Richter_ Sunlight.mp3",
+        "name": "Richter: Sunlight",
+        "duration": "11:19",
+        "track_number": 16
+      },
+      {
+        "filename": "17 - In The Garden (Recorded at Spotify Studios NYC).mp3",
+        "name": "In The Garden (Recorded at Spotify Studios NYC)",
+        "duration": "10:00",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - Richter_ Broken Symmetries For Y.mp3",
+        "name": "Richter: Broken Symmetries For Y",
+        "duration": "02:07",
+        "track_number": 18
+      },
+      {
+        "filename": "19 - Richter_ Mercy (Live).mp3",
+        "name": "Richter: Mercy (Live)",
+        "duration": "10:48",
+        "track_number": 19
+      },
+      {
+        "filename": "2 - Richter_ A Catalogue of Afternoons.mp3",
+        "name": "Richter: A Catalogue of Afternoons",
+        "duration": "03:38",
+        "track_number": 2
+      },
+      {
+        "filename": "20 - Richter_ Dream Solo.mp3",
+        "name": "Richter: Dream Solo",
+        "duration": "13:52",
+        "track_number": 20
+      },
+      {
+        "filename": "21 - Richter_ Path Solo.mp3",
+        "name": "Richter: Path Solo",
+        "duration": "08:24",
+        "track_number": 21
+      },
+      {
+        "filename": "22 - The Inexorable Advance Of Mr_ Delaney (из сериала _Табу_).mp3",
+        "name": "The Inexorable Advance Of Mr. Delaney (из сериала «Табу»)",
+        "duration": "05:59",
+        "track_number": 22
+      },
+      {
+        "filename": "23 - The Young Mariner (из фильма _Мэй и Лонг_).mp3",
+        "name": "The Young Mariner (из фильма «Мэй и Лонг»)",
+        "duration": "08:17",
+        "track_number": 23
+      },
+      {
+        "filename": "24 - Trigger (From _White Boy Rick_ Soundtrack).mp3",
+        "name": "Trigger (From \"White Boy Rick\" Soundtrack)",
+        "duration": "08:43",
+        "track_number": 24
+      },
+      {
+        "filename": "25 - Elena _ Lila (From _My Brilliant Friend_ TV Series Soundtrack).mp3",
+        "name": "Elena & Lila (From “My Brilliant Friend” TV Series Soundtrack)",
+        "duration": "09:51",
+        "track_number": 25
+      },
+      {
+        "filename": "26 - Ride To Marathon Station (From _White Boy Rick_ Soundtrack).mp3",
+        "name": "Ride To Marathon Station (From \"White Boy Rick\" Soundtrack)",
+        "duration": "04:24",
+        "track_number": 26
+      },
+      {
+        "filename": "27 - Lamentation For A Lost Life (из сериала _Табу_).mp3",
+        "name": "Lamentation For A Lost Life (из сериала «Табу»)",
+        "duration": "04:39",
+        "track_number": 27
+      },
+      {
+        "filename": "28 - The Mind_s Eye (из фильма _Работа без авторства_).mp3",
+        "name": "The Mind’s Eye (из фильма «Работа без авторства»)",
+        "duration": "05:38",
+        "track_number": 28
+      },
+      {
+        "filename": "29 - Where We Belong (From _Hostiles_ Soundtrack).mp3",
+        "name": "Where We Belong (From \"Hostiles\" Soundtrack)",
+        "duration": "05:53",
+        "track_number": 29
+      },
+      {
+        "filename": "3 - Recomposed by Max Richter_ Vivaldi_ The Four Seasons - Spring 0.mp3",
+        "name": "Recomposed by Max Richter: Vivaldi, The Four Seasons - Spring 0",
+        "duration": "01:25",
+        "track_number": 3
+      },
+      {
+        "filename": "30 - A New Generation (из фильма _Две королевы_).mp3",
+        "name": "A New Generation (из фильма «Две королевы»)",
+        "duration": "05:37",
+        "track_number": 30
+      },
+      {
+        "filename": "31 - On Reflection (из сериала _Чёрное зеркало_).mp3",
+        "name": "On Reflection (из сериала «Чёрное зеркало»)",
+        "duration": "14:38",
+        "track_number": 31
+      },
+      {
+        "filename": "32 - Your Reflection (From _My Brilliant Friend_ TV Series Soundtrack).mp3",
+        "name": "Your Reflection (From “My Brilliant Friend” TV Series Soundtrack)",
+        "duration": "07:14",
+        "track_number": 32
+      },
+      {
+        "filename": "33 - A Woman Alone (From _Hostiles_ Soundtrack).mp3",
+        "name": "A Woman Alone (From \"Hostiles\" Soundtrack)",
+        "duration": "03:45",
+        "track_number": 33
+      },
+      {
+        "filename": "34 - Our Reflection (From _My Brilliant Friend_ TV Series Soundtrack).mp3",
+        "name": "Our Reflection (From “My Brilliant Friend” TV Series Soundtrack)",
+        "duration": "11:12",
+        "track_number": 34
+      },
+      {
+        "filename": "35 - Wershe _ Son (From _White Boy Rick_ Soundtrack).mp3",
+        "name": "Wershe & Son (From \"White Boy Rick\" Soundtrack)",
+        "duration": "04:36",
+        "track_number": 35
+      },
+      {
+        "filename": "36 - Richter_ The Departure.mp3",
+        "name": "Richter: The Departure",
+        "duration": "05:13",
+        "track_number": 36
+      },
+      {
+        "filename": "4 - Recomposed by Max Richter_ Vivaldi_ The Four Seasons - Spring 1.mp3",
+        "name": "Recomposed by Max Richter: Vivaldi, The Four Seasons - Spring 1",
+        "duration": "05:11",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Richter_ Autumn Music 2.mp3",
+        "name": "Richter: Autumn Music 2",
+        "duration": "07:45",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Richter_ Three Worlds_ Music from Woolf Works _ Orlando - Modular Astronomy.mp3",
+        "name": "Richter: Three Worlds: Music from Woolf Works / Orlando - Modular Astronomy",
+        "duration": "06:39",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Richter_ Vladimir's Blues.mp3",
+        "name": "Richter: Vladimir's Blues",
+        "duration": "02:37",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Richter_ November.mp3",
+        "name": "Richter: November",
+        "duration": "12:19",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Richter_ Dream 3 (in the midst of my life).mp3",
+        "name": "Richter: Dream 3 (in the midst of my life)",
+        "duration": "20:12",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
       "name": "Michael Price",
       "description": ""
     },
@@ -5466,10 +9813,646 @@
       "description": ""
     },
     "album": {
+      "name": "1996 (Re-Mastered)",
+      "description": "",
+      "year": 2011,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\1996 (Re-Mastered)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - A Day a Gorilla Gives a Banana.mp3",
+        "name": "A Day a Gorilla Gives a Banana",
+        "duration": "03:27",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - High Heels (Main Theme).mp3",
+        "name": "High Heels (Main Theme)",
+        "duration": "06:43",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Aoneko no Torso.mp3",
+        "name": "Aoneko no Torso",
+        "duration": "05:11",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - The Wuthering Heights.mp3",
+        "name": "The Wuthering Heights",
+        "duration": "10:47",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Parolibre.mp3",
+        "name": "Parolibre",
+        "duration": "06:51",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Acceptance  - Little Buddha (End Credit).mp3",
+        "name": "Acceptance  - Little Buddha (End Credit)",
+        "duration": "15:08",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Before Long.mp3",
+        "name": "Before Long",
+        "duration": "06:12",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Self Portrait.mp3",
+        "name": "Self Portrait",
+        "duration": "09:26",
+        "track_number": 16
+      },
+      {
+        "filename": "2 - Rain.mp3",
+        "name": "Rain",
+        "duration": "07:23",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Bibo No Aozora.mp3",
+        "name": "Bibo No Aozora",
+        "duration": "13:23",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - The Last Emperor.mp3",
+        "name": "The Last Emperor",
+        "duration": "11:56",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - 1919.mp3",
+        "name": "1919",
+        "duration": "12:52",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Merry Christmas Mr_ Lawrence.mp3",
+        "name": "Merry Christmas Mr. Lawrence",
+        "duration": "09:40",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - M_A_Y_ in the Backyard.mp3",
+        "name": "M.A.Y. in the Backyard",
+        "duration": "08:52",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - The Sheltering Sky.mp3",
+        "name": "The Sheltering Sky",
+        "duration": "09:13",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - A Tribute to N_J_P_.mp3",
+        "name": "A Tribute to N.J.P.",
+        "duration": "06:41",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ryuichi Sakamoto\u0000Morelenbaum²",
+      "description": ""
+    },
+    "album": {
+      "name": "Casa",
+      "description": "",
+      "year": 2002,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Casa"
+    },
+    "track_list": [
+      {
+        "filename": "10 - Estrada Branca.mp3",
+        "name": "Estrada Branca",
+        "duration": "04:02",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - O Grande Amor.mp3",
+        "name": "O Grande Amor",
+        "duration": "04:30",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Cançao Em Modo Menor.mp3",
+        "name": "Cançao Em Modo Menor",
+        "duration": "02:01",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Tema Para Ana.mp3",
+        "name": "Tema Para Ana",
+        "duration": "02:07",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Derradeira Primavera.mp3",
+        "name": "Derradeira Primavera",
+        "duration": "02:21",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Esperança Perdida - I Was Just One More for You.mp3",
+        "name": "Esperança Perdida - I Was Just One More for You",
+        "duration": "04:04",
+        "track_number": 15
+      },
+      {
+        "filename": "16 - Sem Você.mp3",
+        "name": "Sem Você",
+        "duration": "05:08",
+        "track_number": 16
+      },
+      {
+        "filename": "17 - Samba Do Avião (Live).mp3",
+        "name": "Samba Do Avião (Live)",
+        "duration": "05:38",
+        "track_number": 17
+      },
+      {
+        "filename": "18 - Improvisation (Live).mp3",
+        "name": "Improvisation (Live)",
+        "duration": "07:11",
+        "track_number": 18
+      },
+      {
+        "filename": "2 - O Amor Em Paz.mp3",
+        "name": "O Amor Em Paz",
+        "duration": "03:51",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Vivo Sonhando - Dreamer.mp3",
+        "name": "Vivo Sonhando - Dreamer",
+        "duration": "04:31",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Inútil Paisagem.mp3",
+        "name": "Inútil Paisagem",
+        "duration": "04:30",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Sabiá.mp3",
+        "name": "Sabiá",
+        "duration": "03:49",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Chanson Pour Michele.mp3",
+        "name": "Chanson Pour Michele",
+        "duration": "03:10",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Bonita.mp3",
+        "name": "Bonita",
+        "duration": "04:22",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Fotografia - Photograph.mp3",
+        "name": "Fotografia - Photograph",
+        "duration": "04:18",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Imagina.mp3",
+        "name": "Imagina",
+        "duration": "02:18",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ryuichi Sakamoto; Morelenbaum²",
+      "description": ""
+    },
+    "album": {
+      "name": "Casa",
+      "description": "",
+      "year": 2002,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Casa\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - As Praias Desertas.mp3",
+        "name": "As Praias Desertas",
+        "duration": "07:43",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Love Poet",
+      "description": ""
+    },
+    "album": {
+      "name": "Deep Lullabies (Piano Collection)",
+      "description": "",
+      "year": 2022,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Deep Lullabies (Piano Collection)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Energy Flow (From _bttb_).mp3",
+        "name": "Energy Flow (From \"bttb\")",
+        "duration": "08:58",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Rain (From _1996_).mp3",
+        "name": "Rain (From \"1996\")",
+        "duration": "06:47",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Forbidden Colors (From _Merry Christmas Mr_ Lawrence_).mp3",
+        "name": "Forbidden Colors (From \"Merry Christmas Mr. Lawrence\")",
+        "duration": "10:14",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Koko",
+      "description": "",
+      "year": 2008,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Koko"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Koko.mp3",
+        "name": "Koko",
+        "duration": "04:05",
+        "track_number": 1
+      },
+      {
+        "filename": "3 - Dancing In the Sky.mp3",
+        "name": "Dancing In the Sky",
+        "duration": "01:09",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ryuichi Sakamoto; Fennesz",
+      "description": ""
+    },
+    "album": {
+      "name": "Koko",
+      "description": "",
+      "year": 2008,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Koko\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "2 - Ropa.mp3",
+        "name": "Ropa",
+        "duration": "10:29",
+        "track_number": 2
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ryuichi Sakamoto;Alva Noto",
+      "description": ""
+    },
+    "album": {
+      "name": "Monomom",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Monomom\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Monomom.mp3",
+        "name": "Monomom",
+        "duration": "11:06",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Playing The Piano",
+      "description": "",
+      "year": 2009,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Playing The Piano\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Amore.mp3",
+        "name": "Amore",
+        "duration": "10:21",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Reversing.mp3",
+        "name": "Reversing",
+        "duration": "07:04",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Mizu no Naka no Bagatelle.mp3",
+        "name": "Mizu no Naka no Bagatelle",
+        "duration": "07:33",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Bolerish.mp3",
+        "name": "Bolerish",
+        "duration": "10:21",
+        "track_number": 12
+      },
+      {
+        "filename": "2 - Sakamoto_ Merry Christmas Mr_ Lawrence.mp3",
+        "name": "Sakamoto: Merry Christmas Mr. Lawrence",
+        "duration": "09:29",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - A Flower is not a Flower.mp3",
+        "name": "A Flower is not a Flower",
+        "duration": "13:12",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Sakamoto_ The Sheltering Sky.mp3",
+        "name": "Sakamoto: The Sheltering Sky",
+        "duration": "09:51",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Tamago 2004.mp3",
+        "name": "Tamago 2004",
+        "duration": "05:41",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - The Last Emperor.mp3",
+        "name": "The Last Emperor",
+        "duration": "13:29",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Tibetan Dance.mp3",
+        "name": "Tibetan Dance",
+        "duration": "08:48",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Thousand Knives.mp3",
+        "name": "Thousand Knives",
+        "duration": "10:48",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Riot In Lagos.mp3",
+        "name": "Riot In Lagos",
+        "duration": "09:13",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Playing the Piano 12122020",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Playing the Piano 12122020\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Andata.mp3",
+        "name": "Andata",
+        "duration": "05:48",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - The Sheltering Sky.mp3",
+        "name": "The Sheltering Sky",
+        "duration": "12:39",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - The Last Emperor.mp3",
+        "name": "The Last Emperor",
+        "duration": "14:08",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - The Seed And The Sower.mp3",
+        "name": "The Seed And The Sower",
+        "duration": "06:56",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Merry Christmas Mr_ Lawrence.mp3",
+        "name": "Merry Christmas Mr. Lawrence",
+        "duration": "11:36",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - MUJI2020.mp3",
+        "name": "MUJI2020",
+        "duration": "04:29",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Improvisation - 20201212.mp3",
+        "name": "Improvisation - 20201212",
+        "duration": "03:46",
+        "track_number": 15
+      },
+      {
+        "filename": "2 - Bibo no Aozora.mp3",
+        "name": "Bibo no Aozora",
+        "duration": "12:25",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Aqua.mp3",
+        "name": "Aqua",
+        "duration": "09:25",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Aubade 2020.mp3",
+        "name": "Aubade 2020",
+        "duration": "07:24",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Aoneko no Torso.mp3",
+        "name": "Aoneko no Torso",
+        "duration": "05:55",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Mizu no Naka no Bagatelle.mp3",
+        "name": "Mizu no Naka no Bagatelle",
+        "duration": "08:32",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Before Long.mp3",
+        "name": "Before Long",
+        "duration": "07:42",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Perspective.mp3",
+        "name": "Perspective",
+        "duration": "12:34",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Energy Flow.mp3",
+        "name": "Energy Flow",
+        "duration": "09:43",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Ryuichi Sakamoto (Music For Film)",
+      "description": "",
+      "year": 2016,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Ryuichi Sakamoto (Music For Film)\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Merry Christmas Mr_ Lawrence - Main Theme (From _Merry Christmas Mr_ Lawrence_).mp3",
+        "name": "Merry Christmas Mr. Lawrence - Main Theme (From \"Merry Christmas Mr. Lawrence\")",
+        "duration": "12:07",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Bibo No Aozora (From _Babel_).mp3",
+        "name": "Bibo No Aozora (From \"Babel\")",
+        "duration": "12:59",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Small Hope (From _Hara-Kiri (Ichimei)_).mp3",
+        "name": "Small Hope (From \"Hara-Kiri (Ichimei)\")",
+        "duration": "10:02",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Yae No Sakura Opening Theme (From _Yae No Sakura_).mp3",
+        "name": "Yae No Sakura Opening Theme (From \"Yae No Sakura\")",
+        "duration": "06:07",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - The Revenant Main Theme (From _The Revenant_).mp3",
+        "name": "The Revenant Main Theme (From \"The Revenant\")",
+        "duration": "06:22",
+        "track_number": 13
+      },
+      {
+        "filename": "2 - Endroll (From _The Last Emperor_).mp3",
+        "name": "Endroll (From \"The Last Emperor\")",
+        "duration": "16:11",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Rain (From _The Last Emperor_).mp3",
+        "name": "Rain (From \"The Last Emperor\")",
+        "duration": "08:34",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - The Sheltering Sky - Main Theme (From _The Sheltering Sky_).mp3",
+        "name": "The Sheltering Sky - Main Theme (From \"The Sheltering Sky\")",
+        "duration": "12:54",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - High Heels Main Theme (From _High Heels_).mp3",
+        "name": "High Heels Main Theme (From \"High Heels\")",
+        "duration": "06:17",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Wild Palms Main Theme (From _Wild Palms_).mp3",
+        "name": "Wild Palms Main Theme (From \"Wild Palms\")",
+        "duration": "05:05",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Acceptance (From _Little Buddha_).mp3",
+        "name": "Acceptance (From \"Little Buddha\")",
+        "duration": "17:42",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Snake Eyes Main Theme (Long Version _ From _Snake Eyes_).mp3",
+        "name": "Snake Eyes Main Theme (Long Version / From \"Snake Eyes\")",
+        "duration": "10:56",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Bolerish (From _Femme Fatale_).mp3",
+        "name": "Bolerish (From \"Femme Fatale\")",
+        "duration": "12:24",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
       "name": "Opus",
       "description": "",
       "year": 2024,
-      "path": "__source__\\classic\\Ryuichi Sakamoto — Opus (2024)_-83776680_85362578"
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Ryuichi Sakamoto — Opus (2024)_-83776680_85362578"
     },
     "track_list": [
       {
@@ -5591,6 +10574,129 @@
         "name": "Trioon",
         "duration": "06:39",
         "track_number": 17
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Tony Takitani",
+      "description": "",
+      "year": 2005,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Tony Takitani"
+    },
+    "track_list": [
+      {
+        "filename": "1 - DNA-intro.mp3",
+        "name": "DNA-intro",
+        "duration": "11:37",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - harmonics _2.mp3",
+        "name": "harmonics #2",
+        "duration": "01:00",
+        "track_number": 10
+      },
+      {
+        "filename": "3 - DNA.mp3",
+        "name": "DNA",
+        "duration": "06:27",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - bottom.mp3",
+        "name": "bottom",
+        "duration": "00:39",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - fotografia _1.mp3",
+        "name": "fotografia #1",
+        "duration": "03:32",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - fotografia _2.mp3",
+        "name": "fotografia #2",
+        "duration": "03:41",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Solitude-Short.mp3",
+        "name": "Solitude-Short",
+        "duration": "02:33",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - harmonics _1.mp3",
+        "name": "harmonics #1",
+        "duration": "00:50",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - solitude-one note.mp3",
+        "name": "solitude-one note",
+        "duration": "03:24",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Ryuichi Sakamoto",
+      "description": ""
+    },
+    "album": {
+      "name": "Tony Takitani",
+      "description": "",
+      "year": 2005,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\Tony Takitani\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "11 - solitude-theme.mp3",
+        "name": "solitude-theme",
+        "duration": "08:00",
+        "track_number": 11
+      },
+      {
+        "filename": "2 - solitude.mp3",
+        "name": "solitude",
+        "duration": "09:52",
+        "track_number": 2
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "James Heather",
+      "description": ""
+    },
+    "album": {
+      "name": "@0 EP3",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\classic\\Ryuichi Sakamoto\\_0 EP3\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Aqua (from Playing Piano for the Isolated).mp3",
+        "name": "Aqua (from Playing Piano for the Isolated)",
+        "duration": "09:07",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - And She Came Home (Strings Version).mp3",
+        "name": "And She Came Home (Strings Version)",
+        "duration": "07:59",
+        "track_number": 2
       }
     ]
   },
@@ -6121,6 +11227,510 @@
         "filename": "07 Simeon Walker - Speak, Pt. 4.mp3",
         "name": "Speak, Pt. 4",
         "duration": "03:34",
+        "track_number": 7
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Steven Mudd",
+      "description": ""
+    },
+    "album": {
+      "name": "Autumn",
+      "description": "",
+      "year": 2021,
+      "path": "__source__\\classic\\Steven Mudd\\Autumn\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Autumn.mp3",
+        "name": "Autumn",
+        "duration": "06:01",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Steven Mudd",
+      "description": ""
+    },
+    "album": {
+      "name": "Espérer: Solo Piano",
+      "description": "",
+      "year": 2020,
+      "path": "__source__\\classic\\Steven Mudd\\Espérer_ Solo Piano\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Growth.mp3",
+        "name": "Growth",
+        "duration": "05:14",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Hope.mp3",
+        "name": "Hope",
+        "duration": "05:16",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Sunrise.mp3",
+        "name": "Sunrise",
+        "duration": "04:50",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Tributary.mp3",
+        "name": "Tributary",
+        "duration": "07:49",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Something New.mp3",
+        "name": "Something New",
+        "duration": "05:07",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Showers.mp3",
+        "name": "Showers",
+        "duration": "03:51",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Journey.mp3",
+        "name": "Journey",
+        "duration": "05:09",
+        "track_number": 7
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Steven Mudd",
+      "description": ""
+    },
+    "album": {
+      "name": "Evoluer: Solo Piano",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\classic\\Steven Mudd\\Evoluer_ Solo Piano\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Childhood.mp3",
+        "name": "Childhood",
+        "duration": "05:28",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Waltz in E.mp3",
+        "name": "Waltz in E",
+        "duration": "05:02",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Clouds.mp3",
+        "name": "Clouds",
+        "duration": "06:22",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Letters.mp3",
+        "name": "Letters",
+        "duration": "05:33",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Urgency.mp3",
+        "name": "Urgency",
+        "duration": "04:57",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Hymn in G.mp3",
+        "name": "Hymn in G",
+        "duration": "07:08",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - First Walk.mp3",
+        "name": "First Walk",
+        "duration": "05:49",
+        "track_number": 7
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Steven Mudd",
+      "description": ""
+    },
+    "album": {
+      "name": "Glacé: Solo Piano",
+      "description": "",
+      "year": 2020,
+      "path": "__source__\\classic\\Steven Mudd\\Glacé_ Solo Piano\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Heartbreak _ Hope.mp3",
+        "name": "Heartbreak & Hope",
+        "duration": "05:37",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Solace.mp3",
+        "name": "Solace",
+        "duration": "06:39",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Victoria.mp3",
+        "name": "Victoria",
+        "duration": "05:05",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Observed.mp3",
+        "name": "Observed",
+        "duration": "05:05",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Ballard Pond.mp3",
+        "name": "Ballard Pond",
+        "duration": "05:17",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Old Times.mp3",
+        "name": "Old Times",
+        "duration": "05:53",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Glacé.mp3",
+        "name": "Glacé",
+        "duration": "08:14",
+        "track_number": 7
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Steven Mudd",
+      "description": ""
+    },
+    "album": {
+      "name": "Gleam Of The Headlights",
+      "description": "",
+      "year": 2020,
+      "path": "__source__\\classic\\Steven Mudd\\Gleam Of The Headlights\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Gleam Of The Headlights.mp3",
+        "name": "Gleam Of The Headlights",
+        "duration": "04:35",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Steven Mudd",
+      "description": ""
+    },
+    "album": {
+      "name": "Noël: Solo Piano",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\classic\\Steven Mudd\\Noël_ Solo Piano\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Merry Christmas_ Darling.mp3",
+        "name": "Merry Christmas, Darling",
+        "duration": "05:28",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - River.mp3",
+        "name": "River",
+        "duration": "05:49",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - In the Bleak Midwinter.mp3",
+        "name": "In the Bleak Midwinter",
+        "duration": "06:02",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Lo How a Rose E'er Blooming.mp3",
+        "name": "Lo How a Rose E'er Blooming",
+        "duration": "04:31",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Somewhere in My Memory.mp3",
+        "name": "Somewhere in My Memory",
+        "duration": "05:02",
+        "track_number": 5
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Steven Mudd",
+      "description": ""
+    },
+    "album": {
+      "name": "Revoir: Solo Piano",
+      "description": "",
+      "year": 2019,
+      "path": "__source__\\classic\\Steven Mudd\\Revoir_ Solo Piano\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Rainfall.mp3",
+        "name": "Rainfall",
+        "duration": "04:19",
+        "track_number": 1
+      },
+      {
+        "filename": "2 - Manor.mp3",
+        "name": "Manor",
+        "duration": "05:42",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Gatehouse.mp3",
+        "name": "Gatehouse",
+        "duration": "07:23",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Tinkerer.mp3",
+        "name": "Tinkerer",
+        "duration": "06:25",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Flutter.mp3",
+        "name": "Flutter",
+        "duration": "05:26",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Hillside.mp3",
+        "name": "Hillside",
+        "duration": "06:35",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Snow.mp3",
+        "name": "Snow",
+        "duration": "08:30",
+        "track_number": 7
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Steven Mudd",
+      "description": ""
+    },
+    "album": {
+      "name": "Solitude",
+      "description": "",
+      "year": 2020,
+      "path": "__source__\\classic\\Steven Mudd\\Solitude\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Solitude.mp3",
+        "name": "Solitude",
+        "duration": "06:39",
+        "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Владимир Вавилов; Mark Shakhin",
+      "description": ""
+    },
+    "album": {
+      "name": "Lute Music",
+      "description": "",
+      "year": 2015,
+      "path": "__source__\\classic\\Владимир Вавилов\\Lute Music\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Canzona and Dance.mp3",
+        "name": "Canzona and Dance",
+        "duration": "07:52",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Gavotte.mp3",
+        "name": "Gavotte",
+        "duration": "10:03",
+        "track_number": 10
+      },
+      {
+        "filename": "11 - Chanson _De Mon Triste Desplasir_.mp3",
+        "name": "Chanson \"De Mon Triste Desplasir\"",
+        "duration": "03:26",
+        "track_number": 11
+      },
+      {
+        "filename": "12 - Fantasy _De Mon Triste_.mp3",
+        "name": "Fantasy \"De Mon Triste\"",
+        "duration": "05:17",
+        "track_number": 12
+      },
+      {
+        "filename": "13 - Ricercare No_ 74.mp3",
+        "name": "Ricercare No. 74",
+        "duration": "05:51",
+        "track_number": 13
+      },
+      {
+        "filename": "14 - Ricercare No_ 51.mp3",
+        "name": "Ricercare No. 51",
+        "duration": "04:54",
+        "track_number": 14
+      },
+      {
+        "filename": "15 - Ricercare No_ 30.mp3",
+        "name": "Ricercare No. 30",
+        "duration": "05:11",
+        "track_number": 15
+      },
+      {
+        "filename": "2 - Spandogletta.mp3",
+        "name": "Spandogletta",
+        "duration": "04:19",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Ave Maria.mp3",
+        "name": "Ave Maria",
+        "duration": "08:25",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Ricercare.mp3",
+        "name": "Ricercare",
+        "duration": "13:01",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Padoana and Galliard.mp3",
+        "name": "Padoana and Galliard",
+        "duration": "08:22",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Chaconne.mp3",
+        "name": "Chaconne",
+        "duration": "09:07",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Green Sleeves.mp3",
+        "name": "Green Sleeves",
+        "duration": "07:30",
+        "track_number": 7
+      },
+      {
+        "filename": "8 - Tourdion.mp3",
+        "name": "Tourdion",
+        "duration": "04:30",
+        "track_number": 8
+      },
+      {
+        "filename": "9 - Pasturella.mp3",
+        "name": "Pasturella",
+        "duration": "06:41",
+        "track_number": 9
+      }
+    ]
+  },
+  {
+    "mount": "class",
+    "artist": {
+      "name": "Владимир Вавилов;Владимир Курлин",
+      "description": ""
+    },
+    "album": {
+      "name": "Лютневая музыка XVI–XVII веков",
+      "description": "",
+      "year": 1969,
+      "path": "__source__\\classic\\Владимир Вавилов\\Лютневая музыка XVI_XVII веков\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "1 - Сюита для лютни_ канцона и танец.mp3",
+        "name": "Сюита для лютни: канцона и танец",
+        "duration": "07:59",
+        "track_number": 1
+      },
+      {
+        "filename": "10 - Гавот.mp3",
+        "name": "Гавот",
+        "duration": "09:56",
+        "track_number": 10
+      },
+      {
+        "filename": "2 - Спандольетта.mp3",
+        "name": "Спандольетта",
+        "duration": "04:23",
+        "track_number": 2
+      },
+      {
+        "filename": "3 - Ave Maria.mp3",
+        "name": "Ave Maria",
+        "duration": "08:28",
+        "track_number": 3
+      },
+      {
+        "filename": "4 - Ричеркар.mp3",
+        "name": "Ричеркар",
+        "duration": "12:59",
+        "track_number": 4
+      },
+      {
+        "filename": "5 - Сюита для лютни_ павана и гальярда.mp3",
+        "name": "Сюита для лютни: павана и гальярда",
+        "duration": "08:22",
+        "track_number": 5
+      },
+      {
+        "filename": "6 - Чакона.mp3",
+        "name": "Чакона",
+        "duration": "09:10",
+        "track_number": 6
+      },
+      {
+        "filename": "7 - Песня _Зелёные рукава_ и гальярда.mp3",
+        "name": "Песня \"Зелёные рукава\" и гальярда",
+        "duration": "07:31",
         "track_number": 7
       }
     ]
@@ -31397,6 +37007,63 @@
   {
     "mount": "lounge",
     "artist": {
+      "name": "US Golf 95",
+      "description": ""
+    },
+    "album": {
+      "name": "𝗥𝗘𝗖𝗢𝗡𝗡𝗘𝗖𝗧 …",
+      "description": "",
+      "year": 2020,
+      "path": "__source__\\lounge\\us golf\\US Golf 95\\������������������ …"
+    },
+    "track_list": [
+      {
+        "filename": "01 US Golf 95 - 這う.mp3",
+        "name": "這う",
+        "duration": "02:09",
+        "track_number": 1
+      },
+      {
+        "filename": "02 US Golf 95 - 部族.mp3",
+        "name": "部族",
+        "duration": "07:53",
+        "track_number": 2
+      },
+      {
+        "filename": "03 US Golf 95 - 静粛.mp3",
+        "name": "静粛",
+        "duration": "02:40",
+        "track_number": 3
+      },
+      {
+        "filename": "05 US Golf 95 - 低音.mp3",
+        "name": "低音",
+        "duration": "03:38",
+        "track_number": 5
+      },
+      {
+        "filename": "06 US Golf 95 - ピアノヒット.mp3",
+        "name": "ピアノヒット",
+        "duration": "09:54",
+        "track_number": 6
+      },
+      {
+        "filename": "07 US Golf 95 - 業界 Gyōkai 業界.mp3",
+        "name": "業界 Gyōkai 業界",
+        "duration": "06:04",
+        "track_number": 7
+      },
+      {
+        "filename": "08 US Golf 95 - どきどき.mp3",
+        "name": "どきどき",
+        "duration": "03:06",
+        "track_number": 8
+      }
+    ]
+  },
+  {
+    "mount": "lounge",
+    "artist": {
       "name": "US Golf 95 x P A T H S パス",
       "description": ""
     },
@@ -32156,6 +37823,84 @@
   {
     "mount": "tech",
     "artist": {
+      "name": "Anton Kubikov",
+      "description": ""
+    },
+    "album": {
+      "name": "Silver Thread",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\Anton Kubikov - Silver Thread 2024\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "01 Polka Dub.mp3",
+        "name": "Polka Dub",
+        "duration": "14:55",
+        "track_number": 1
+      },
+      {
+        "filename": "02 Snow Horn.mp3",
+        "name": "Snow Horn",
+        "duration": "14:24",
+        "track_number": 2
+      },
+      {
+        "filename": "03 After The Rain.mp3",
+        "name": "After The Rain",
+        "duration": "16:35",
+        "track_number": 3
+      },
+      {
+        "filename": "04 Silver Thread.mp3",
+        "name": "Silver Thread",
+        "duration": "15:29",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Barut",
+      "description": ""
+    },
+    "album": {
+      "name": "Antelia",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\Barut - Antelia 2024\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "01 Ilanto Zur.mp3",
+        "name": "Ilanto Zur",
+        "duration": "14:56",
+        "track_number": 1
+      },
+      {
+        "filename": "02 Amarel.mp3",
+        "name": "Amarel",
+        "duration": "15:56",
+        "track_number": 2
+      },
+      {
+        "filename": "03 Ramana.mp3",
+        "name": "Ramana",
+        "duration": "14:56",
+        "track_number": 3
+      },
+      {
+        "filename": "04 Antelia.mp3",
+        "name": "Antelia",
+        "duration": "16:59",
+        "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
       "name": "Developer",
       "description": ""
     },
@@ -32240,6 +37985,45 @@
         "name": "Toting A Gun",
         "duration": "09:44",
         "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Escape Artist",
+      "description": ""
+    },
+    "album": {
+      "name": "Far Away Places",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\Escape Artist - Far Away Places 2024\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "Escape Artist - Ascension.mp3",
+        "name": "Ascension",
+        "duration": "13:33",
+        "track_number": 1
+      },
+      {
+        "filename": "Escape Artist - Breaks In Case of Emergency.mp3",
+        "name": "Breaks In Case of Emergency",
+        "duration": "09:39",
+        "track_number": 4
+      },
+      {
+        "filename": "Escape Artist - Far Away Places.mp3",
+        "name": "Far Away Places",
+        "duration": "17:08",
+        "track_number": 3
+      },
+      {
+        "filename": "Escape Artist - Sapphire.mp3",
+        "name": "Sapphire",
+        "duration": "13:16",
+        "track_number": 2
       }
     ]
   },
@@ -32549,6 +38333,45 @@
         "name": "You Tell Me",
         "duration": "06:31",
         "track_number": 1
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Jerome Hill",
+      "description": ""
+    },
+    "album": {
+      "name": "Looming Large EP",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\Jerome Hill - Looming Large EP 2024\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "Jerome Hill - All My Friends.mp3",
+        "name": "All My Friends",
+        "duration": "11:14",
+        "track_number": 1
+      },
+      {
+        "filename": "Jerome Hill - Blip Trick Trak.mp3",
+        "name": "Blip Trick Trak",
+        "duration": "10:01",
+        "track_number": 4
+      },
+      {
+        "filename": "Jerome Hill - Dog Booty.mp3",
+        "name": "Dog Booty",
+        "duration": "10:22",
+        "track_number": 3
+      },
+      {
+        "filename": "Jerome Hill - The Ghost Of New Beat.mp3",
+        "name": "The Ghost Of New Beat",
+        "duration": "11:47",
+        "track_number": 2
       }
     ]
   },
@@ -32906,6 +38729,45 @@
   {
     "mount": "tech",
     "artist": {
+      "name": "Kwartz",
+      "description": ""
+    },
+    "album": {
+      "name": "Under Control EP",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\Kwartz - Under Control EP 2024\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "Kwartz - Animal Instinct (Original Mix).mp3",
+        "name": "Animal Instinct",
+        "duration": "08:39",
+        "track_number": 4
+      },
+      {
+        "filename": "Kwartz - Enter The Zone (Original Mix).mp3",
+        "name": "Enter The Zone",
+        "duration": "12:12",
+        "track_number": 2
+      },
+      {
+        "filename": "Kwartz - The Golden Hour (Original Mix).mp3",
+        "name": "The Golden Hour",
+        "duration": "10:31",
+        "track_number": 1
+      },
+      {
+        "filename": "Kwartz - Under Control (Original Mix).mp3",
+        "name": "Under Control",
+        "duration": "11:18",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
       "name": "Mr. Ho",
       "description": ""
     },
@@ -33149,6 +39011,75 @@
         "name": "Pulse XVI",
         "duration": "13:11",
         "track_number": 4
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Prince Of Denmark",
+      "description": ""
+    },
+    "album": {
+      "name": "The Body",
+      "description": "",
+      "year": 2013,
+      "path": "__source__\\tech\\Prince Of Denmark – The Body 2013\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "A1_Cut_02.mp3",
+        "name": "Cut 02",
+        "duration": "15:27",
+        "track_number": 1
+      },
+      {
+        "filename": "B1_Nymphonic.mp3",
+        "name": "Nymphonic",
+        "duration": "15:11",
+        "track_number": 2
+      },
+      {
+        "filename": "B2_Signjam.mp3",
+        "name": "Signjam",
+        "duration": "15:42",
+        "track_number": 3
+      },
+      {
+        "filename": "C1_Cut_Untitled_Cut.mp3",
+        "name": "Cut Untitled Cut",
+        "duration": "14:42",
+        "track_number": 4
+      },
+      {
+        "filename": "D1_Your_Body.mp3",
+        "name": "Your Body",
+        "duration": "15:06",
+        "track_number": 5
+      },
+      {
+        "filename": "D2_Thanatos.mp3",
+        "name": "Thanatos",
+        "duration": "14:26",
+        "track_number": 6
+      },
+      {
+        "filename": "E1_Mardou.mp3",
+        "name": "Mardou",
+        "duration": "18:41",
+        "track_number": 7
+      },
+      {
+        "filename": "F1__In_The_End_The_Ghost_Ran_Out_Of_Memory.mp3",
+        "name": "(In The End) The Ghost Ran Out Of Memory",
+        "duration": "18:10",
+        "track_number": 8
+      },
+      {
+        "filename": "F2_Sublimation.mp3",
+        "name": "Sublimation",
+        "duration": "12:41",
+        "track_number": 9
       }
     ]
   },
@@ -33749,6 +39680,120 @@
   {
     "mount": "tech",
     "artist": {
+      "name": "Rostøm",
+      "description": ""
+    },
+    "album": {
+      "name": "Void",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\Rostøm - Void 2024\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "Rostøm - Federkleid.mp3",
+        "name": "Federkleid",
+        "duration": "11:48",
+        "track_number": 1
+      },
+      {
+        "filename": "Rostøm - Greyscale.mp3",
+        "name": "Greyscale",
+        "duration": "10:57",
+        "track_number": 2
+      },
+      {
+        "filename": "Rostøm - Lost Summer.mp3",
+        "name": "Lost Summer",
+        "duration": "11:05",
+        "track_number": 5
+      },
+      {
+        "filename": "Rostøm - Mithril.mp3",
+        "name": "Mithril",
+        "duration": "09:55",
+        "track_number": 6
+      },
+      {
+        "filename": "Rostøm - Sentinel.mp3",
+        "name": "Sentinel",
+        "duration": "09:37",
+        "track_number": 4
+      },
+      {
+        "filename": "Rostøm - Void.mp3",
+        "name": "Void",
+        "duration": "11:01",
+        "track_number": 3
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Smoley",
+      "description": ""
+    },
+    "album": {
+      "name": "NFR039",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\Smoley - NFR039 2024\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "01 - Smoley - Orbiting Echoes.mp3",
+        "name": "Orbiting Echoes",
+        "duration": "11:55",
+        "track_number": 1
+      },
+      {
+        "filename": "02 - Smoley - Lunar Reflections.mp3",
+        "name": "Lunar Reflections",
+        "duration": "09:59",
+        "track_number": 2
+      },
+      {
+        "filename": "03 - Smoley - Galactic Odyssey.mp3",
+        "name": "Galactic Odyssey",
+        "duration": "07:55",
+        "track_number": 3
+      },
+      {
+        "filename": "04 - Smoley - Celestial Voyage.mp3",
+        "name": "Celestial Voyage",
+        "duration": "11:47",
+        "track_number": 4
+      },
+      {
+        "filename": "05 - Smoley - Chronicles Of The Void.mp3",
+        "name": "Chronicles Of The Void",
+        "duration": "11:40",
+        "track_number": 5
+      },
+      {
+        "filename": "06 - Smoley - Astral Dreams.mp3",
+        "name": "Astral Dreams",
+        "duration": "11:40",
+        "track_number": 6
+      },
+      {
+        "filename": "07 - Smoley - Celestial Oceans.mp3",
+        "name": "Celestial Oceans",
+        "duration": "10:39",
+        "track_number": 7
+      },
+      {
+        "filename": "08 - Smoley - Astronaut's Lullaby.mp3",
+        "name": "Astronaut's Lullaby",
+        "duration": "12:40",
+        "track_number": 8
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
       "name": "Soft Blade",
       "description": ""
     },
@@ -33887,6 +39932,39 @@
         "name": "Blinker",
         "duration": "08:13",
         "track_number": 10
+      }
+    ]
+  },
+  {
+    "mount": "tech",
+    "artist": {
+      "name": "Stekke & Lowris & Thome",
+      "description": ""
+    },
+    "album": {
+      "name": "CWB Studio",
+      "description": "",
+      "year": 2024,
+      "path": "__source__\\tech\\Stekke & Lowris & Thome - CWB Studio 2024\\mp3"
+    },
+    "track_list": [
+      {
+        "filename": "A1. Stekke - Mind Balance.mp3",
+        "name": "Mind Balance",
+        "duration": "18:28",
+        "track_number": 1
+      },
+      {
+        "filename": "B1. Stekke & Lowris - Romanian 90'S.mp3",
+        "name": "Romanian 90'S",
+        "duration": "16:36",
+        "track_number": 2
+      },
+      {
+        "filename": "B2. Stekke & Lowris & Thome - Late Night Vibes.mp3",
+        "name": "Late Night Vibes",
+        "duration": "12:37",
+        "track_number": 3
       }
     ]
   },
