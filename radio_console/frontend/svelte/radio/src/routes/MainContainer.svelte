@@ -39,7 +39,20 @@
         apiController.trackRequest().then(
             value => playlistResponse = value?.data as Rows
         );
-        if (!needUpdateCover) {return;}
+        if (!needUpdateCover) {
+            return;
+        }
+        apiController.coverRequest().then(response => {
+            currentCoverPath = URL.createObjectURL(response.data)
+            previousAlbum = currentAlbum;
+        })
+    }
+
+    function firstUpdateData() {
+        const apiController = new ApiController()
+        apiController.trackRequest().then(
+            value => playlistResponse = value?.data as Rows
+        );
         apiController.coverRequest().then(response => {
             currentCoverPath = URL.createObjectURL(response.data)
             previousAlbum = currentAlbum;
@@ -49,7 +62,7 @@
     function startUpdater(): number {
         previousAlbum = ''
         currentCoverPath = 'img.png'
-        updateData()
+        firstUpdateData()
         return setInterval(updateData, 5000);
     }
 
